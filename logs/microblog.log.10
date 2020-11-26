@@ -1,0 +1,131 @@
+2020-05-03 04:09:54,936 ERROR: Exception on /Upgrade [POST] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 195, in Upgrade
+    db.session.commit()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1036, in commit
+    self.transaction.commit()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 503, in commit
+    self._prepare_impl()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2479, in flush
+    self._flush(objects)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2617, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2577, in _flush
+    flush_context.execute()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 589, in execute
+    uow,
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 213, in save_obj
+    ) in _organize_states_for_save(base_mapper, states, uowtransaction):
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 408, in _organize_states_for_save
+    % (state_str(state), instance_key, state_str(existing))
+sqlalchemy.orm.exc.FlushError: New instance <Pay at 0x236ee6acec8> with identity key (<class 'app.models.Pay'>, (4,), None) conflicts with persistent instance <Pay at 0x236ee6af588>
+2020-05-03 04:14:42,838 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 04:16:36,454 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 10:00:58,476 ERROR: Exception on /PaySite [POST] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: pay.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 167, in PaySite
+    db.session.commit()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1036, in commit
+    self.transaction.commit()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 503, in commit
+    self._prepare_impl()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2479, in flush
+    self._flush(objects)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2617, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2577, in _flush
+    flush_context.execute()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 589, in execute
+    uow,
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 245, in save_obj
+    insert,
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1084, in _emit_insert_statements
+    c = cached_connections[connection].execute(statement, multiparams)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: pay.id
+[SQL: INSERT INTO pay (id, planid, "Paydate") VALUES (?, ?, ?)]
+[parameters: (3, '3', '2020-05-03 10:00:58.471285')]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+2020-05-03 10:25:10,687 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 10:25:16,378 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 10:26:28,885 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 10:38:37,648 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 10:38:53,343 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 10:39:02,800 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 10:39:08,889 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 10:39:38,311 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 10:40:21,665 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]

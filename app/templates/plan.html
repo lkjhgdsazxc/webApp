@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+
+{% block content %}
+        <div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{ listone.Pname }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ listone.Price }} <small class="text-muted">/ Month</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ listone.Speed }}</li>
+
+        </ul>
+          <a href="{{ url_for('main.PaySite') }}"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Buy It!!</button></a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{ listtwo.Pname }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ listtwo.Price }} <small class="text-muted">/ Month</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ listtwo.Speed }}</li>
+
+        </ul>
+          <a href="{{ url_for('main.PaySite') }}"><button type="button" class="btn btn-lg btn-block btn-primary">Get started</button></a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{listthree.Pname}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ listthree.Price }} <small class="text-muted">/ Month</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ listthree.Speed }}</li>
+
+        </ul>
+          <a href="{{ url_for('main.PaySite') }}"><button type="button"  class="btn btn-lg btn-block btn-primary">Choose Me</button></a>
+      </div>
+    </div>
+  </div>
+    </div>
+{% endblock %}

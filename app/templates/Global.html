@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+
+<main role="main" class="inner cover">
+    <h1 class="cover-heading"><h1>{{ _('GlobalTalk') }}</h1></h1>
+    <p class="lead">{{ Globfun1 }}</p>
+    <p class="lead">{{ Globfun2 }}</p>
+    <p class="lead">{{ Globfun3 }}</p>
+      <a href="https://play.google.com/store/apps/details?id=com.hkbn.voiceapp" class="btn btn-lg btn-secondary">Learn more</a>
+    </p>
+  </main>
+</div>
+
+{% endblock %}

@@ -1,0 +1,319 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block title %}
+    {% if title %}{{ title }} - Microblog{% else %}{{ _('Welcome to Microblog') }}{% endif %}
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta name="theme-color" content="#000000">
+    <meta name="google" content="notranslate">
+    <title>住宅及商業光纖寬頻服務供應商 | 香港寬頻 HKBN</title>
+
+
+
+    <!-- Fix ios 11.1 modal bug-->
+    <style>
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+
+
+
+</style>
+    <!-- Google Optimize -->
+<style>
+    .async-hide {
+        opacity: 0 !important
+    }
+</style>
+<!-- End Google Optimize -->
+
+{% endblock head %}
+{% block navbar %}
+    <div class="float animated" style="position: relative; z-index: 1001; width: 100%;"></div>
+    <div class="CommonLibraryNavBar">
+	<nav class="navbar navbar-light navbar-expand-lg   dark-color">
+	<div>
+		<div class="navbar-brand logo my-2 my-md-3 mx-2 mx-md-0">
+			<a class="navbar-brand" href="{{ url_for('main.index') }}"><img style="float: left" src="{{ url_for('static', filename='hkbn_icon.jpg') }}" width="120" height="110"></a>
+		</div>
+	</div>
+	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+		<div class="flex-column">
+			<div>
+				<ul class="navbar-nav justify-content-end sub-nav">
+					<li class="nav-item active"><a class="nav-link">住宅客戶</a></li>
+					<li class="nav-item "><a class="nav-link">商業客戶</a></li>
+					<li class="nav-item "><a href="{{ url_for('main.aboutus') }}"class="nav-link">關於我們</></li>
+					<li class="nav-item "><a href="{{ url_for('main.Referral') }}"class="nav-link">推薦獎賞計劃</a></li>
+					<li><a class="nav-link">EN</a></li>
+				</ul>
+			</div>
+			<div class="topnav">
+				<ul class="navbar-nav main-nav">
+					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.index') }}">{{ _('精選推介') }}</a></li>
+					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.check_location') }}"class="nav-link pb-1 px-2">家居</a></li>
+					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.Mobplanlist') }}"class="nav-link pb-1 px-2">流動</a></li>
+					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.GlobalSite') }}"class="nav-link pb-1 px-2">外遊</a></li>
+					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.entertainment') }}"class="nav-link pb-1 px-2">娛樂</a></li>
+					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.Service') }}"class="nav-link pb-1 px-2">其他</a></li>
+					<li class="nav-item mx-1 text-center "><a class="nav-link pb-1 px-2">我的戶口</a></li>
+                    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.Upgrade') }}"class="nav-link pb-1 px-2">續約 / 升級</a></li>
+                <div class="main-nav-icon">
+                    {% if current_user.is_anonymous %}
+                        <li>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter" style="background-color:transparent">
+
+                            <img style="float: left" src="{{ url_for('static', filename='people.png') }}" width="35" height="35">
+                            {{ _('登入') }}
+                        </button>
+
+                        </li>
+                    {% else %}
+                        <div class="dropdown show">
+                              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Profile
+                              </a>
+                                <div class="dropdown-menu">
+
+                                    <a class="dropdown-item" href="{{ url_for('main.user', username=current_user.username) }}">{{ _('Profile') }}</a>
+                                    <a class="dropdown-item" href="{{ url_for('auth.logout') }}">{{ _('Logout') }}</a>
+                                </div>
+                        </div>
+                    {% endif %}
+                </div>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+	</nav>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="container">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-info" role="alert">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
+
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{{ url_for('static', filename='DSCF7790.JPG') }}" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{ url_for('static', filename='hkbn-2gb-broadband.png') }}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{ url_for('static', filename='hkbn-88.png') }}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+
+
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle"><b>現有客戶登入</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                        <form id="login-form" action="" method="post" role="form" style="display: block;">
+                          <div class="modal-body">
+                              <div class="form-group">
+                                  <div class="row">
+                                      <div class="input-group my-2">
+                                          <div class="col-12">
+                                              <div style="margin: 10px 0px;">
+                                              </div>
+                                                <div class="input-block tget_txt_account">
+
+
+                                                    <div class="row">
+                                                        <div class=col-12">
+                                                            {{ wtf.quick_form(form) }}
+                                                        </div>
+                                                    </div>
+
+                                                        <br>
+
+                                                            <p>{{ _('New User?') }} <a href="{{ url_for('auth.register') }}">{{ _('Click to Register!') }}</a></p>
+
+                                                                <p>
+                                                                    {{ _('Forgot Your Password?') }}
+                                                                    <a href="{{ url_for('auth.reset_password_request') }}">{{ _('Click to Reset It') }}</a>
+                                                                </p>
+                                                </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 這個等等del,沒有用的,先留住. -->
+{% block current_app_content %}{% endblock %}
+<!-- 以上 -->
+
+
+
+
+
+
+
+
+{% block footer %}
+    <footer class="p-3 mb-2 bg-info text-white">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img class="mb-2" src="{{ url_for('static', filename='my.handsome.png') }}" alt="" width="24" height="24">
+            <small class="d-block mb-3 text-white">©香港寬頻網絡有限公司 | 2019-2020</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small" >
+              <li><a class="text-white" href="#">Cool stuff</a></li>
+              <li><a class="text-white" href="#">Random feature</a></li>
+              <li><a class="text-white" href="#">Team feature</a></li>
+              <li><a class="text-white" href="#">Stuff for developers</a></li>
+              <li><a class="text-white" href="#">Another one</a></li>
+              <li><a class="text-white" href="#">Last time</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="#">Resource</a></li>
+              <li><a class="text-white" href="#">Resource name</a></li>
+              <li><a class="text-white" href="#">Another resource</a></li>
+              <li><a class="text-white" href="#">Final resource</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="#">Team</a></li>
+              <li><a class="text-white" href="#">Locations</a></li>
+              <li><a class="text-white" href="#">Privacy</a></li>
+              <li><a class="text-white" href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {# current_application content needs to be provided in the current_app_content block #}
+
+{% endblock %}
+
+
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}
+    {{ moment.lang(g.locale) }}
+{% endblock %}

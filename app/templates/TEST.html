@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block current_app_content %}
+    <h1>{{ _('TEST') }}</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+{% endblock %}
+
+        alls = Plan.query.all()
+        for all in alls:
+            print(all.id)
+            print(all.Pname)
+            print(all.Speed)
+            print(all.Price)
+
+        {% for plan in alls %}
+            {{ plan.id }}<br>
+            {{ plan.Pname }}<br>
+            {{ plan.Price }}<br>
+            {{ plan.Speed }}<br>
+        {% endfor %}
+
+@bp.route('/planlist', methods=['GET', 'POST'])
+@login_required
+def planlist():
+    alls = Plan.query.all()
+    id = alls.id
+    Planname = alls.Pname
+    Speed = alls.Speed
+    Price = alls.Price
+    return render_template('plan.html', id=id,Planname=Planname,Speed=Speed,Price=Price)
+
+    for all in alls:
+        id = all.id
+        Planname = all.Pname
+        Speed = all.Speed
+        Price = all.Price

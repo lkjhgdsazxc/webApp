@@ -1,0 +1,87 @@
+2020-05-03 15:39:08,820 ERROR: Exception on /Service [GET] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 723, in __getattr__
+    return getattr(self.comparator, key)
+AttributeError: 'Comparator' object has no attribute 'query'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 227, in __getattr__
+    return getattr(self.comparator, key)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 949, in __getattr__
+    return self._fallback_getattr(key)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\properties.py", line 312, in _fallback_getattr
+    return getattr(self.__clause_element__(), key)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 727, in __getattr__
+    % (type(self).__name__, type(self.comparator).__name__, key)
+AttributeError: Neither 'AnnotatedColumn' object nor 'Comparator' object has an attribute 'query'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 220, in Service
+    Servies = EService.ServiceName.query.all()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 236, in __getattr__
+    key,
+AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with EService.ServiceName has an attribute 'query'
+2020-05-03 15:40:23,996 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 15:41:05,033 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 15:41:14,540 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 15:44:38,143 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 15:44:39,458 ERROR: Exception on /Service [GET] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 221, in Service
+    print(Servies.id)
+AttributeError: 'list' object has no attribute 'id'
+2020-05-03 15:45:26,679 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 15:46:06,282 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 15:46:06,430 ERROR: Exception on /Service [GET] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 221, in Service
+    Show = Servies.ServiceName
+AttributeError: 'list' object has no attribute 'ServiceName'
+2020-05-03 15:46:17,063 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 15:47:55,376 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]

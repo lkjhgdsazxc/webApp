@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+
+
+
+
+
+<div class="container-fluid">
+    <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" src="{{ url_for('static', filename='http://www.discoverhongkong.com/nz/images/plan-your-trip/large/5.4.1-location_03.jpg') }}"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"><h1 align="center">{{ _('Enter city your live') }}</h1></text></svg>
+            <div class="card-body">
+             <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+{% endblock %}

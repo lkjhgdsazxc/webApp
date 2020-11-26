@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+
+
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://img.tvb.com/ti_img/MyTVSuperPromo/3468/5e606cf3bb3b9_1583377651.jpeg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ Plan1.PlanLevel }}</h5>
+    <p class="card-text">include channel:{{ Plan1.channel }}</p>
+
+  </div>
+    </div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://img.tvb.com/ti_img/MyTVSuperPromo/2557/5c987a1178a00_1553496593.jpeg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ Plan2.PlanLevel }}</h5>
+    <p class="card-text">include channel:{{ Plan2.channel }}</p>
+
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

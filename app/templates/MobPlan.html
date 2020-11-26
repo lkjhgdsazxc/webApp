@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+
+{% block content %}
+        <div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{ moblistone.Pname }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ moblistone.Price }} <small class="text-muted">/ Month</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ moblistone.Data }}</li>
+
+        </ul>
+          <a href="{{ url_for('main.PaySite') }}"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Buy It!!</button></a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{ moblisttwo.Pname }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ moblisttwo.Price }} <small class="text-muted">/ Month</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ moblisttwo.Data }}</li>
+
+        </ul>
+          <a href="{{ url_for('main.PaySite') }}"><button type="button" class="btn btn-lg btn-block btn-primary">Get started</button></a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{moblistthree.Pname}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ moblistthree.Price }} <small class="text-muted">/ Month</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ moblistthree.Data }}</li>
+
+        </ul>
+          <a href="{{ url_for('main.PaySite') }}"><button type="button"  class="btn btn-lg btn-block btn-primary">Choose Me</button></a>
+      </div>
+    </div>
+  </div>
+    </div>
+{% endblock %}

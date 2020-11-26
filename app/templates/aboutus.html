@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+{% block content %}
+
+
+<div class="container-fluid">
+<div class="col-lg-4">
+            <img class="rounded-circle" src="https://cdn.thestandnews.com/media/photos/cache/hkbn_Do4xi_1200x0.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>{{ _('Services') }}</h2>
+            <p>{{ Tel2.Service }}: {{ Tel2.Telno }}</p>
+            <p>{{ Tel1.Service }}: {{ Tel1.Telno }}</p>
+            <p>{{ Tel3.Service }}: {{ Tel3.Telno }}</p>
+          </div>
+</div>
+
+{% endblock %}
