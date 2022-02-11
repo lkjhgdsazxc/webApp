@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <meta name="theme-color" content="#000000">
     <meta name="google" content="notranslate">
-    <title>住宅及商業光纖寬頻服務供應商 | 香港寬頻 HKBN</title>
+    <title>Sports spaces provider | Hong Kong booking system</title>
 
 
 
@@ -58,37 +58,32 @@
 	<nav class="navbar navbar-light navbar-expand-lg   dark-color">
 	<div>
 		<div class="navbar-brand logo my-2 my-md-3 mx-2 mx-md-0">
-			<a class="navbar-brand" href="{{ url_for('main.index') }}"><img style="float: left" src="{{ url_for('static', filename='hkbn_icon.jpg') }}" width="120" height="110"></a>
+			<a class="navbar-brand" href="{{ url_for('main.index') }}"><img style="float: left" src="{{ url_for('static', filename='icon.png') }}" width="120" height="110"></a>
 		</div>
 	</div>
 	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 		<div class="flex-column">
 			<div>
 				<ul class="navbar-nav justify-content-end sub-nav">
-					<li class="nav-item active"><a class="nav-link">住宅客戶</a></li>
-					<li class="nav-item "><a class="nav-link">商業客戶</a></li>
-					<li class="nav-item "><a href="{{ url_for('main.aboutus') }}"class="nav-link">關於我們</></li>
-					<li class="nav-item "><a href="{{ url_for('main.Referral') }}"class="nav-link">推薦獎賞計劃</a></li>
-					<li><a class="nav-link">EN</a></li>
+					<li class="nav-item "><a class="nav-link">SERVICE PROVIDER</a></li>
+					<li class="nav-item "><a href="{{ url_for('main.aboutus') }}"class="nav-link">ABOUT US</></li>
 				</ul>
 			</div>
 			<div class="topnav">
 				<ul class="navbar-nav main-nav">
-					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.index') }}">{{ _('精選推介') }}</a></li>
-					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.check_location') }}"class="nav-link pb-1 px-2">家居</a></li>
-					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.Mobplanlist') }}"class="nav-link pb-1 px-2">流動</a></li>
-					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.GlobalSite') }}"class="nav-link pb-1 px-2">外遊</a></li>
-					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.entertainment') }}"class="nav-link pb-1 px-2">娛樂</a></li>
-					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.Service') }}"class="nav-link pb-1 px-2">其他</a></li>
-					<li class="nav-item mx-1 text-center "><a class="nav-link pb-1 px-2">我的戶口</a></li>
-                    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.Upgrade') }}"class="nav-link pb-1 px-2">續約 / 升級</a></li>
+					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
+					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.Mobplanlist') }}"class="nav-link pb-1 px-2">LOCATIONS/SERVICE</a></li>
+					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.index') }}"class="nav-link pb-1 px-2">COMMUNITY</a></li>
+					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.entertainment') }}"class="nav-link pb-1 px-2">BLOG</a></li>
+					<li class="nav-item mx-1 text-center "><a href="{{ url_for('main.Service') }}"class="nav-link pb-1 px-2">CONTACT</a></li>
+					<li class="nav-item mx-1 text-center "><a class="nav-link pb-1 px-2">PROFILE</a></li>
                 <div class="main-nav-icon">
                     {% if current_user.is_anonymous %}
                         <li>
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter" style="background-color:transparent">
 
                             <img style="float: left" src="{{ url_for('static', filename='people.png') }}" width="35" height="35">
-                            {{ _('登入') }}
+                            {{ _('LOGIN') }}
                         </button>
 
                         </li>
@@ -130,37 +125,6 @@
 
 
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="{{ url_for('static', filename='DSCF7790.JPG') }}" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="{{ url_for('static', filename='hkbn-2gb-broadband.png') }}" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="{{ url_for('static', filename='hkbn-88.png') }}" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-
-
-
-
 
 
 
@@ -173,7 +137,7 @@
 
 
                   <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle"><b>現有客戶登入</b></h5>
+                      <h5 class="modal-title" id="exampleModalLongTitle"><b>USER LOGIN</b></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -242,7 +206,7 @@
         <div class="row">
           <div class="col-12 col-md">
             <img class="mb-2" src="{{ url_for('static', filename='my.handsome.png') }}" alt="" width="24" height="24">
-            <small class="d-block mb-3 text-white">©香港寬頻網絡有限公司 | 2019-2020</small>
+            <small class="d-block mb-3 text-white">©Hong Kong booking system | 2021-2022</small>
           </div>
           <div class="col-6 col-md">
             <h5>Features</h5>
