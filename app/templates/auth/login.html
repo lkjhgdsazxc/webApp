@@ -1,7 +1,173 @@
-{% extends 'base1.html' %}
+{% extends "base.html" %}
 {% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %} About US {% endblock %} 
+
+{% block body_class %} about-us {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
 
 {% block current_app_content %}
 
+
+  <header class="bg-gradient-dark">
+    <div class="page-header min-vh-75" style="background-image: url('/static/1.jpg');">
+      <span class="mask bg-gradient-dark opacity-6"></span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mx-auto my-auto">
+            <h1 class="text-white">Booking any where</h1>
+            <p class="lead mb-4 text-white opacity-8">The best booking system here, join now!</p>
+            <button type="submit" class="btn bg-white text-dark" onclick="javascript:location.href='{{ url_for('auth.register') }}'">Create Account</button>
+            <h6 class="text-white mb-2 mt-5">Find us on</h6>
+            <div class="d-flex justify-content-center">
+              <a href="javascript:;"><i class="fab fa-facebook text-lg text-white me-4"></i>&nbsp&nbsp&nbsp</a>
+              <a href="javascript:;"><i class="fab fa-instagram text-lg text-white me-4"></i>&nbsp&nbsp&nbsp</a>
+              <a href="javascript:;"><i class="fab fa-twitter text-lg text-white me-4"></i>&nbsp&nbsp&nbsp</a>
+              <a href="javascript:;"><i class="fab fa-google-plus text-lg text-white"></i>&nbsp&nbsp&nbsp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+    <!-- Section with four info areas left & one card right with image and waves -->
+    <section class="py-7">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="row justify-content-start">
+              <div class="col-md-6">
+                <div class="info">
+                  <i class="material-icons text-3xl text-gradient text-info mb-3">public</i>
+                  <h5>Fully integrated</h5>
+                  <p>We get insulted by others, lose trust for those We get back freezes</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info">
+                  <i class="material-icons text-3xl text-gradient text-info mb-3">payments</i>
+                  <h5>Payments functionality</h5>
+                  <p>We get insulted by others, lose trust for those We get back freezes</p>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-start mt-4">
+              <div class="col-md-6">
+                <div class="info">
+                  <i class="material-icons text-3xl text-gradient text-info mb-3">apps</i>
+                  <h5>Prebuilt components</h5>
+                  <p>We get insulted by others, lose trust for those We get back freezes</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info">
+                  <i class="material-icons text-3xl text-gradient text-info mb-3">3p</i>
+                  <h5>Improved platform</h5>
+                  <p>We get insulted by others, lose trust for those We get back freezes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+
 {% endblock %}
-    
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+  <script>
+    // get the element to animate
+    var element = document.getElementById('count-stats');
+    var elementHeight = element.clientHeight;
+
+    // listen for scroll event and call animate function
+
+    document.addEventListener('scroll', animate);
+
+    // check if element is in view
+    function inView() {
+      // get window height
+      var windowHeight = window.innerHeight;
+      // get number of pixels that the document is scrolled
+      var scrollY = window.scrollY || window.pageYOffset;
+      // get current scroll position (distance from the top of the page to the bottom of the current viewport)
+      var scrollPosition = scrollY + windowHeight;
+      // get element position (distance from the top of the page to the bottom of the element)
+      var elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
+
+      // is scroll position greater than element position? (is element in view?)
+      if (scrollPosition > elementPosition) {
+        return true;
+      }
+
+      return false;
+    }
+
+    var animateComplete = true;
+    // animate element when it is in view
+    function animate() {
+
+      // is element in view?
+      if (inView()) {
+        if (animateComplete) {
+          if (document.getElementById('state1')) {
+            const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+            if (!countUp.error) {
+              countUp.start();
+            } else {
+              console.error(countUp.error);
+            }
+          }
+          if (document.getElementById('state2')) {
+            const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+            if (!countUp1.error) {
+              countUp1.start();
+            } else {
+              console.error(countUp1.error);
+            }
+          }
+          if (document.getElementById('state3')) {
+            const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+            if (!countUp2.error) {
+              countUp2.start();
+            } else {
+              console.error(countUp2.error);
+            };
+          }
+          animateComplete = false;
+        }
+      }
+    }
+
+    if (document.getElementById('typed')) {
+      var typed = new Typed("#typed", {
+        stringsElement: '#typed-strings',
+        typeSpeed: 90,
+        backSpeed: 90,
+        backDelay: 200,
+        startDelay: 500,
+        loop: true
+      });
+    }
+  </script>
+
+  <script>
+    if (document.getElementsByClassName('page-header')) {
+      window.onscroll = debounce(function() {
+        var scrollPosition = window.pageYOffset;
+        var bgParallax = document.querySelector('.page-header');
+        var oVal = (window.scrollY / 3);
+        bgParallax.style.transform = 'translate3d(0,' + oVal + 'px,0)';
+      }, 6);
+    }
+  </script>
+
+<style type="text/css">
+    .d-flex justify-content-center{margin:0 10px}
+</style>>
+{% endblock javascripts %}

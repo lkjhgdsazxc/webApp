@@ -1,127 +1,93 @@
-2020-05-03 16:15:07,983 ERROR: Exception on /Service [GET] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+2020-05-03 20:17:27,378 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 20:34:29,168 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 20:36:34,011 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 20:36:54,643 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 20:37:42,712 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 20:39:14,221 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 20:39:24,508 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2020-05-03 20:39:57,526 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+2022-02-11 03:43:55,175 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 03:52:54,892 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 03:56:37,711 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 05:23:51,776 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 05:24:05,537 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 224, in Service
-    return render_template('Service.html', form=form,Servies=Servies)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\templating.py", line 140, in render_template
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 38, in index
+    prev_url=prev_url)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
     rv = template.render(context)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
     self.environment.handle_exception()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+  File "/usr/local/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\User\Desktop\microblog\app\templates\Service.html", line 3, in top-level template code
-    {% from app.models import EService %}
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app' is undefined
-2020-05-03 16:15:23,456 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:16:12,890 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:16:13,545 ERROR: Exception on /Service [GET] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 1, in top-level template code
+    {% extends "base1.html" %}
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: base1.html
+2022-02-11 05:24:09,968 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 224, in Service
-    return render_template('Service.html', form=form,Servies=Servies)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\loaders.py", line 129, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\User\Desktop\microblog\app\templates\Service.html", line 9, in template
-    {% Servies.ServiceName %}
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'Servies'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
-2020-05-03 16:16:27,487 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:20:39,534 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:21:01,924 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:21:32,568 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:21:59,933 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:22:01,405 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:37:42,195 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:41:16,766 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:41:21,927 ERROR: Exception on /aboutus [GET] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 236, in aboutus
-    return render_template('aboutus.html', form=form,Tel=Tel)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\templating.py", line 140, in render_template
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 38, in index
+    prev_url=prev_url)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
     rv = template.render(context)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
     self.environment.handle_exception()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+  File "/usr/local/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\User\Desktop\microblog\app\templates\aboutus.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "C:\Users\User\Desktop\microblog\app\templates\base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 3, in block "doc"
-    <html{% block html_attribs %}{% endblock html_attribs %}>
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 11, in block "html"
-    {%- endblock metas %}
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 13, in block "body"
-    {%- block styles %}
-  File "C:\Users\User\Desktop\microblog\app\templates\aboutus.html", line 9, in block "content"
-    {{ Ser1.ServiceName }}
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'Ser1' is undefined
-2020-05-03 16:42:16,221 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:44:52,499 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 1, in top-level template code
+    {% extends "base1.html" %}
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: base1.html
+2022-02-11 05:26:18,764 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 05:33:12,388 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 05:51:13,287 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 05:52:27,449 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 05:54:30,668 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 05:54:58,189 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 06:01:55,177 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 06:34:28,274 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-11 06:35:31,667 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 01:58:31,590 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 02:01:51,555 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]

@@ -1,16 +1,4 @@
-2020-05-03 20:17:27,378 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 20:34:29,168 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 20:36:34,011 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 20:36:54,643 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 20:37:42,712 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 20:39:14,221 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 20:39:24,508 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 20:39:57,526 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2022-02-11 03:43:55,175 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 03:52:54,892 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 03:56:37,711 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 05:23:51,776 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 05:24:05,537 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
+2022-02-14 03:58:12,718 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -28,24 +16,27 @@ Traceback (most recent call last):
     return func(*args, **kwargs)
   File "/home/ec2-user/environment/webApp/app/main/routes.py", line 38, in index
     prev_url=prev_url)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
   File "/usr/local/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 1, in top-level template code
-    {% extends "base1.html" %}
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 60, in get_source
-    return self._get_source_fast(environment, template)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 89, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: base1.html
-2022-02-11 05:24:09,968 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
+  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 258, in template
+    {% endblock content %}
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'content'
+2022-02-14 03:58:39,481 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 03:58:43,702 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -63,29 +54,40 @@ Traceback (most recent call last):
     return func(*args, **kwargs)
   File "/home/ec2-user/environment/webApp/app/main/routes.py", line 38, in index
     prev_url=prev_url)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/loaders.py", line 129, in load
+    code = environment.compile(source, name, filename)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
   File "/usr/local/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 1, in top-level template code
-    {% extends "base1.html" %}
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 60, in get_source
-    return self._get_source_fast(environment, template)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 89, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: base1.html
-2022-02-11 05:26:18,764 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 05:33:12,388 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 05:51:13,287 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 05:52:27,449 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 05:54:30,668 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 05:54:58,189 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 06:01:55,177 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 06:34:28,274 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-02-11 06:35:31,667 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 258, in template
+    {% endblock content %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'.
+2022-02-14 03:59:12,027 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 04:00:38,978 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 04:01:42,528 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 04:02:31,501 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 04:06:34,210 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 04:09:06,178 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 04:11:24,975 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 04:12:11,711 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 04:13:09,326 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 05:40:58,776 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 07:02:10,418 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 07:23:37,640 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 07:36:06,187 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 07:37:59,572 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 07:38:39,869 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 07:39:08,748 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 07:41:51,220 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-02-14 07:42:19,789 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
