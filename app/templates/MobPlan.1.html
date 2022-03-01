@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+
+{% block content %}
+        <div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{ govlist1.District }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ govlist1.Category }} <small class="text-muted">/ Month</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ govlist1.Venue_Name }}</li>
+
+        </ul>
+          <a href="{{ url_for('main.PaySite') }}"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Buy It!!</button></a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{ govlist2.District }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ govlist2.Category }} <small class="text-muted">/ Month</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ govlist2.Venue_Name }}</li>
+
+        </ul>
+          <a href="{{ url_for('main.PaySite') }}"><button type="button" class="btn btn-lg btn-block btn-primary">Get started</button></a>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{govlist3.District}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ govlist3.Category }} <small class="text-muted">/ Month</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ govlist3.Venue_Name }}</li>
+
+        </ul>
+          <a href="{{ url_for('main.PaySite') }}"><button type="button"  class="btn btn-lg btn-block btn-primary">Choose Me</button></a>
+      </div>
+    </div>
+  </div>
+    </div>
+    <table>
+      {% for testt in govlist %}
+      <tr>
+        <td>{{ testt.District }}</td>
+        <td>{{ testt.Venue_Name }}</td>
+        <td><a href="{{ url_for('main.PaySite') }}"><button type="button"  class="btn btn-lg btn-block btn-primary">Book</button></a></td>
+      </tr>
+      {% endfor %}
+    </table>>
+{% endblock %}

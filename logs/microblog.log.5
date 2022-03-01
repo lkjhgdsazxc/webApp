@@ -1,4 +1,5 @@
-2022-03-01 01:23:11,671 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-01 01:35:38,963 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-01 01:35:41,247 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context
@@ -10,7 +11,7 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.post' doesn't exist")
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.followers' doesn't exist")
 
 The above exception was the direct cause of the following exception:
 
@@ -59,7 +60,7 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.post' doesn't exist")
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.followers' doesn't exist")
 [SQL: SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id 
 FROM (SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
 FROM post INNER JOIN followers ON followers.followed_id = post.user_id 
@@ -69,8 +70,7 @@ WHERE post.user_id = %s) AS anon_1 ORDER BY anon_1.post_timestamp DESC
  LIMIT %s, %s]
 [parameters: (0, 0, 0, 25)]
 (Background on this error at: http://sqlalche.me/e/f405)
-2022-03-01 01:28:37,109 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 01:28:52,715 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-01 01:35:45,904 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context

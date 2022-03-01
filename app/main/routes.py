@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm, CheckLocationForm, PriceListForm, PayForm , MobPriceListForm, RecordForm, UpgradeForm
-from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, MyTVSuper,permission
+from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, MyTVSuper,permission, Governmentfac
 from app.main import bp
 
 @bp.before_request
@@ -172,12 +172,13 @@ def planlist():
 @login_required
 def Mobplanlist():
     form = MobPriceListForm()
-    moblist = MobPlan.query.all()
-    moblistone = MobPlan.query.get(11)
-    moblisttwo = MobPlan.query.get(12)
-    moblistthree = MobPlan.query.get(13)
-    print(moblistone)
-    return render_template('MobPlan.html', form=form, moblist=moblist, moblistone=moblistone, moblisttwo=moblisttwo, moblistthree=moblistthree)
+    govlist = Governmentfac.query.all()
+    group = Governmentfac.query.group_by(Governmentfac.District).all()
+    group2 = Governmentfac.query.group_by(Governmentfac.Category).all()
+    return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group)
+
+        
+
 
 @bp.route('/PaySite',methods=['GET', 'POST'])
 @login_required
