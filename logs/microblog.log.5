@@ -1,113 +1,143 @@
-2020-05-03 16:08:04,834 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:11:19,625 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:11:22,025 ERROR: Exception on /Service [GET] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+2022-03-01 01:23:11,671 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 221, in Service
-    return render_template('Service.html', form=form,Servies=Servies)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\loaders.py", line 129, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\User\Desktop\microblog\app\templates\Service.html", line 9, in template
-    {%  Serviess = show.ServiceName %}<br>
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'Serviess'. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
-2020-05-03 16:12:40,634 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:12:42,358 ERROR: Exception on /Service [GET] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.post' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
     rv = self.dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 221, in Service
-    return render_template('Service.html', form=form,Servies=Servies)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\loaders.py", line 129, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 31, in index
+    page, current_app.config['POSTS_PER_PAGE'], False)
+  File "/usr/local/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in paginate
+    items = self.limit(per_page).offset((page - 1) * per_page).all()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3233, in all
+    return list(self)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\User\Desktop\microblog\app\templates\Service.html", line 9, in template
-    {%  Serviess = show.ServiceName %}<br>
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'Serviess'. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
-2020-05-03 16:13:10,678 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:14:53,609 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 16:14:54,775 ERROR: Exception on /Service [GET] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.post' doesn't exist")
+[SQL: SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id 
+FROM (SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post INNER JOIN followers ON followers.followed_id = post.user_id 
+WHERE followers.follower_id = %s UNION SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post 
+WHERE post.user_id = %s) AS anon_1 ORDER BY anon_1.post_timestamp DESC 
+ LIMIT %s, %s]
+[parameters: (0, 0, 0, 25)]
+(Background on this error at: http://sqlalche.me/e/f405)
+2022-03-01 01:28:37,109 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-01 01:28:52,715 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.followers' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
     rv = self.dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 221, in Service
-    return render_template('Service.html', form=form,Servies=Servies)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 31, in index
+    page, current_app.config['POSTS_PER_PAGE'], False)
+  File "/usr/local/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in paginate
+    items = self.limit(per_page).offset((page - 1) * per_page).all()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3233, in all
+    return list(self)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\User\Desktop\microblog\app\templates\Service.html", line 3, in top-level template code
-    {% from app.models import EService %}
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app' is undefined
-2020-05-03 16:15:06,754 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.followers' doesn't exist")
+[SQL: SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id 
+FROM (SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post INNER JOIN followers ON followers.followed_id = post.user_id 
+WHERE followers.follower_id = %s UNION SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post 
+WHERE post.user_id = %s) AS anon_1 ORDER BY anon_1.post_timestamp DESC 
+ LIMIT %s, %s]
+[parameters: (0, 0, 0, 25)]
+(Background on this error at: http://sqlalche.me/e/f405)

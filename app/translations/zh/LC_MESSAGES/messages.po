@@ -28,11 +28,11 @@ msgstr ""
 
 #: app/auth/forms.py:10 app/auth/forms.py:17 app/main/forms.py:10
 msgid "Username"
-msgstr "XXX"
+msgstr "Username"
 
 #: app/auth/forms.py:11 app/auth/forms.py:19 app/auth/forms.py:42
 msgid "Password"
-msgstr "YYY"
+msgstr "Password"
 
 #: app/auth/forms.py:12
 msgid "Remember Me"

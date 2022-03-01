@@ -1,134 +1,133 @@
-2020-05-03 15:47:57,576 ERROR: Exception on /Service [GET] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+2022-02-28 15:43:03,361 ERROR: Exception on /auth/login [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1246, in _execute_context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 588, in do_execute
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
     cursor.execute(statement, parameters)
-sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.user' doesn't exist")
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
     rv = self.dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 222, in Service
-    Serviess = EService.query.get(Show)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1004, in get
-    return self._get_impl(ident, loading.load_on_pk_identity)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1116, in _get_impl
-    return db_load_fn(self, primary_key_identity)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\loading.py", line 284, in load_on_pk_identity
-    return q.one()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3347, in one
-    ret = self.one_or_none()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3316, in one_or_none
-    ret = list(self)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3389, in __iter__
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 19, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3287, in first
+    ret = list(self[0:1])
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3065, in __getitem__
+    return list(res)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
     return self._execute_and_instances(context)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3414, in _execute_and_instances
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
     result = conn.execute(querycontext.statement, self._params)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
     return meth(self, multiparams, params)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 293, in _execute_on_connection
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
     return connection._execute_clauseelement(self, multiparams, params)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1101, in _execute_clauseelement
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
     distilled_params,
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1250, in _execute_context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
     e, statement, parameters, cursor, context
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
     util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
     reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1246, in _execute_context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 588, in do_execute
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
     cursor.execute(statement, parameters)
-sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
-[SQL: SELECT e_service."ServiceID" AS "e_service_ServiceID", e_service."ServiceName" AS "e_service_ServiceName" 
-FROM e_service 
-WHERE e_service."ServiceID" = ?]
-[parameters: (<EService 1>,)]
-(Background on this error at: http://sqlalche.me/e/rvf5)
-2020-05-03 15:50:11,206 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 15:50:12,211 ERROR: Exception on /Service [GET] [in C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.user' doesn't exist")
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
+FROM user 
+WHERE user.username = %s 
+ LIMIT %s]
+[parameters: ('Tester', 1)]
+(Background on this error at: http://sqlalche.me/e/f405)
+2022-02-28 15:44:14,252 ERROR: Exception on /auth/login [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1246, in _execute_context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 588, in do_execute
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
     cursor.execute(statement, parameters)
-sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.user' doesn't exist")
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
     rv = self.dispatch_request()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\User\Desktop\microblog\app\main\routes.py", line 222, in Service
-    Serviess = EService.query.get(Show)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1004, in get
-    return self._get_impl(ident, loading.load_on_pk_identity)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1116, in _get_impl
-    return db_load_fn(self, primary_key_identity)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\loading.py", line 284, in load_on_pk_identity
-    return q.one()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3347, in one
-    ret = self.one_or_none()
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3316, in one_or_none
-    ret = list(self)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3389, in __iter__
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 19, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3287, in first
+    ret = list(self[0:1])
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3065, in __getitem__
+    return list(res)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
     return self._execute_and_instances(context)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3414, in _execute_and_instances
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
     result = conn.execute(querycontext.statement, self._params)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 982, in execute
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
     return meth(self, multiparams, params)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 293, in _execute_on_connection
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
     return connection._execute_clauseelement(self, multiparams, params)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1101, in _execute_clauseelement
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
     distilled_params,
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1250, in _execute_context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
     e, statement, parameters, cursor, context
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
     util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
     reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1246, in _execute_context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context
-  File "C:\Users\User\Desktop\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 588, in do_execute
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
     cursor.execute(statement, parameters)
-sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
-[SQL: SELECT e_service."ServiceID" AS "e_service_ServiceID", e_service."ServiceName" AS "e_service_ServiceName" 
-FROM e_service 
-WHERE e_service."ServiceID" = ?]
-[parameters: (<EService 1>,)]
-(Background on this error at: http://sqlalche.me/e/rvf5)
-2020-05-03 15:50:25,251 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 15:50:58,102 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
-2020-05-03 15:52:08,406 INFO: Microblog startup [in C:\Users\User\Desktop\microblog\app\__init__.py:74]
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.user' doesn't exist")
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
+FROM user 
+WHERE user.username = %s 
+ LIMIT %s]
+[parameters: ('Tester', 1)]
+(Background on this error at: http://sqlalche.me/e/f405)
+2022-02-28 16:05:46,657 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
