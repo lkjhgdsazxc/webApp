@@ -1,5 +1,4 @@
-2022-03-01 01:36:49,340 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 01:44:50,223 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-01 07:11:02,484 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context
@@ -11,7 +10,7 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.mob_plan' doesn't exist")
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.governmentfac' doesn't exist")
 
 The above exception was the direct cause of the following exception:
 
@@ -27,7 +26,7 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
   File "/home/ec2-user/environment/webApp/app/main/routes.py", line 175, in Mobplanlist
-    moblist = MobPlan.query.all()
+    govlist = Governmentfac.query.all()
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3233, in all
     return list(self)
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
@@ -58,12 +57,13 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.mob_plan' doesn't exist")
-[SQL: SELECT mob_plan.id AS mob_plan_id, mob_plan.`Pname` AS `mob_plan_Pname`, mob_plan.`Price` AS `mob_plan_Price`, mob_plan.`Data` AS `mob_plan_Data` 
-FROM mob_plan]
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.governmentfac' doesn't exist")
+[SQL: SELECT governmentfac.govid AS governmentfac_govid, governmentfac.`District` AS `governmentfac_District`, governmentfac.`Category` AS `governmentfac_Category`, governmentfac.`Venue_Name` AS `governmentfac_Venue_Name` 
+FROM governmentfac]
 (Background on this error at: http://sqlalche.me/e/f405)
-2022-03-01 03:28:43,931 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 03:29:10,125 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-01 07:16:06,748 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-01 08:41:25,471 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-01 08:41:38,359 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -75,37 +75,33 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 175, in Mobplanlist
-    moblist = Governmentfac.query.all()
-NameError: name 'Governmentfac' is not defined
-2022-03-01 03:29:25,846 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 175, in Mobplanlist
-    moblist = Governmentfac.query.all()
-NameError: name 'Governmentfac' is not defined
-2022-03-01 03:29:34,528 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 175, in Mobplanlist
-    moblist = Governmentfac.query.all()
-NameError: name 'Governmentfac' is not defined
-2022-03-01 06:07:43,141 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
+    return render_template('MobPlan.html', form=form, govlist=Governmentfac, govlist1=govlist1, govlist2=govlist2, govlist3=govlist3)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+    ctx.app,
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 20, in block 'content'
+    {% include 'includes/_flashmsg.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: includes/_flashmsg.html
+2022-03-01 08:43:29,630 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]

@@ -13,7 +13,7 @@ from flask_babel import Babel, lazy_gettext as _l
 from config import Config
 
 
-connection = mysql.connector.connect(host='localhost',port='3306',database='DATABASE',user='root',password='root')
+connection = mysql.connector.connect(host='18.235.52.171',port='3306',database='DATABASE',user='root',password='root')
 cursor = connection.cursor()
 
 

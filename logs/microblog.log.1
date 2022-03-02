@@ -1,4 +1,4 @@
-2022-03-02 09:50:17,889 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-02 12:25:08,033 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,27 +10,14 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 184, in Mobplanlist
-    return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group, govlist_filter=govlist_filter)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 148, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 997, in get_template
-    return self._load_template(name, globals)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 958, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "/usr/local/lib/python3.7/site-packages/jinja2/loaders.py", line 137, in load
-    code = environment.compile(source, name, filename)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 757, in compile
-    self.handle_exception(source=source_hint)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 151, in template
-    <li class="page-item active"><a class="page-link" href="{{ url_for('Mobplanlist', page=page) }}">{{ page }}</a></li>
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'Mobplanlist'
-2022-03-02 09:52:28,407 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:52:31,163 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 181, in Mobplanlist
+    print(govlist.govimg)
+AttributeError: 'Pagination' object has no attribute 'govimg'
+2022-03-02 12:44:16,385 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:44:58,034 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:46:00,463 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:47:40,791 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:47:46,654 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -42,26 +29,12 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 184, in Mobplanlist
-    return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group, govlist_filter=govlist_filter)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 148, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 997, in get_template
-    return self._load_template(name, globals)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 958, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "/usr/local/lib/python3.7/site-packages/jinja2/loaders.py", line 137, in load
-    code = environment.compile(source, name, filename)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 757, in compile
-    self.handle_exception(source=source_hint)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 151, in template
-    <li class="page-item active"><a class="page-link" href="{{ url_for('main.Mobplanlist', page=page) }}">{{ page }}</a></li>
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'main'
-2022-03-02 09:52:33,650 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 181, in Mobplanlist
+    print(govlist.items.govimg)
+AttributeError: 'list' object has no attribute 'govimg'
+2022-03-02 12:49:13,084 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:49:36,626 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:49:39,743 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -73,23 +46,90 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 184, in Mobplanlist
-    return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group, govlist_filter=govlist_filter)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 148, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 997, in get_template
-    return self._load_template(name, globals)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 958, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "/usr/local/lib/python3.7/site-packages/jinja2/loaders.py", line 137, in load
-    code = environment.compile(source, name, filename)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 757, in compile
-    self.handle_exception(source=source_hint)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 151, in template
-    <li class="page-item active"><a class="page-link" href="{{ url_for('main.Mobplanlist', page=page) }}">{{ page }}</a></li>
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'main'
-2022-03-02 09:52:51,413 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 182, in Mobplanlist
+    print(listte.govimg)
+AttributeError: 'Governmentfac' object has no attribute 'govimg'
+2022-03-02 12:50:41,804 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:59:21,035 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:01:58,295 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:06:09,907 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:07:16,826 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:07:49,761 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:11:02,482 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:18:12,110 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:18:14,440 ERROR: Exception on /Mobplanlist/4 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
+    group3 = Governmentfac.query.group_by(Governmentfac.govimg).all()
+AttributeError: type object 'Governmentfac' has no attribute 'govimg'
+2022-03-02 13:26:39,650 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:26:42,798 ERROR: Exception on /Mobplanlist/4 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
+    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
+AttributeError: type object 'governmentfac' has no attribute 'govimg'
+2022-03-02 13:26:43,985 ERROR: Exception on /Mobplanlist/2 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
+    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
+AttributeError: type object 'governmentfac' has no attribute 'govimg'
+2022-03-02 13:26:44,853 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
+    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
+AttributeError: type object 'governmentfac' has no attribute 'govimg'
+2022-03-02 13:26:45,624 ERROR: Exception on /Mobplanlist/4 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
+    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
+AttributeError: type object 'governmentfac' has no attribute 'govimg'

@@ -1,5 +1,4 @@
-2022-03-01 01:35:38,963 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 01:35:41,247 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-01 06:08:19,348 ERROR: Exception on /auth/register [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context
@@ -11,7 +10,7 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.followers' doesn't exist")
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '0' for key 'PRIMARY'")
 
 The above exception was the direct cause of the following exception:
 
@@ -24,18 +23,34 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 31, in index
-    page, current_app.config['POSTS_PER_PAGE'], False)
-  File "/usr/local/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in paginate
-    items = self.limit(per_page).offset((page - 1) * per_page).all()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3233, in all
-    return list(self)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
-    return self._execute_and_instances(context)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
-    result = conn.execute(querycontext.statement, self._params)
+  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 45, in register
+    db.session.commit()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2479, in flush
+    self._flush(objects)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2617, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2577, in _flush
+    flush_context.execute()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1137, in _emit_insert_statements
+    statement, params
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
     return meth(self, multiparams, params)
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
@@ -60,84 +75,10 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.followers' doesn't exist")
-[SQL: SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id 
-FROM (SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
-FROM post INNER JOIN followers ON followers.followed_id = post.user_id 
-WHERE followers.follower_id = %s UNION SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
-FROM post 
-WHERE post.user_id = %s) AS anon_1 ORDER BY anon_1.post_timestamp DESC 
- LIMIT %s, %s]
-[parameters: (0, 0, 0, 25)]
-(Background on this error at: http://sqlalche.me/e/f405)
-2022-03-01 01:35:45,904 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
-    cursor.execute(statement, parameters)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
-    res = self._query(query)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
-    db.query(q)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
-    _mysql.connection.query(self, query)
-MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.followers' doesn't exist")
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 31, in index
-    page, current_app.config['POSTS_PER_PAGE'], False)
-  File "/usr/local/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in paginate
-    items = self.limit(per_page).offset((page - 1) * per_page).all()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3233, in all
-    return list(self)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
-    return self._execute_and_instances(context)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
-    result = conn.execute(querycontext.statement, self._params)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
-    return meth(self, multiparams, params)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
-    distilled_params,
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
-    e, statement, parameters, cursor, context
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
-    util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
-    raise value.with_traceback(tb)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
-    cursor.execute(statement, parameters)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
-    res = self._query(query)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
-    db.query(q)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
-    _mysql.connection.query(self, query)
-sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.followers' doesn't exist")
-[SQL: SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id 
-FROM (SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
-FROM post INNER JOIN followers ON followers.followed_id = post.user_id 
-WHERE followers.follower_id = %s UNION SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
-FROM post 
-WHERE post.user_id = %s) AS anon_1 ORDER BY anon_1.post_timestamp DESC 
- LIMIT %s, %s]
-[parameters: (0, 0, 0, 25)]
-(Background on this error at: http://sqlalche.me/e/f405)
+sqlalchemy.exc.IntegrityError: (MySQLdb._exceptions.IntegrityError) (1062, "Duplicate entry '0' for key 'PRIMARY'")
+[SQL: INSERT INTO user (username, email, password_hash, about_me, last_seen) VALUES (%s, %s, %s, %s, %s)]
+[parameters: ('Test2', 'Test2@gmail.com', 'pbkdf2:sha256:260000$aZM7sTcWBucIS888$d5af39a539279f04809df5a51ea6e3bcd005a9d98987de5df3cee298ba17dac3', None, datetime.datetime(2022, 3, 1, 6, 8, 19, 347169))]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+2022-03-01 06:46:09,328 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-01 07:03:19,804 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-01 07:10:54,327 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]

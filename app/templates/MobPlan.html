@@ -31,6 +31,11 @@
                 <a class="dropdown-item" href="#">{{Categorys.Category}}</a>
                 {% endfor %}
               </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                {% for imgs in group3 %}
+                <a class="dropdown-item" href="#">{{imgs.govimg}}</a>
+                {% endfor %}
+              </div>
             </div>
             <select id="searchbar1" name="searchbar1" class="form-control">
               <option selected="selected"></option>
@@ -127,7 +132,7 @@
                 {% for govlists in govlist.items %}
                 <tr>
                   <td class="number text-center">{{ govlists.govid }}</td>
-                  <td class="image"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></td>
+                  <td class="image"><img src="{{ govlists.govimg }}" alt=""></td>
                   <td class="product"><strong>{{ govlists.Venue_Name }}</strong><br>{{ govlists.Address }}</td>
                   <td class="rate text-right"><span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></span></td>
                   <td class="price text-right">$350</td>

@@ -60,13 +60,15 @@ class MobPlan(db.Model):
     Price = db.Column(db.Integer)
     Data = db.Column(db.VARCHAR(10))
     Category = db.Column(db.VARCHAR(100))
+    govimg = db.Column(db.VARCHAR(200))
     
-class Governmentfac(db.Model):
+class governmentfac(db.Model):
     govid = db.Column(db.Integer, primary_key=True)
     District = db.Column(db.VARCHAR(100))
     Category = db.Column(db.VARCHAR(100))
     Venue_Name = db.Column(db.VARCHAR(100))
     Address = db.Column(db.VARCHAR(100))
+    govimg = db.Column(db.VARCHAR(200))
 
 class Pay(db.Model):
     id = db.Column(db.Integer, primary_key=True)

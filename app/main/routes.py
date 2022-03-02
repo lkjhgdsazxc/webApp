@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm, CheckLocationForm, PriceListForm, PayForm , MobPriceListForm, RecordForm, UpgradeForm
-from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, MyTVSuper,permission, Governmentfac
+from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, MyTVSuper,permission, governmentfac
 from app.main import bp
 
 @bp.before_request
@@ -175,9 +175,9 @@ def Mobplanlist(page):
     page = page
     pages = 10
     form = MobPriceListForm()
-    group = Governmentfac.query.group_by(Governmentfac.District).all()
-    group2 = Governmentfac.query.group_by(Governmentfac.Category).all()
-    govlist = Governmentfac.query.order_by(Governmentfac.govid.asc()).paginate(page,pages,error_out=False)
+    group = governmentfac.query.group_by(governmentfac.District).all()
+    group2 = governmentfac.query.group_by(governmentfac.Category).all()
+    govlist = governmentfac.query.order_by(governmentfac.govid.asc()).paginate(page,pages,error_out=False)
     if request.method == 'POST' and 'searchbar' in request.form:
         searchbar = request.form["searchbar"]
         Search = "%{}%".format(searchbar)
@@ -185,8 +185,7 @@ def Mobplanlist(page):
         Search1 = "%{}%".format(searchbar1)
         searchbar2 = request.form["searchbar2"]
         Search2 = "%{}%".format(searchbar2)
-        govlist = Governmentfac.query.filter(Governmentfac.Venue_Name.like(Search),Governmentfac.Category.like(Search1),Governmentfac.District.like(Search2)).paginate(per_page=pages, error_out=False) # LIKE: query.filter(User.name.like('%ednalan%'))
-        print(Search1)
+        govlist = governmentfac.query.filter(governmentfac.Venue_Name.like(Search),governmentfac.Category.like(Search1),governmentfac.District.like(Search2)).paginate(per_page=pages, error_out=False) # LIKE: query.filter(User.name.like('%ednalan%'))
         return render_template('MobPlan.html', govlist=govlist, searchbar=searchbar,searchbar1=searchbar1,searchbar2=searchbar2,group2=group2, group=group)
     return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group)
 
