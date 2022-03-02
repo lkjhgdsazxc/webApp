@@ -59,6 +59,7 @@ class MobPlan(db.Model):
     Pname = db.Column(db.VARCHAR(20))
     Price = db.Column(db.Integer)
     Data = db.Column(db.VARCHAR(10))
+    Category = db.Column(db.VARCHAR(100))
     
 class Governmentfac(db.Model):
     govid = db.Column(db.Integer, primary_key=True)

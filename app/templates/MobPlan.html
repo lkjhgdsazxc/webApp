@@ -20,15 +20,26 @@
             <hr>
             
             <!-- BEGIN FILTER BY CATEGORY -->
+            <form action="" method="post" autocompleted="off">
             <h4>By category:</h4>
-            <select id="cars">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categorys..
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                {% for Categorys in group2 %}
+                <a class="dropdown-item" href="#">{{Categorys.Category}}</a>
+                {% endfor %}
+              </div>
+            </div>
+            <select id="searchbar1" name="searchbar1" class="form-control">
               <option selected="selected"></option>
               {% for Categorys in group2 %}
               <option value={{Categorys.Category}}>{{Categorys.Category}}</option>
               {% endfor %}
             </select>
             <h4>By District:</h4>
-            <select id="cars">
+            <select id="searchbar2" name="searchbar2" class="form-control">
               <option selected="selected"></option>
               {% for Districts in group %}
               <option value={{Districts.District}}>{{Districts.District}}</option>
@@ -71,14 +82,15 @@
             <h2><i class="fa fa-file-o"></i> Result</h2>
             <hr>
             <!-- BEGIN SEARCH INPUT -->
+
             <div class="input-group">
-              <input type="text" class="form-control" value="web development">
+              <input id="searchbar" name="searchbar" type="text" class="form-control" placeholder="Enter any key word">
               <span class="input-group-btn">
-                <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+                <input class="btn btn-primary" value="Search" type="submit" name=""><i class="fa fa-search"></i></input>
               </span>
             </div>
-            <!-- END SEARCH INPUT -->
-            <p>Showing all results matching "web development"</p>
+            </form>
+
             
             <div class="padding"></div>
             
@@ -112,7 +124,7 @@
               <table class="table table-hover">
 
                 <tbody>
-                {% for govlists in govlist %}
+                {% for govlists in govlist.items %}
                 <tr>
                   <td class="number text-center">{{ govlists.govid }}</td>
                   <td class="image"><img src="https://via.placeholder.com/400x300/FF8C00" alt=""></td>
@@ -126,15 +138,36 @@
             <!-- END TABLE RESULT -->
             
             <!-- BEGIN PAGINATION -->
-            <ul class="pagination">
-              <li class="disabled"><a href="#">«</a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">»</a></li>
-            </ul>
+   <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    {% if govlist.has_prev %}
+                      <li class="page-item"> <a class="page-link" href="{{ url_for('main.Mobplanlist', page=govlist.prev_num) }}">Previous</a></li>
+                    {% else %}
+                      <li class="page-item"><a class="page-link btn disabled" href="#">Previous</a></li>
+                    {% endif %}
+      
+                   {% for page in govlist.iter_pages(left_edge=3, right_edge=3) %}
+                   {% if page %}
+                    
+                    {% if page==govlist.page %}
+                     <li class="page-item active"><a class="page-link" href="{{ url_for('main.Mobplanlist', page=page) }}">{{ page }}</a></li>
+                    {% else %}
+                     <li class="page-item"><a class="page-link" href="{{ url_for('main.Mobplanlist', page=page) }}">{{ page }}</a></li>
+                    {% endif %}
+                     
+                     {% else %}
+                      <li class="page-item disabled" id="example_ellipsis"><a href="#" class="page-link">…</a></li> 
+                     {% endif %}
+                     {% endfor %}
+ 
+                    {% if govlist.has_next %}
+                      <li class="page-item"> <a class="page-link" href="{{ url_for('main.Mobplanlist', page=govlist.next_num) }}">Next</a></li>
+                    {% else %}
+                      <li class="page-item"><a class="page-link btn disabled" href="#">Next</a></li>
+                    {% endif %}
+ 
+                </ul>
+    </nav>
             <!-- END PAGINATION -->
           </div>
           <!-- END RESULT -->
@@ -173,7 +206,7 @@ background:#eee;
 
 .search table tr td.rate {
     color: #f39c12;
-    line-height: 50px;
+    line-height: 25px;
 }
 
 .search table tr:hover {
@@ -191,7 +224,7 @@ background:#eee;
 
 .search table tr td.rate {
 	color: #f39c12;
-	line-height: 50px;
+	line-height: 25px;
 }
 
 .search table tr td.price {

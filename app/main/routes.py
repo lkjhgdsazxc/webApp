@@ -168,16 +168,29 @@ def planlist():
     listthree = Plan.query.get(3)
     return render_template('plan.html', form=form, list=list, listone=listone, listtwo=listtwo, listthree=listthree)
 
-@bp.route('/Mobplanlist', methods=['GET', 'POST'])
+@bp.route('/Mobplanlist', methods=['GET', 'POST'], defaults={"page": 1})
+@bp.route('/Mobplanlist/<int:page>', methods=['GET', 'POST'])
 @login_required
-def Mobplanlist():
+def Mobplanlist(page):
+    page = page
+    pages = 10
     form = MobPriceListForm()
-    govlist = Governmentfac.query.all()
     group = Governmentfac.query.group_by(Governmentfac.District).all()
     group2 = Governmentfac.query.group_by(Governmentfac.Category).all()
+    govlist = Governmentfac.query.order_by(Governmentfac.govid.asc()).paginate(page,pages,error_out=False)
+    if request.method == 'POST' and 'searchbar' in request.form:
+        searchbar = request.form["searchbar"]
+        Search = "%{}%".format(searchbar)
+        searchbar1 = request.form["searchbar1"]
+        Search1 = "%{}%".format(searchbar1)
+        searchbar2 = request.form["searchbar2"]
+        Search2 = "%{}%".format(searchbar2)
+        govlist = Governmentfac.query.filter(Governmentfac.Venue_Name.like(Search),Governmentfac.Category.like(Search1),Governmentfac.District.like(Search2)).paginate(per_page=pages, error_out=False) # LIKE: query.filter(User.name.like('%ednalan%'))
+        print(Search1)
+        return render_template('MobPlan.html', govlist=govlist, searchbar=searchbar,searchbar1=searchbar1,searchbar2=searchbar2,group2=group2, group=group)
     return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group)
 
-        
+
 
 
 @bp.route('/PaySite',methods=['GET', 'POST'])
@@ -278,3 +291,4 @@ def entertainment():
     Plan1 = MyTVSuper.query.get(1)
     Plan2 = MyTVSuper.query.get(2)
     return render_template('MyTVSuper.html', form=form,Plan1=Plan1,Plan2=Plan2)
+    

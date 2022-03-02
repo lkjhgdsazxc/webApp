@@ -1,4 +1,5 @@
-2022-02-28 16:05:50,005 ERROR: Exception on /auth/login [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-01 01:35:38,963 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-01 01:35:41,247 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context
@@ -10,7 +11,7 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-MySQLdb._exceptions.ProgrammingError: (1146, "Table 'db.user' doesn't exist")
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.followers' doesn't exist")
 
 The above exception was the direct cause of the following exception:
 
@@ -23,12 +24,14 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 19, in login
-    user = User.query.filter_by(username=form.username.data).first()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3287, in first
-    ret = list(self[0:1])
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3065, in __getitem__
-    return list(res)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 31, in index
+    page, current_app.config['POSTS_PER_PAGE'], False)
+  File "/usr/local/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in paginate
+    items = self.limit(per_page).offset((page - 1) * per_page).all()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3233, in all
+    return list(self)
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
     return self._execute_and_instances(context)
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
@@ -57,14 +60,17 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'db.user' doesn't exist")
-[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
-FROM user 
-WHERE user.username = %s 
- LIMIT %s]
-[parameters: ('Tester', 1)]
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.followers' doesn't exist")
+[SQL: SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id 
+FROM (SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post INNER JOIN followers ON followers.followed_id = post.user_id 
+WHERE followers.follower_id = %s UNION SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post 
+WHERE post.user_id = %s) AS anon_1 ORDER BY anon_1.post_timestamp DESC 
+ LIMIT %s, %s]
+[parameters: (0, 0, 0, 25)]
 (Background on this error at: http://sqlalche.me/e/f405)
-2022-02-28 16:06:00,390 ERROR: Exception on /auth/login [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-01 01:35:45,904 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context
@@ -76,7 +82,7 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-MySQLdb._exceptions.ProgrammingError: (1146, "Table 'db.user' doesn't exist")
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'DATABASE.followers' doesn't exist")
 
 The above exception was the direct cause of the following exception:
 
@@ -89,12 +95,14 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 19, in login
-    user = User.query.filter_by(username=form.username.data).first()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3287, in first
-    ret = list(self[0:1])
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3065, in __getitem__
-    return list(res)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 31, in index
+    page, current_app.config['POSTS_PER_PAGE'], False)
+  File "/usr/local/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 496, in paginate
+    items = self.limit(per_page).offset((page - 1) * per_page).all()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3233, in all
+    return list(self)
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
     return self._execute_and_instances(context)
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
@@ -123,12 +131,13 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'db.user' doesn't exist")
-[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
-FROM user 
-WHERE user.username = %s 
- LIMIT %s]
-[parameters: ('Test', 1)]
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'DATABASE.followers' doesn't exist")
+[SQL: SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id 
+FROM (SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post INNER JOIN followers ON followers.followed_id = post.user_id 
+WHERE followers.follower_id = %s UNION SELECT post.id AS post_id, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post 
+WHERE post.user_id = %s) AS anon_1 ORDER BY anon_1.post_timestamp DESC 
+ LIMIT %s, %s]
+[parameters: (0, 0, 0, 25)]
 (Background on this error at: http://sqlalche.me/e/f405)
-2022-02-28 16:23:51,941 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 01:22:18,422 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
