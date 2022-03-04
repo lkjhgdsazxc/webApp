@@ -1,4 +1,19 @@
-2022-03-02 12:25:08,033 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-04 08:22:00,316 ERROR: Exception on /aboutus [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'FYP_DATABASE.support_tel' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,126 +25,98 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 181, in Mobplanlist
-    print(govlist.govimg)
-AttributeError: 'Pagination' object has no attribute 'govimg'
-2022-03-02 12:44:16,385 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 12:44:58,034 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 12:46:00,463 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 12:47:40,791 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 12:47:46,654 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 181, in Mobplanlist
-    print(govlist.items.govimg)
-AttributeError: 'list' object has no attribute 'govimg'
-2022-03-02 12:49:13,084 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 12:49:36,626 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 12:49:39,743 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 182, in Mobplanlist
-    print(listte.govimg)
-AttributeError: 'Governmentfac' object has no attribute 'govimg'
-2022-03-02 12:50:41,804 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 12:59:21,035 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 13:01:58,295 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 13:06:09,907 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 13:07:16,826 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 13:07:49,761 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 13:11:02,482 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 13:18:12,110 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 13:18:14,440 ERROR: Exception on /Mobplanlist/4 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
-    group3 = Governmentfac.query.group_by(Governmentfac.govimg).all()
-AttributeError: type object 'Governmentfac' has no attribute 'govimg'
-2022-03-02 13:26:39,650 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 13:26:42,798 ERROR: Exception on /Mobplanlist/4 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
-    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
-AttributeError: type object 'governmentfac' has no attribute 'govimg'
-2022-03-02 13:26:43,985 ERROR: Exception on /Mobplanlist/2 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
-    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
-AttributeError: type object 'governmentfac' has no attribute 'govimg'
-2022-03-02 13:26:44,853 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
-    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
-AttributeError: type object 'governmentfac' has no attribute 'govimg'
-2022-03-02 13:26:45,624 ERROR: Exception on /Mobplanlist/4 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
-    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
-AttributeError: type object 'governmentfac' has no attribute 'govimg'
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 276, in aboutus
+    Tel1 = SupportTel.query.get(11112222)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 1004, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 1116, in _get_impl
+    return db_load_fn(self, primary_key_identity)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/loading.py", line 284, in load_on_pk_identity
+    return q.one()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3347, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3316, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'FYP_DATABASE.support_tel' doesn't exist")
+[SQL: SELECT support_tel.`Telno` AS `support_tel_Telno`, support_tel.`Service` AS `support_tel_Service` 
+FROM support_tel 
+WHERE support_tel.`Telno` = %s]
+[parameters: (11112222,)]
+(Background on this error at: http://sqlalche.me/e/f405)
+2022-03-04 08:22:35,427 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:26:36,263 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:27:27,555 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:28:41,576 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:31:21,305 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:31:53,707 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:33:39,522 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:34:51,944 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:35:43,827 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:41:16,206 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:41:47,698 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:42:54,162 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:45:00,567 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:45:39,676 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:46:05,148 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:47:09,461 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:52:28,516 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:55:41,979 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:57:52,664 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 08:58:15,727 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:10:27,952 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:11:08,355 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:13:55,106 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:14:04,737 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:14:48,001 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:21:44,667 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:23:03,682 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:23:49,653 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:27:41,665 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:28:31,899 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:31:44,208 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:32:39,023 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:33:06,721 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 09:36:58,982 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:30:18,469 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:31:59,590 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:35:26,593 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:37:17,205 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:37:47,005 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:41:23,327 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:49:49,341 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:51:07,352 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:51:22,288 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:51:37,857 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:52:28,167 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:53:21,964 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:54:12,660 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:56:14,285 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-04 13:56:34,637 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]

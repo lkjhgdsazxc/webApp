@@ -1,9 +1,10 @@
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
-from flask import Flask, request, current_app, render_template
+from flask import Flask, request, current_app, render_template, jsonify
 import mysql.connector
 from flask_sqlalchemy import SQLAlchemy
+from flask_mysqldb import MySQL,MySQLdb
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
@@ -13,8 +14,7 @@ from flask_babel import Babel, lazy_gettext as _l
 from config import Config
 
 
-connection = mysql.connector.connect(host='18.235.52.171',port='3306',database='DATABASE',user='root',password='root')
-cursor = connection.cursor()
+
 
 
 

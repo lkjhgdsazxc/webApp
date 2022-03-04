@@ -1,4 +1,4 @@
-2022-03-02 09:42:27,398 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-02 12:25:08,033 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,35 +10,14 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 184, in Mobplanlist
-    return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group, govlist_filter=govlist_filter)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 141, in block 'content'
-    {% if govlists.has_prev %}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'govlists' is undefined
-2022-03-02 09:43:54,887 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:43:56,412 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 181, in Mobplanlist
+    print(govlist.govimg)
+AttributeError: 'Pagination' object has no attribute 'govimg'
+2022-03-02 12:44:16,385 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:44:58,034 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:46:00,463 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:47:40,791 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:47:46,654 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -50,40 +29,12 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 184, in Mobplanlist
-    return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group, govlist_filter=govlist_filter)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 151, in block 'content'
-    <li class="page-item active"><a class="page-link" href="{{ url_for('index', page=page) }}">{{ page }}</a></li>
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'index' with values ['page']. Did you mean 'main.index' instead?
-2022-03-02 09:44:44,943 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:46:55,466 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:46:57,438 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 181, in Mobplanlist
+    print(govlist.items.govimg)
+AttributeError: 'list' object has no attribute 'govimg'
+2022-03-02 12:49:13,084 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:49:36,626 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:49:39,743 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -95,36 +46,90 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 184, in Mobplanlist
-    return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group, govlist_filter=govlist_filter)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 151, in block 'content'
-    <li class="page-item active"><a class="page-link" href="{{ url_for('index', page=page) }}">{{ page }}</a></li>
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'index' with values ['page']. Did you mean 'main.index' instead?
-2022-03-02 09:48:11,003 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:49:03,790 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 182, in Mobplanlist
+    print(listte.govimg)
+AttributeError: 'Governmentfac' object has no attribute 'govimg'
+2022-03-02 12:50:41,804 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:59:21,035 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:01:58,295 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:06:09,907 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:07:16,826 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:07:49,761 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:11:02,482 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:18:12,110 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:18:14,440 ERROR: Exception on /Mobplanlist/4 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
+    group3 = Governmentfac.query.group_by(Governmentfac.govimg).all()
+AttributeError: type object 'Governmentfac' has no attribute 'govimg'
+2022-03-02 13:26:39,650 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 13:26:42,798 ERROR: Exception on /Mobplanlist/4 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
+    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
+AttributeError: type object 'governmentfac' has no attribute 'govimg'
+2022-03-02 13:26:43,985 ERROR: Exception on /Mobplanlist/2 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
+    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
+AttributeError: type object 'governmentfac' has no attribute 'govimg'
+2022-03-02 13:26:44,853 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
+    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
+AttributeError: type object 'governmentfac' has no attribute 'govimg'
+2022-03-02 13:26:45,624 ERROR: Exception on /Mobplanlist/4 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
+    group3 = governmentfac.query.group_by(governmentfac.govimg).all()
+AttributeError: type object 'governmentfac' has no attribute 'govimg'

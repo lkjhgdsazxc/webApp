@@ -1,69 +1,4 @@
-2022-03-02 08:53:00,937 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 176, in Mobplanlist
-    govlist_filter = Governmentfac.query.filter_by(Governmentfac.Category == "Camp")
-TypeError: filter_by() takes 1 positional argument but 2 were given
-2022-03-02 08:55:53,819 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 08:57:21,603 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 08:57:22,855 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 176, in Mobplanlist
-    govlist_filter = Governmentfac.query.filter_by(Category)
-NameError: name 'Category' is not defined
-2022-03-02 08:57:34,335 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 176, in Mobplanlist
-    govlist_filter = Governmentfac.query.filter_by(Category = "Camp")
-NameError: name 'Category' is not defined
-2022-03-02 08:57:39,921 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 08:58:39,670 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:01:52,212 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:02:38,596 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:03:59,501 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:04:20,719 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:05:07,325 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:05:29,277 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:09:01,215 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:09:23,661 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:09:38,594 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:09:52,621 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:10:31,559 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:11:33,215 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:12:57,024 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:13:58,757 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:14:39,109 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:35:30,044 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:35:32,789 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-02 09:52:57,167 ERROR: Exception on /Mobplanlist/2 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -97,9 +32,86 @@ Traceback (most recent call last):
     {% block body -%}
   File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
     {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 126, in block 'content'
-    {% for govlists in govlist %}
-TypeError: 'Pagination' object is not iterable
-2022-03-02 09:37:09,086 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:38:02,548 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-02 09:42:26,383 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 142, in block 'content'
+    <li class="page-item"> <a class="page-link" href="{{ url_for('index', page=govlist.prev_num) }}">Previous</a></li>
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index' with values ['page']. Did you mean 'main.index' instead?
+2022-03-02 09:53:31,894 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:17:02,381 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:21:25,153 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:23:21,548 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:25:27,572 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:27:30,054 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:28:11,370 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:28:52,599 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:33:25,323 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:35:14,311 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:38:58,281 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:39:34,602 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:39:39,809 ERROR: Exception on /Mobplanlist [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 183, in Mobplanlist
+    govlist = Governmentfac.query.order_by(Governmentfac.id.asc()).paginate(page,pages,error_out=False)
+AttributeError: type object 'Governmentfac' has no attribute 'id'
+2022-03-02 10:41:18,788 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:43:29,000 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:44:30,908 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:51:43,347 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:53:51,430 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:55:30,102 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:58:49,685 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:58:52,679 ERROR: Exception on /Mobplanlist [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 187, in Mobplanlist
+    searchresults = govlist.query.filter(govlist.Venue_Name.like(Search)).paginate(per_page=pages, error_out=False) # LIKE: query.filter(User.name.like('%ednalan%'))
+AttributeError: 'Pagination' object has no attribute 'Venue_Name'
+2022-03-02 10:59:45,766 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 10:59:48,802 ERROR: Exception on /Mobplanlist [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 187, in Mobplanlist
+    govlist = govlist.query.filter(govlist.Venue_Name.like(Search)).paginate(per_page=pages, error_out=False) # LIKE: query.filter(User.name.like('%ednalan%'))
+AttributeError: 'Pagination' object has no attribute 'Venue_Name'
+2022-03-02 11:00:52,160 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 11:14:26,433 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 11:17:15,327 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 11:43:35,581 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:05:35,962 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:12:56,638 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:13:36,398 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:15:41,008 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 12:24:52,870 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]

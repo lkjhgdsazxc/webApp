@@ -1,4 +1,4 @@
-2022-03-01 08:43:37,694 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-02 09:49:07,223 ERROR: Exception on /Mobplanlist/2 [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,8 +10,8 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
-    return render_template('MobPlan.html', form=form, govlist=Governmentfac, govlist1=govlist1, govlist2=govlist2, govlist3=govlist3)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 184, in Mobplanlist
+    return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group, govlist_filter=govlist_filter)
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -30,15 +30,19 @@ Traceback (most recent call last):
     {%- block html %}
   File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
     {% block body -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 21, in block 'body'
-    {% include 'includes/_flashmsg.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 59, in get_source
-    return self._get_source_fast(environment, template)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 95, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: includes/_flashmsg.html
-2022-03-01 08:47:47,244 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 08:47:56,993 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 142, in block 'content'
+    <li class="page-item"> <a class="page-link" href="{{ url_for('index', page=govlist.prev_num) }}">Previous</a></li>
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index' with values ['page']. Did you mean 'main.index' instead?
+2022-03-02 09:49:32,399 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-02 09:49:34,048 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -50,35 +54,26 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 180, in Mobplanlist
-    return render_template('MobPlan.html', form=form, govlist=Governmentfac, govlist1=govlist1, govlist2=govlist2, govlist3=govlist3)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 184, in Mobplanlist
+    return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group, govlist_filter=govlist_filter)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/usr/local/lib/python3.7/site-packages/jinja2/loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 1, in top-level template code
-    {% extends 'layout.html' %}
-  File "/home/ec2-user/environment/webApp/app/templates/layout.html", line 15, in top-level template code
-    {% include 'includes/_navbar.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 59, in get_source
-    return self._get_source_fast(environment, template)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 95, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: includes/_navbar.html
-2022-03-01 11:46:12,509 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 11:48:08,466 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 11:48:47,102 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 11:49:11,477 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 11:50:15,017 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 11:51:33,710 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 11:52:34,545 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 11:53:09,385 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 11:57:01,117 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 11:57:04,327 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 151, in template
+    <li class="page-item active"><a class="page-link" href="{{ url_for('main.Mobplanlist', page=page) }}">{{ page }}</a></li>
+jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'main'
+2022-03-02 09:49:35,643 ERROR: Exception on /Mobplanlist [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -90,34 +85,23 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 175, in Mobplanlist
-    govlist = Governmentfac.query.all()
-UnboundLocalError: local variable 'Governmentfac' referenced before assignment
-2022-03-01 12:31:00,816 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 12:32:59,412 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 12:43:25,007 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 12:46:25,194 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 12:47:48,465 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 12:49:18,517 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 12:55:22,689 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:03:51,430 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:05:10,513 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:09:14,548 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:10:09,823 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:13:46,661 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:14:11,320 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:16:06,099 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:19:51,855 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:21:19,119 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:22:06,202 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:30:07,560 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:36:49,360 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:39:35,296 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:43:33,130 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:44:06,134 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:44:36,219 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:45:05,139 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:46:40,226 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:50:12,998 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:54:42,589 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-01 13:56:55,056 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 184, in Mobplanlist
+    return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group, govlist_filter=govlist_filter)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/usr/local/lib/python3.7/site-packages/jinja2/loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 151, in template
+    <li class="page-item active"><a class="page-link" href="{{ url_for('main.Mobplanlist', page=page) }}">{{ page }}</a></li>
+jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'main'
+2022-03-02 09:50:16,347 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
