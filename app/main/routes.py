@@ -6,6 +6,9 @@ from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm, CheckLocationForm, PriceListForm, PayForm , MobPriceListForm, RecordForm, UpgradeForm
 from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, MyTVSuper,permission
 from app.main import bp
+from werkzeug.utils import secure_filename
+import boto3
+#import access as enter
 
 @bp.before_request
 def before_request():
@@ -277,3 +280,38 @@ def entertainment():
     Plan1 = MyTVSuper.query.get(1)
     Plan2 = MyTVSuper.query.get(2)
     return render_template('MyTVSuper.html', form=form,Plan1=Plan1,Plan2=Plan2)
+    
+@bp.route('/s3', methods=['GET', 'POST'])
+def s3():
+    form = MobPriceListForm()
+    return render_template('s3_send_image.html', form=form)
+    
+@bp.route('/upload', methods=['POST'])
+def upload():
+    session = boto3.Session()
+    credentials = session.get_credentials()
+    a = credentials.access_key
+    b = credentials.secret_key
+    c = credentials.token
+
+    s3 = boto3.client('s3',
+                    aws_access_key_id= a ,
+                    aws_secret_access_key= b ,
+                    aws_session_token= c
+                    )
+                    
+    BUCKET_NAME='fype03'
+    if request.method == 'POST':
+        img = request.files['file']
+        if img:
+                filename = secure_filename(img.filename)
+                img.save(filename)
+                s3.upload_file(
+                    Bucket = BUCKET_NAME,
+                    Filename=filename,
+                    Key = filename
+                )
+                msg = "Upload Done ! "
+
+    return render_template("s3_send_image.html",msg =msg)
+    
