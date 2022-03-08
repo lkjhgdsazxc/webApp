@@ -70,6 +70,23 @@ class governmentfac(db.Model):
     Address = db.Column(db.VARCHAR(100))
     govimg = db.Column(db.VARCHAR(200))
 
+class facility(db.Model):
+    fid = db.Column(db.Integer, primary_key=True)
+    fname = db.Column(db.VARCHAR(100))
+    type = db.Column(db.VARCHAR(100))
+    company = db.Column(db.VARCHAR(100))
+    price = db.Column(db.VARCHAR(100))
+
+class booking_record(db.Model):
+    bid = db.Column(db.Integer, primary_key=True)
+    center = db.Column(db.VARCHAR(100))
+    id = db.Column(db.Integer)
+    faclists = db.Column(db.VARCHAR(100))
+    bdate = db.Column(db.Date)
+    starttime = db.Column(db.VARCHAR(100))
+    endtime = db.Column(db.VARCHAR(100))
+    status = db.Column(db.VARCHAR(50))
+
 class Pay(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     planid = db.Column(db.VARCHAR)

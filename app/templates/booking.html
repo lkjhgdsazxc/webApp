@@ -1,29 +1,56 @@
 <link rel="stylesheet" href="css/popup.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<!--Card-->
 <div class="container d-flex justify-content-center">
+
     <div class="row my-5">
         <div class="col-md-6 text-left text-white lcol">
             <img width="550" height="500" class="pull-right" src="{{ popup.govimg }}">
         </div>
         <div class="col-md-6 rcol">
-            <form class="sign-up">
+            <form class="sign-up" action="" id="booking_form" method="post" autocompleted="off">
                 <h2 class="heading mb-4">{{ popup.Venue_Name }}</h2>
-                <div class="form-group fone mt-2"> <input type="class" class="form-control" placeholder="Select the place..."> </div>
-                    <div class="form-group fone mt-2"> <input type='text' class="form-control" name="datetime" id="datetime" placeholder="Start Date time"> </div>
-                    <div class="form-group fone mt-2"> <input type="text" class="form-control" name="datetime" id="datetime" placeholder="End Date time">
+                <input type="hidden" id="center" name="center" value="{{ popup.Venue_Name }}">
+                    <select id="faclists" name="faclists" class="form-control" required>
+                      <option selected="selected"></option>
+                      {% for faclists in faclist %}
+                      <option value="{{faclists.fname}}">{{faclists.fname}}</option>
+                      {% endfor %}
+                    </select>
+                    <div class="form-group fone mt-2"> <input type='date' name="date" class="form-control" placeholder="Date" required> </div>
+                    <div class="form-group fone mt-2"> <input type="time" id="stime" name="stime" class="form-control" placeholder="Start time" required>
+                    <div class="form-group fone mt-2"> <input type="time" id="etime" name="etime" class="form-control" placeholder="End time" required>
                 <div class="image"></div>
                 </div> <input type="checkbox" class="form-check-input ml-0" id="exampleCheck1"> <label class="form-check-label ml-3" for="exampleCheck1">I agree to Stoke <u>Terms</u> and <u>Privacy Policy</u></label>
-            </form> <button type="button" class="btn btn-success mt-5">Get satrted now</button>
+             </form>
+             <input class="btn btn-primary" value="Submit" type="submit" name="book_insert" id="book_insert">
         </div>
     </div>
 </div>
 
 
-<script>
-flatpickr("#datetime", {
-    enableTime: true,
-    dateFormat: "Y-m-d H:i",
-});
+<script type='text/javascript'>
+$(document).ready(function(){
+  event.preventDefault();  
+ $('#booking_form').on("submit", function(event){  
+  event.preventDefault();
+   $.ajax({  
+    url:"/book_insert",  
+    method:"POST",  
+    data:$('#booking_form').serialize(),  
+    beforeSend:function(){  
+     $('#book_insert').val("Inserting");  
+    },  
+    success:function(data){  
+     $('#empModal').modal('hide'); 
+      if (data=='success')  {alert("booking successful")
+       window.location.href = "/MobPlan";   
+     }
+    }  
+   });  
+  })  
+ })
 </script>
+
+ 
+ 

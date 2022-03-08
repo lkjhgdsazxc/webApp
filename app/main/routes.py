@@ -3,8 +3,8 @@ from flask import render_template, flash, redirect, url_for, request, g, session
 from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from app import current_app, db
-from app.main.forms import EditProfileForm, PostForm, CheckLocationForm, PriceListForm, PayForm , MobPriceListForm, RecordForm, UpgradeForm
-from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, MyTVSuper,permission, governmentfac
+from app.main.forms import EditProfileForm, PostForm, CheckLocationForm, PriceListForm, PayForm , MobPriceListForm, RecordForm, UpgradeForm, BookingForm
+from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, MyTVSuper,permission, governmentfac, facility, booking_record
 from app.main import bp
 
 @bp.before_request
@@ -192,9 +192,39 @@ def Mobplanlist(page):
 @bp.route("/booking",methods=["POST","GET"])
 def booking():
     if request.method == 'POST':
-        userid = request.form['userid']
-        popup = governmentfac.query.get(userid)
-    return jsonify({'htmlresponse': render_template('booking.html',popup=popup)})
+        faclist = facility.query.all()
+        govid = request.form['govid']
+        popup = governmentfac.query.get(govid)
+    return jsonify({'htmlresponse': render_template('booking.html',popup=popup,faclist=faclist)})
+    
+@bp.route('/book_insert', methods=['GET', 'POST'])
+def book_insert():
+    if request.method == 'POST': 
+        center = request.form['center']
+        faclists = request.form['faclists']
+        date = request.form['date']
+        stime = request.form['stime']
+        etime = request.form['etime']
+        BookingRc = booking_record(id=current_user.id, center=center,faclists=faclists, bdate=date, starttime=stime,endtime=etime,status="active")
+        db.session.add(BookingRc)
+        db.session.commit()
+    return jsonify('success')
+
+@bp.route("/cancelbook",methods=["POST","GET"])
+def cancelbook():
+    cancelbook = request.form['string']
+    print(cancelbook)
+    cancel = booking_record.query.get(cancelbook)
+    cancel.status = 'Canceled'
+    db.session.commit()
+    return render_template('Record.html')
+
+#@bp.route("/timecounting",methods=["POST","GET"])
+#def timecounting():
+ #   stime = request.form["stime"]
+  #  etime = request.form["stime"]
+   # FMT = '%H:%M'
+    #tdelta = datetime.strptime(etime, FMT) - datetime.strptime(stime, FMT)
 
 
 @bp.route('/PaySite',methods=['GET', 'POST'])
@@ -213,14 +243,8 @@ def PaySite():
 @bp.route('/CheckRecord',methods=['GET', 'POST'])
 @login_required
 def CheckRecord():
-    form = RecordForm()
-    Record = Pay.query.get(current_user.id)
-    if Record is not None:
-        flash(_('You have purchase Record!'))
-    elif Record is None:
-        flash(_('You are not purchase Record'))
-        return redirect(url_for('main.index'))
-    return render_template('Record.html',form=form, Record=Record)
+    Record = booking_record.query.filter(booking_record.id.like(current_user.id))
+    return render_template('Record.html', Record=Record)
 
 @bp.route('/Upgrade',methods=['GET', 'POST'])
 @login_required

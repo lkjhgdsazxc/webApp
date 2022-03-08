@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="css/popup.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<!--Card-->
+<div class="container d-flex justify-content-center">
+    <div class="row my-5">
+        <div class="col-md-6 text-left text-white lcol">
+            <img width="550" height="500" class="pull-right" src="{{ popup.govimg }}">
+        </div>
+        <div class="col-md-6 rcol">
+            <form class="sign-up" method="POST">
+                <h2 class="heading mb-4">{{ popup.Venue_Name }}</h2>
+                    <select id="searchbar1" name="searchbar1" class="form-control">
+                      <option selected="selected"></option>
+                      {% for faclists in faclist %}
+                      <option value={{faclists.fname}}>{{faclists.fname}}</option>
+                      {% endfor %}
+                    </select>
+                    <div class="form-group fone mt-2"> <input type='date' class="form-control" placeholder="Date"> </div>
+                    <div class="form-group fone mt-2"> <input type="time" class="form-control" name="datetime" placeholder="Start time">
+                    <div class="form-group fone mt-2"> <input type="time" class="form-control" name="datetime" placeholder="End time">
+                <div class="image"></div>
+                </div> <input type="checkbox" class="form-check-input ml-0" id="exampleCheck1"> <label class="form-check-label ml-3" for="exampleCheck1">I agree to Stoke <u>Terms</u> and <u>Privacy Policy</u></label>
+            </form> <button id="click2book2" type="button" class="btn btn-success mt-5">Review</button>
+        </div>
+    </div>
+</div>

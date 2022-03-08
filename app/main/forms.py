@@ -1,7 +1,9 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, \
+from wtforms import StringField, SubmitField, DateField, \
     TextAreaField
 from wtforms.validators import ValidationError, DataRequired, Length
+from wtforms_components import TimeField
+from werkzeug.datastructures import MultiDict
 from flask_babel import _, lazy_gettext as _l
 from app.models import User, Plan
 
@@ -52,4 +54,9 @@ class RecordForm(FlaskForm):
 
 class UpgradeForm(FlaskForm):
     planname =  StringField(_l('Please Enter Plan Name'), validators=[DataRequired()])
+    submit = SubmitField(_l('Submit'))
+
+class BookingForm(FlaskForm):
+    start_date = DateField('Start date')
+    start_time = TimeField('Start time')
     submit = SubmitField(_l('Submit'))
