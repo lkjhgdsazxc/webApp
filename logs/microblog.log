@@ -139,3 +139,7 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/boto3/s3/transfer.py", line 287, in upload_file
     filename, '/'.join([bucket, key]), e))
 S3UploadFailedError: Failed to upload Bro.png to fype03/Bro.png: An error occurred (ExpiredToken) when calling the PutObject operation: The provided token has expired.
+2022-03-11 07:24:12,719 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 07:28:04,250 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 07:46:23,475 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 07:47:06,918 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
