@@ -1,4 +1,4 @@
-2022-03-02 15:47:07,407 ERROR: Exception on /auth/login [GET] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+2022-03-04 05:00:38,130 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,44 +10,27 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 28, in login
-    return render_template('auth/login.html', title=_('Sign In'), form=form)
-  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/home/ec2-user/environment/webApp/app/templates/auth/login.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 3, in block "doc"
-    <html{% block html_attribs %}{% endblock html_attribs %}>
-  File "/usr/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 11, in block "html"
-    {%- endblock metas %}
-  File "/usr/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 12, in block "body"
-    
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 86, in block "navbar"
-    <div class="main-nav-icon">
-  File "/usr/lib/python2.7/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/usr/lib/python2.7/site-packages/werkzeug/routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-BuildError: Could not build url for endpoint 's3_send_image'. Did you mean 'main.Upgrade' instead?
-2022-03-02 15:47:13,136 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-02 15:49:47,896 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-02 15:51:47,394 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-02 15:57:42,488 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-02 15:57:49,613 ERROR: Exception on /auth/login [GET] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 308, in upload
+    return render_template("s3_send_image",msg =msg)
+  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/lib/python2.7/site-packages/jinja2/loaders.py", line 117, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: s3_send_image
+2022-03-04 05:02:57,937 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 15:47:37,453 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 15:51:27,495 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 15:53:13,929 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -59,41 +42,19 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 28, in login
-    return render_template('auth/login.html', title=_('Sign In'), form=form)
-  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/home/ec2-user/environment/webApp/app/templates/auth/login.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 3, in block "doc"
-    <html{% block html_attribs %}{% endblock html_attribs %}>
-  File "/usr/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 11, in block "html"
-    {%- endblock metas %}
-  File "/usr/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 12, in block "body"
-    
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 86, in block "navbar"
-    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.s3_send_image') }}">s3</a></li>
-  File "/usr/lib/python2.7/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/usr/lib/python2.7/site-packages/werkzeug/routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-BuildError: Could not build url for endpoint 'main.s3_send_image'. Did you mean 'main.index' instead?
-2022-03-02 16:16:53,078 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-02 16:17:05,351 ERROR: Exception on /s3 [GET] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 304, in upload
+    Key = filename
+  File "/usr/lib/python2.7/site-packages/boto3/s3/inject.py", line 131, in upload_file
+    extra_args=ExtraArgs, callback=Callback)
+  File "/usr/lib/python2.7/site-packages/boto3/s3/transfer.py", line 279, in upload_file
+    future.result()
+  File "/usr/lib/python2.7/site-packages/s3transfer/futures.py", line 106, in result
+    return self._coordinator.result()
+  File "/usr/lib/python2.7/site-packages/s3transfer/futures.py", line 265, in result
+    raise self._exception
+OSError: [Errno 2] No such file or directory: 'god_face.png'
+2022-03-04 15:53:55,511 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 15:54:55,876 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -105,9 +66,15 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-TypeError: s3() takes exactly 1 argument (0 given)
-2022-03-02 16:27:04,445 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-02 16:27:17,983 ERROR: Exception on /s3 [GET] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 304, in upload
+    Key = filename
+  File "/usr/lib/python2.7/site-packages/boto3/s3/inject.py", line 131, in upload_file
+    extra_args=ExtraArgs, callback=Callback)
+  File "/usr/lib/python2.7/site-packages/boto3/s3/transfer.py", line 287, in upload_file
+    filename, '/'.join([bucket, key]), e))
+S3UploadFailedError: Failed to upload god_face.png to fype03/god_face.png: An error occurred (ExpiredToken) when calling the PutObject operation: The provided token has expired.
+2022-03-04 15:56:09,197 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 15:56:52,729 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -119,14 +86,59 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-TypeError: s3() takes exactly 1 argument (0 given)
-2022-03-02 16:28:40,923 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-02 17:51:44,672 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-03 17:18:24,159 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-03 17:24:07,764 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-03 17:40:24,986 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-03 17:44:00,258 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-03 17:48:18,210 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 02:06:34,164 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 02:30:58,611 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 04:58:13,035 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 304, in upload
+    Key = filename
+  File "/usr/lib/python2.7/site-packages/boto3/s3/inject.py", line 131, in upload_file
+    extra_args=ExtraArgs, callback=Callback)
+  File "/usr/lib/python2.7/site-packages/boto3/s3/transfer.py", line 287, in upload_file
+    filename, '/'.join([bucket, key]), e))
+S3UploadFailedError: Failed to upload god_face.png to fype03/god_face.png: An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.
+2022-03-04 19:13:04,110 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 19:14:59,280 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 294, in upload
+    aws_access_key_id= credentials.access_key,
+AttributeError: 'NoneType' object has no attribute 'access_key'
+2022-03-04 19:21:19,084 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 19:21:39,501 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 294, in upload
+    aws_access_key_id= credentials.access_key,
+AttributeError: 'NoneType' object has no attribute 'access_key'
+2022-03-04 19:24:50,576 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 19:25:15,398 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 294, in upload
+    aws_access_key_id= credentials.access_key,
+AttributeError: 'NoneType' object has no attribute 'access_key'
+2022-03-04 19:30:20,517 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]

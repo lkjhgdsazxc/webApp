@@ -1,4 +1,4 @@
-2022-03-04 05:00:38,130 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+2022-03-04 19:30:40,486 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,27 +10,11 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 308, in upload
-    return render_template("s3_send_image",msg =msg)
-  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/usr/lib/python2.7/site-packages/jinja2/loaders.py", line 117, in load
-    source, filename, uptodate = self.get_source(environment, name)
-  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 60, in get_source
-    return self._get_source_fast(environment, template)
-  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 89, in _get_source_fast
-    raise TemplateNotFound(template)
-TemplateNotFound: s3_send_image
-2022-03-04 05:02:57,937 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 15:47:37,453 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 15:51:27,495 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 15:53:13,929 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 293, in upload
+    a = credentials.access_key
+AttributeError: 'NoneType' object has no attribute 'access_key'
+2022-03-04 19:31:29,867 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 19:31:54,940 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -42,59 +26,11 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 304, in upload
-    Key = filename
-  File "/usr/lib/python2.7/site-packages/boto3/s3/inject.py", line 131, in upload_file
-    extra_args=ExtraArgs, callback=Callback)
-  File "/usr/lib/python2.7/site-packages/boto3/s3/transfer.py", line 279, in upload_file
-    future.result()
-  File "/usr/lib/python2.7/site-packages/s3transfer/futures.py", line 106, in result
-    return self._coordinator.result()
-  File "/usr/lib/python2.7/site-packages/s3transfer/futures.py", line 265, in result
-    raise self._exception
-OSError: [Errno 2] No such file or directory: 'god_face.png'
-2022-03-04 15:53:55,511 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 15:54:55,876 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 304, in upload
-    Key = filename
-  File "/usr/lib/python2.7/site-packages/boto3/s3/inject.py", line 131, in upload_file
-    extra_args=ExtraArgs, callback=Callback)
-  File "/usr/lib/python2.7/site-packages/boto3/s3/transfer.py", line 287, in upload_file
-    filename, '/'.join([bucket, key]), e))
-S3UploadFailedError: Failed to upload god_face.png to fype03/god_face.png: An error occurred (ExpiredToken) when calling the PutObject operation: The provided token has expired.
-2022-03-04 15:56:09,197 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 15:56:52,729 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 304, in upload
-    Key = filename
-  File "/usr/lib/python2.7/site-packages/boto3/s3/inject.py", line 131, in upload_file
-    extra_args=ExtraArgs, callback=Callback)
-  File "/usr/lib/python2.7/site-packages/boto3/s3/transfer.py", line 287, in upload_file
-    filename, '/'.join([bucket, key]), e))
-S3UploadFailedError: Failed to upload god_face.png to fype03/god_face.png: An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.
-2022-03-04 19:13:04,110 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 19:14:59,280 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 293, in upload
+    a = credentials.access_key
+AttributeError: 'NoneType' object has no attribute 'access_key'
+2022-03-04 19:32:12,639 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 19:32:34,718 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -107,10 +43,10 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/ec2-user/environment/webApp/app/main/routes.py", line 294, in upload
-    aws_access_key_id= credentials.access_key,
-AttributeError: 'NoneType' object has no attribute 'access_key'
-2022-03-04 19:21:19,084 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 19:21:39,501 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+    b = credentials.secret_key
+AttributeError: 'NoneType' object has no attribute 'secret_key'
+2022-03-04 19:36:03,864 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 19:36:20,930 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -122,11 +58,11 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 294, in upload
-    aws_access_key_id= credentials.access_key,
-AttributeError: 'NoneType' object has no attribute 'access_key'
-2022-03-04 19:24:50,576 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 19:25:15,398 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 300, in upload
+    aws_session_token= 'IQoJb3JpZ2luX2VjEPz//////////wEaCXVzLWVhc3QtMSJHMEUCID/OAqlb9x9CBHq5iJBpI7rexCcMSwgK+1x9JSxzfQrsAiEAiaah8SfLhatL0/3QbJyXI/IkWZi3HXMl2L20jC3WNGAqyQQIZBAAGgw3MjczMzE1NDk3MzciDGV29ziborsGf4jl+iqmBNRLJe9DgxNF54I01hcGUps7xOCL1E+wTrgAY8DgKE3cXthAaHP8E3ZHMKdRSfvyUf/Tilq8zeRKuAfIoBHpCIsl1NRrdyEZmYJFRJQuPyRwa1cJtgZIs9LRPCe3lUbfjy8qRrLADzzM6CjX/MkZ28qpv2gnz5rkuP46d97iRo0Ji2/3YXAsO8ZhuB4K8JkCiDpWDf/+evBCwsusLQtKp3Q37arqWOHMNMuLHfX7PFFsTWjItW7UFXY5xzfkbHSRU1s0qcfehk4CFzi1m5chls6YIOVWeId8sVz7Lqv3HkJf1OhQlIIBx415hJyCcs9s5E0t+Xl7iTfHNyJDl0aUUIDtmRb/66a0dBoIJ4a7GD7z9uzXyd34A1jeGrSkJZ50Sp+hg5AvCzdr8kL8B7Uh0mzIfRv7Uv7GXmlJqpzHrEljY6y5O4vmzojlx09/XR75SSMHtYD5qvgdEQkAxZsRso8Ge11giAS4p2JzM8gsFTHBUK0h6pz9dCVEb6NO7rsWW5hinB949bpsef0nF2d2c2HEOJ3BrV5lMcJ/es3sijIINg/cJyJvUYmQALDDx46BVYbbeCh33dfIgCZIZAMgI9/6d1hU/+WeALfYbOA7XmLRq2PkzdqCS62l798i3eA9/mKmYqC2lZC4eIR1jM/uk7H91xmWGFEYl9h9NQNd1G0nC0hl4923o0BLJdpIOlGBON8ZiEnUTClBs92hSFXQJhKrbr9yA7wwjsuJkQY6pgI45FIzgJvMzc0O1jek/sbnDCS8mdGYdQkMmZQkB/FuUIaubPsL6GxMOFUR++uJZdU9qDRjV2WigueHkBxsMo6lGiqmVuifbY6qXK6s5RglbWfUYSoVYhzMpzXZv8JqxOYSnRJ4WG2eD0sFnQKvmXGG+uqjcZjorsdJZHihNH/ixv2y25VGU5opAshWAb4GeIpRhZ3HNvzBZxVLOFg9bcoeTRAnIQvdUe1pdrQJxLgKEOMVJ5bQueaE6xW7dpP314Y/HaOiFHLkizeLdvuiVlM2yF0eo4uqgy16uMVexrX6v15v3S5InpsQqSdy7B6fC7L67TCGnKTWB4IjXBp5sR67fOPf0oYSlIaJGiELTt+l83gIWd+nHsoSUeBjngukM+jwIqWZL8Q='
+TypeError: 'module' object is not callable
+2022-03-04 19:40:26,480 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 19:40:55,162 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -138,7 +74,39 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 294, in upload
-    aws_access_key_id= credentials.access_key,
-AttributeError: 'NoneType' object has no attribute 'access_key'
-2022-03-04 19:30:20,517 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 300, in upload
+    aws_session_token= 'FwoGZXIvYXdzEA0aDB1w7wPMAdnpmGz55CLIATXK6BhLmfdRz6zhCShgTZZ3SKEPGLWXWvqtmxp5JkWZuFJMmp4wHzJFgOi7udGxYRA/YNu1d7/OX0kckMn/UCsTKPhqwBupzMSGduKs5Bwyb06tSjx62ydSUQuupHct2ouFMM4Ceo2g6rheYok3JPXnDmjP5V6VoniD7w8SSvk6XrjFxJrDt28VxnUnj6yqAXc5lJb6DP/R+ZadoDUob83DDZKTyCAFQDS031bLcDZqbDzwE6weWQnsMuSYFT/fp44w/dnWipLZKI7LiZEGMi3T4A5wdwe8fKM+7/3m70jJhMIMQl/YZzXJnSHfRk96tlav9u2syQt06YJklss='
+TypeError: 'module' object is not callable
+2022-03-04 19:42:41,252 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 19:42:47,135 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 300, in upload
+    aws_session_token= 'FwoGZXIvYXdzEA0aDB1w7wPMAdnpmGz55CLIATXK6BhLmfdRz6zhCShgTZZ3SKEPGLWXWvqtmxp5JkWZuFJMmp4wHzJFgOi7udGxYRA/YNu1d7/OX0kckMn/UCsTKPhqwBupzMSGduKs5Bwyb06tSjx62ydSUQuupHct2ouFMM4Ceo2g6rheYok3JPXnDmjP5V6VoniD7w8SSvk6XrjFxJrDt28VxnUnj6yqAXc5lJb6DP/R+ZadoDUob83DDZKTyCAFQDS031bLcDZqbDzwE6weWQnsMuSYFT/fp44w/dnWipLZKI7LiZEGMi3T4A5wdwe8fKM+7/3m70jJhMIMQl/YZzXJnSHfRk96tlav9u2syQt06YJklss='
+TypeError: 'module' object is not callable
+2022-03-04 19:43:05,514 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 300, in upload
+    aws_session_token= 'FwoGZXIvYXdzEA0aDB1w7wPMAdnpmGz55CLIATXK6BhLmfdRz6zhCShgTZZ3SKEPGLWXWvqtmxp5JkWZuFJMmp4wHzJFgOi7udGxYRA/YNu1d7/OX0kckMn/UCsTKPhqwBupzMSGduKs5Bwyb06tSjx62ydSUQuupHct2ouFMM4Ceo2g6rheYok3JPXnDmjP5V6VoniD7w8SSvk6XrjFxJrDt28VxnUnj6yqAXc5lJb6DP/R+ZadoDUob83DDZKTyCAFQDS031bLcDZqbDzwE6weWQnsMuSYFT/fp44w/dnWipLZKI7LiZEGMi3T4A5wdwe8fKM+7/3m70jJhMIMQl/YZzXJnSHfRk96tlav9u2syQt06YJklss='
+TypeError: 'module' object is not callable
+2022-03-04 19:45:52,931 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-04 19:47:20,759 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]

@@ -1,5 +1,5 @@
 from flask_babel import lazy_gettext as _l, _
-from flask_wtf import FlaskForm
+from flask_wtf import FlaskForm, RecaptchaField
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, ValidationError
 from wtforms.validators import DataRequired, Email, EqualTo
 
@@ -7,19 +7,21 @@ from app.models import User
 
 
 class LoginForm(FlaskForm):
-    username = StringField(_l('Username'), validators=[DataRequired()])
-    password = PasswordField(_l('Password'), validators=[DataRequired()])
+    username = StringField(_l('username'), validators=[DataRequired()])
+    password = PasswordField(_l('password'), validators=[DataRequired()])
     remember_me = BooleanField(_l('Remember Me'))
+    recaptcha = RecaptchaField()
     submit = SubmitField(_l('Sign In'))
 
 
 class RegistrationForm(FlaskForm):
-    username = StringField(_l('Username'), validators=[DataRequired()])
+    username = StringField(_l('username'), validators=[DataRequired()])
     email = StringField(_l('Email'), validators=[DataRequired(), Email()])
-    password = PasswordField(_l('Password'), validators=[DataRequired()])
+    password = PasswordField(_l('password'), validators=[DataRequired()])
     password2 = PasswordField(
         _l('Repeat Password'), validators=[DataRequired(),
                                            EqualTo('password')])
+    recaptcha = RecaptchaField()
     submit = SubmitField(_l('Register'))
 
     def validate_username(self, username):
@@ -39,7 +41,7 @@ class ResetPasswordRequestForm(FlaskForm):
 
 
 class ResetPasswordForm(FlaskForm):
-    password = PasswordField(_l('Password'), validators=[DataRequired()])
+    password = PasswordField(_l('password'), validators=[DataRequired()])
     password2 = PasswordField(
         _l('Repeat Password'), validators=[DataRequired(),
                                            EqualTo('password')])
