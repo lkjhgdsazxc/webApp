@@ -1,112 +1,98 @@
-2022-03-04 19:30:40,486 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 293, in upload
-    a = credentials.access_key
-AttributeError: 'NoneType' object has no attribute 'access_key'
-2022-03-04 19:31:29,867 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 19:31:54,940 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 293, in upload
-    a = credentials.access_key
-AttributeError: 'NoneType' object has no attribute 'access_key'
-2022-03-04 19:32:12,639 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 19:32:34,718 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 294, in upload
-    b = credentials.secret_key
-AttributeError: 'NoneType' object has no attribute 'secret_key'
-2022-03-04 19:36:03,864 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 19:36:20,930 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 300, in upload
-    aws_session_token= 'IQoJb3JpZ2luX2VjEPz//////////wEaCXVzLWVhc3QtMSJHMEUCID/OAqlb9x9CBHq5iJBpI7rexCcMSwgK+1x9JSxzfQrsAiEAiaah8SfLhatL0/3QbJyXI/IkWZi3HXMl2L20jC3WNGAqyQQIZBAAGgw3MjczMzE1NDk3MzciDGV29ziborsGf4jl+iqmBNRLJe9DgxNF54I01hcGUps7xOCL1E+wTrgAY8DgKE3cXthAaHP8E3ZHMKdRSfvyUf/Tilq8zeRKuAfIoBHpCIsl1NRrdyEZmYJFRJQuPyRwa1cJtgZIs9LRPCe3lUbfjy8qRrLADzzM6CjX/MkZ28qpv2gnz5rkuP46d97iRo0Ji2/3YXAsO8ZhuB4K8JkCiDpWDf/+evBCwsusLQtKp3Q37arqWOHMNMuLHfX7PFFsTWjItW7UFXY5xzfkbHSRU1s0qcfehk4CFzi1m5chls6YIOVWeId8sVz7Lqv3HkJf1OhQlIIBx415hJyCcs9s5E0t+Xl7iTfHNyJDl0aUUIDtmRb/66a0dBoIJ4a7GD7z9uzXyd34A1jeGrSkJZ50Sp+hg5AvCzdr8kL8B7Uh0mzIfRv7Uv7GXmlJqpzHrEljY6y5O4vmzojlx09/XR75SSMHtYD5qvgdEQkAxZsRso8Ge11giAS4p2JzM8gsFTHBUK0h6pz9dCVEb6NO7rsWW5hinB949bpsef0nF2d2c2HEOJ3BrV5lMcJ/es3sijIINg/cJyJvUYmQALDDx46BVYbbeCh33dfIgCZIZAMgI9/6d1hU/+WeALfYbOA7XmLRq2PkzdqCS62l798i3eA9/mKmYqC2lZC4eIR1jM/uk7H91xmWGFEYl9h9NQNd1G0nC0hl4923o0BLJdpIOlGBON8ZiEnUTClBs92hSFXQJhKrbr9yA7wwjsuJkQY6pgI45FIzgJvMzc0O1jek/sbnDCS8mdGYdQkMmZQkB/FuUIaubPsL6GxMOFUR++uJZdU9qDRjV2WigueHkBxsMo6lGiqmVuifbY6qXK6s5RglbWfUYSoVYhzMpzXZv8JqxOYSnRJ4WG2eD0sFnQKvmXGG+uqjcZjorsdJZHihNH/ixv2y25VGU5opAshWAb4GeIpRhZ3HNvzBZxVLOFg9bcoeTRAnIQvdUe1pdrQJxLgKEOMVJ5bQueaE6xW7dpP314Y/HaOiFHLkizeLdvuiVlM2yF0eo4uqgy16uMVexrX6v15v3S5InpsQqSdy7B6fC7L67TCGnKTWB4IjXBp5sR67fOPf0oYSlIaJGiELTt+l83gIWd+nHsoSUeBjngukM+jwIqWZL8Q='
-TypeError: 'module' object is not callable
-2022-03-04 19:40:26,480 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 19:40:55,162 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 300, in upload
-    aws_session_token= 'FwoGZXIvYXdzEA0aDB1w7wPMAdnpmGz55CLIATXK6BhLmfdRz6zhCShgTZZ3SKEPGLWXWvqtmxp5JkWZuFJMmp4wHzJFgOi7udGxYRA/YNu1d7/OX0kckMn/UCsTKPhqwBupzMSGduKs5Bwyb06tSjx62ydSUQuupHct2ouFMM4Ceo2g6rheYok3JPXnDmjP5V6VoniD7w8SSvk6XrjFxJrDt28VxnUnj6yqAXc5lJb6DP/R+ZadoDUob83DDZKTyCAFQDS031bLcDZqbDzwE6weWQnsMuSYFT/fp44w/dnWipLZKI7LiZEGMi3T4A5wdwe8fKM+7/3m70jJhMIMQl/YZzXJnSHfRk96tlav9u2syQt06YJklss='
-TypeError: 'module' object is not callable
-2022-03-04 19:42:41,252 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 19:42:47,135 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 300, in upload
-    aws_session_token= 'FwoGZXIvYXdzEA0aDB1w7wPMAdnpmGz55CLIATXK6BhLmfdRz6zhCShgTZZ3SKEPGLWXWvqtmxp5JkWZuFJMmp4wHzJFgOi7udGxYRA/YNu1d7/OX0kckMn/UCsTKPhqwBupzMSGduKs5Bwyb06tSjx62ydSUQuupHct2ouFMM4Ceo2g6rheYok3JPXnDmjP5V6VoniD7w8SSvk6XrjFxJrDt28VxnUnj6yqAXc5lJb6DP/R+ZadoDUob83DDZKTyCAFQDS031bLcDZqbDzwE6weWQnsMuSYFT/fp44w/dnWipLZKI7LiZEGMi3T4A5wdwe8fKM+7/3m70jJhMIMQl/YZzXJnSHfRk96tlav9u2syQt06YJklss='
-TypeError: 'module' object is not callable
-2022-03-04 19:43:05,514 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 300, in upload
-    aws_session_token= 'FwoGZXIvYXdzEA0aDB1w7wPMAdnpmGz55CLIATXK6BhLmfdRz6zhCShgTZZ3SKEPGLWXWvqtmxp5JkWZuFJMmp4wHzJFgOi7udGxYRA/YNu1d7/OX0kckMn/UCsTKPhqwBupzMSGduKs5Bwyb06tSjx62ydSUQuupHct2ouFMM4Ceo2g6rheYok3JPXnDmjP5V6VoniD7w8SSvk6XrjFxJrDt28VxnUnj6yqAXc5lJb6DP/R+ZadoDUob83DDZKTyCAFQDS031bLcDZqbDzwE6weWQnsMuSYFT/fp44w/dnWipLZKI7LiZEGMi3T4A5wdwe8fKM+7/3m70jJhMIMQl/YZzXJnSHfRk96tlav9u2syQt06YJklss='
-TypeError: 'module' object is not callable
-2022-03-04 19:45:52,931 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-04 19:47:20,759 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 08:52:56,582 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 13:50:49,187 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 13:50:49,843 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 16:32:09,474 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 19:24:33,369 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 19:24:33,372 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 19:24:33,387 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 21:32:03,595 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 21:32:03,597 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 21:32:03,614 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 21:32:03,616 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-11 21:32:03,617 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 01:28:51,624 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 01:28:51,625 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 01:28:51,629 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 02:42:30,107 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 02:42:30,104 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 02:42:30,106 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 02:46:33,033 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 02:46:33,675 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 04:17:52,833 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 04:17:52,834 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 04:17:52,840 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 04:44:38,532 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 04:44:38,533 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 04:44:38,533 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 11:54:40,518 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 11:54:40,520 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 11:54:40,514 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 12:07:42,885 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 12:07:42,885 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 12:07:42,882 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 12:21:21,350 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 12:21:21,349 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 12:21:21,365 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 12:34:01,643 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 12:34:01,623 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 12:34:01,662 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 13:04:45,056 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 13:04:45,061 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 13:04:45,060 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 15:55:06,797 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 15:55:06,797 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-12 15:55:06,797 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-13 07:44:16,479 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-13 07:44:16,480 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-13 07:44:16,479 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-15 13:31:48,259 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-15 13:31:48,268 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-15 13:31:48,295 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-15 18:00:57,946 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-15 18:00:57,953 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-15 18:00:57,958 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-16 11:53:44,816 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-16 11:53:44,813 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-16 11:53:44,818 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-16 16:19:51,651 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-16 16:19:51,653 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-16 16:19:51,655 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-17 01:55:24,634 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-17 01:55:24,630 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-17 01:55:24,638 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-17 02:28:19,376 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-17 02:28:19,371 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-17 02:28:19,382 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 01:02:52,844 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 01:02:52,843 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 01:02:52,845 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 06:38:48,541 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 06:38:48,540 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 06:38:48,543 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 13:33:08,968 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 13:33:08,971 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 13:33:08,971 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 17:41:23,321 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 17:41:23,329 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-18 17:41:23,331 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-20 13:45:25,495 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-20 13:45:25,490 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-20 13:45:25,488 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-20 14:28:52,745 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-20 14:28:52,744 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-20 14:28:52,736 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 01:29:39,041 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 01:29:39,050 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 01:29:39,059 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 03:40:34,938 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 03:40:34,934 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 03:40:34,926 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 06:29:42,745 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 06:29:42,743 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 06:29:42,737 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 07:51:42,602 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 07:51:42,601 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 07:51:42,596 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 15:33:04,928 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 15:33:04,927 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-21 15:33:04,919 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]

@@ -1,145 +1,19 @@
-2022-03-04 19:48:02,578 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 312, in upload
-    Key = filename
-  File "/usr/lib/python2.7/site-packages/boto3/s3/inject.py", line 131, in upload_file
-    extra_args=ExtraArgs, callback=Callback)
-  File "/usr/lib/python2.7/site-packages/boto3/s3/transfer.py", line 279, in upload_file
-    future.result()
-  File "/usr/lib/python2.7/site-packages/s3transfer/futures.py", line 106, in result
-    return self._coordinator.result()
-  File "/usr/lib/python2.7/site-packages/s3transfer/futures.py", line 265, in result
-    raise self._exception
-OSError: [Errno 2] No such file or directory: '5f3.png'
-2022-03-04 19:48:38,492 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 312, in upload
-    Key = filename
-  File "/usr/lib/python2.7/site-packages/boto3/s3/inject.py", line 131, in upload_file
-    extra_args=ExtraArgs, callback=Callback)
-  File "/usr/lib/python2.7/site-packages/boto3/s3/transfer.py", line 279, in upload_file
-    future.result()
-  File "/usr/lib/python2.7/site-packages/s3transfer/futures.py", line 106, in result
-    return self._coordinator.result()
-  File "/usr/lib/python2.7/site-packages/s3transfer/futures.py", line 265, in result
-    raise self._exception
-OSError: [Errno 2] No such file or directory: '5f3.png'
-2022-03-04 19:48:50,687 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-05 02:06:51,917 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-05 02:08:14,290 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 312, in upload
-    Key = filename
-  File "/usr/lib/python2.7/site-packages/boto3/s3/inject.py", line 131, in upload_file
-    extra_args=ExtraArgs, callback=Callback)
-  File "/usr/lib/python2.7/site-packages/boto3/s3/transfer.py", line 287, in upload_file
-    filename, '/'.join([bucket, key]), e))
-S3UploadFailedError: Failed to upload god_face.png to fype03/god_face.png: An error occurred (AccessDenied) when calling the PutObject operation: Access Denied
-2022-03-05 02:10:41,975 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-05 02:15:18,320 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-05 02:32:54,109 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-05 02:33:07,125 ERROR: Exception on / [GET] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 33, in index
-    posts = current_user.followed_posts().paginate(
-  File "/usr/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'AnonymousUserMixin' object has no attribute 'followed_posts'
-2022-03-05 02:33:12,624 ERROR: Exception on / [GET] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 33, in index
-    posts = current_user.followed_posts().paginate(
-  File "/usr/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'AnonymousUserMixin' object has no attribute 'followed_posts'
-2022-03-05 02:33:13,077 ERROR: Exception on /index [GET] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 33, in index
-    posts = current_user.followed_posts().paginate(
-  File "/usr/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'AnonymousUserMixin' object has no attribute 'followed_posts'
-2022-03-05 02:33:43,524 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-05 02:51:39,158 ERROR: Exception on /upload [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 312, in upload
-    Key = filename
-  File "/usr/lib/python2.7/site-packages/boto3/s3/inject.py", line 131, in upload_file
-    extra_args=ExtraArgs, callback=Callback)
-  File "/usr/lib/python2.7/site-packages/boto3/s3/transfer.py", line 287, in upload_file
-    filename, '/'.join([bucket, key]), e))
-S3UploadFailedError: Failed to upload Bro.png to fype03/Bro.png: An error occurred (ExpiredToken) when calling the PutObject operation: The provided token has expired.
-2022-03-11 07:24:12,719 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-11 07:28:04,250 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-11 07:46:23,475 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
-2022-03-11 07:47:06,918 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-22 13:46:06,566 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-23 14:54:09,180 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-23 14:54:09,182 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-23 14:54:09,182 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-23 18:13:58,763 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-23 18:13:58,762 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-23 18:13:58,795 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-23 18:57:07,664 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-23 18:57:07,663 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-23 18:57:07,661 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-24 06:02:42,818 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-24 06:02:42,817 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-24 06:02:42,817 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-24 13:25:20,107 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-24 13:25:20,104 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-24 13:25:20,104 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-24 14:03:27,809 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-24 14:03:27,810 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-03-24 14:03:27,833 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
