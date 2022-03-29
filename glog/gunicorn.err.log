@@ -1,0 +1,141 @@
+[2022-03-29 07:46:04 +0000] [8784] [INFO] Starting gunicorn 19.10.0
+[2022-03-29 07:46:04 +0000] [8784] [INFO] Listening at: http://0.0.0.0:8080 (8784)
+[2022-03-29 07:46:04 +0000] [8784] [INFO] Using worker: sync
+[2022-03-29 07:46:04 +0000] [8787] [INFO] Booting worker with pid: 8787
+[2022-03-29 07:46:04 +0000] [8787] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ModuleNotFoundError: No module named '–workers'
+[2022-03-29 07:46:04 +0000] [8787] [INFO] Worker exiting (pid: 8787)
+[2022-03-29 07:46:04 +0000] [8784] [INFO] Shutting down: Master
+[2022-03-29 07:46:04 +0000] [8784] [INFO] Reason: Worker failed to boot.
+[2022-03-29 07:46:06 +0000] [8794] [INFO] Starting gunicorn 19.10.0
+[2022-03-29 07:46:06 +0000] [8794] [INFO] Listening at: http://0.0.0.0:8080 (8794)
+[2022-03-29 07:46:06 +0000] [8794] [INFO] Using worker: sync
+[2022-03-29 07:46:06 +0000] [8799] [INFO] Booting worker with pid: 8799
+[2022-03-29 07:46:06 +0000] [8799] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ModuleNotFoundError: No module named '–workers'
+[2022-03-29 07:46:06 +0000] [8799] [INFO] Worker exiting (pid: 8799)
+[2022-03-29 07:46:06 +0000] [8794] [INFO] Shutting down: Master
+[2022-03-29 07:46:06 +0000] [8794] [INFO] Reason: Worker failed to boot.
+[2022-03-29 07:46:08 +0000] [8843] [INFO] Starting gunicorn 19.10.0
+[2022-03-29 07:46:08 +0000] [8843] [INFO] Listening at: http://0.0.0.0:8080 (8843)
+[2022-03-29 07:46:08 +0000] [8843] [INFO] Using worker: sync
+[2022-03-29 07:46:08 +0000] [8846] [INFO] Booting worker with pid: 8846
+[2022-03-29 07:46:08 +0000] [8846] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ModuleNotFoundError: No module named '–workers'
+[2022-03-29 07:46:08 +0000] [8846] [INFO] Worker exiting (pid: 8846)
+[2022-03-29 07:46:08 +0000] [8843] [INFO] Shutting down: Master
+[2022-03-29 07:46:08 +0000] [8843] [INFO] Reason: Worker failed to boot.
+[2022-03-29 07:46:11 +0000] [8865] [INFO] Starting gunicorn 19.10.0
+[2022-03-29 07:46:11 +0000] [8865] [INFO] Listening at: http://0.0.0.0:8080 (8865)
+[2022-03-29 07:46:11 +0000] [8865] [INFO] Using worker: sync
+[2022-03-29 07:46:11 +0000] [8868] [INFO] Booting worker with pid: 8868
+[2022-03-29 07:46:11 +0000] [8868] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ModuleNotFoundError: No module named '–workers'
+[2022-03-29 07:46:11 +0000] [8868] [INFO] Worker exiting (pid: 8868)
+[2022-03-29 07:46:11 +0000] [8865] [INFO] Shutting down: Master
+[2022-03-29 07:46:11 +0000] [8865] [INFO] Reason: Worker failed to boot.
+usage: gunicorn [OPTIONS] [APP_MODULE]
+gunicorn: error: unrecognized arguments: -–workers
+usage: gunicorn [OPTIONS] [APP_MODULE]
+gunicorn: error: unrecognized arguments: -–workers
+usage: gunicorn [OPTIONS] [APP_MODULE]
+gunicorn: error: unrecognized arguments: -–workers
+usage: gunicorn [OPTIONS] [APP_MODULE]
+gunicorn: error: unrecognized arguments: -–workers
+[2022-03-29 07:52:27 +0000] [11650] [INFO] Starting gunicorn 19.10.0
+[2022-03-29 07:52:27 +0000] [11650] [INFO] Listening at: http://0.0.0.0:8080 (11650)
+[2022-03-29 07:52:27 +0000] [11650] [INFO] Using worker: sync
+[2022-03-29 07:52:27 +0000] [11653] [INFO] Booting worker with pid: 11653
+[2022-03-29 07:52:27 +0000] [11654] [INFO] Booting worker with pid: 11654
+[2022-03-29 07:52:27 +0000] [11655] [INFO] Booting worker with pid: 11655
+[2022-03-29 07:52:31,544] INFO in __init__: Microblog startup
+[2022-03-29 07:52:31,556] INFO in __init__: Microblog startup
+[2022-03-29 07:52:31,562] INFO in __init__: Microblog startup
+[2022-03-29 08:00:09 +0000] [11650] [INFO] Handling signal: term
+[2022-03-29 08:00:09 +0000] [11653] [INFO] Worker exiting (pid: 11653)
+[2022-03-29 08:00:09 +0000] [11654] [INFO] Worker exiting (pid: 11654)
+[2022-03-29 08:00:09 +0000] [11655] [INFO] Worker exiting (pid: 11655)
+[2022-03-29 08:00:09 +0000] [11650] [INFO] Shutting down: Master
+[2022-03-29 08:00:11 +0000] [15068] [INFO] Starting gunicorn 19.10.0
+[2022-03-29 08:00:11 +0000] [15068] [INFO] Listening at: http://0.0.0.0:8080 (15068)
+[2022-03-29 08:00:11 +0000] [15068] [INFO] Using worker: sync
+[2022-03-29 08:00:11 +0000] [15071] [INFO] Booting worker with pid: 15071
+[2022-03-29 08:00:11 +0000] [15072] [INFO] Booting worker with pid: 15072
+[2022-03-29 08:00:11 +0000] [15073] [INFO] Booting worker with pid: 15073
+[2022-03-29 08:00:11,828] INFO in __init__: Microblog startup
+[2022-03-29 08:00:11,934] INFO in __init__: Microblog startup
+[2022-03-29 08:00:12,045] INFO in __init__: Microblog startup
+[2022-03-29 08:01:25 +0000] [15068] [INFO] Handling signal: term
+[2022-03-29 08:01:25 +0000] [15071] [INFO] Worker exiting (pid: 15071)
+[2022-03-29 08:01:25 +0000] [15073] [INFO] Worker exiting (pid: 15073)
+[2022-03-29 08:01:25 +0000] [15072] [INFO] Worker exiting (pid: 15072)
+[2022-03-29 08:01:25 +0000] [15068] [INFO] Shutting down: Master
+[2022-03-29 08:01:27 +0000] [15724] [INFO] Starting gunicorn 19.10.0
+[2022-03-29 08:01:27 +0000] [15724] [INFO] Listening at: http://0.0.0.0:8080 (15724)
+[2022-03-29 08:01:27 +0000] [15724] [INFO] Using worker: sync
+[2022-03-29 08:01:27 +0000] [15744] [INFO] Booting worker with pid: 15744
+[2022-03-29 08:01:27 +0000] [15745] [INFO] Booting worker with pid: 15745
+[2022-03-29 08:01:27 +0000] [15746] [INFO] Booting worker with pid: 15746
+[2022-03-29 08:01:28,243] INFO in __init__: Microblog startup
+[2022-03-29 08:01:28,344] INFO in __init__: Microblog startup
+[2022-03-29 08:01:28,402] INFO in __init__: Microblog startup
