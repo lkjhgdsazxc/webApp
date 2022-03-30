@@ -2,7 +2,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <div class="container d-flex justify-content-center">
-
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
     <div class="row my-5">
         <div class="col-md-6 text-left text-white lcol">
             <img width="550" height="500" class="pull-right" src="{{ popup.govimg }}">
@@ -22,8 +30,8 @@
                     <div class="form-group fone mt-2"> <input type="time" id="etime" name="etime" class="form-control" placeholder="End time" required>
                 <div class="image"></div>
                 </div> <input type="checkbox" class="form-check-input ml-0" id="exampleCheck1"> <label class="form-check-label ml-3" for="exampleCheck1">I agree to Stoke <u>Terms</u> and <u>Privacy Policy</u></label>
+                <input class="btn btn-primary" value="Submit" type="submit" name="book_insert" id="book_insert">
              </form>
-             <input class="btn btn-primary" value="Submit" type="submit" name="book_insert" id="book_insert">
         </div>
     </div>
 </div>
@@ -32,7 +40,7 @@
 <script type='text/javascript'>
 $(document).ready(function(){
   event.preventDefault();  
- $('#booking_form').on("submit", function(event){  
+ $('#booking_form').submit(function(event){  
   event.preventDefault();
    $.ajax({  
     url:"/book_insert",  
@@ -44,7 +52,11 @@ $(document).ready(function(){
     success:function(data){  
      $('#empModal').modal('hide'); 
       if (data=='success')  {alert("booking successful")
-       window.location.href = "/MobPlan";   
+       window.location.href = "/Mobplanlist";   
+     }
+     else {
+       alert("Service has been reserved! Please pick other datetime.");
+       return false;
      }
     }  
    });  

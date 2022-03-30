@@ -1,4 +1,4 @@
-2022-03-05 06:53:39,808 ERROR: Exception on /booking [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-08 06:02:25,937 ERROR: Exception on /TEST [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,8 +8,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 198, in booking
-    return jsonify({'htmlresponse': render_template('booking.html',popup=popup,faclist=faclist)})
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 221, in Test
+    return render_template('TEST.html')
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -18,61 +18,7 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/booking.html", line 15, in top-level template code
-    {% for faclists in faclist %}
-TypeError: 'method' object is not iterable
-2022-03-05 06:55:44,203 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 07:02:09,699 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:10:42,643 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:11:07,007 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:19:36,286 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:24:22,396 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:25:33,716 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:26:34,294 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:34:00,324 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:34:27,118 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:50:07,939 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:51:03,294 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:53:08,697 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:53:48,298 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:53:59,553 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:55:39,614 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-05 11:56:47,903 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 02:12:16,628 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 02:15:53,939 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 02:38:34,635 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 02:40:11,477 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 02:47:10,392 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 02:52:31,192 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 02:54:00,870 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 03:05:40,048 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 03:07:54,567 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 03:09:52,023 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 03:10:47,977 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 03:12:24,627 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 03:14:42,143 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 03:15:41,605 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 03:15:47,091 ERROR: Exception on /booking [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 199, in booking
-    return render_template('MobPlan.html')
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
+  File "/home/ec2-user/environment/webApp/app/templates/TEST.html", line 2, in top-level template code
     {% import 'bootstrap/wtf.html' as wtf %}
   File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
@@ -84,12 +30,17 @@ Traceback (most recent call last):
     {% block body -%}
   File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
     {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
-    {% for govlists in govlist.items %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 158, in block 'content'
+    {{ wtf.quick_form(form) }}
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
+    rv = self._func(*arguments)
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 200, in template
+    {{ form.hidden_tag() }}
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'govlist' is undefined
-2022-03-07 03:15:49,330 ERROR: Exception on /booking [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2022-03-08 06:04:59,856 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 06:05:07,100 ERROR: Exception on /TEST [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -99,8 +50,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 199, in booking
-    return render_template('MobPlan.html')
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 221, in Test
+    return render_template('TEST.html')
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -109,7 +60,7 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
+  File "/home/ec2-user/environment/webApp/app/templates/TEST.html", line 2, in top-level template code
     {% import 'bootstrap/wtf.html' as wtf %}
   File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
@@ -121,8 +72,63 @@ Traceback (most recent call last):
     {% block body -%}
   File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
     {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
-    {% for govlists in govlist.items %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 158, in block 'content'
+    {{ wtf.quick_form(form) }}
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
+    rv = self._func(*arguments)
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 200, in template
+    {{ form.hidden_tag() }}
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'govlist' is undefined
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2022-03-08 06:06:08,879 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 06:12:24,673 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 06:18:23,390 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 06:18:26,282 ERROR: Exception on /TEST [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 223, in Test
+    id_count = check_datetime.first()[0]
+TypeError: 'booking_record' object is not subscriptable
+2022-03-08 06:37:41,274 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 06:37:53,825 ERROR: Exception on /TEST [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 221, in Test
+    results = db.execute('SELECT STATUS FROM booking_record WHERE STATUS="Canceled"')
+AttributeError: 'SQLAlchemy' object has no attribute 'execute'
+2022-03-08 06:51:06,198 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 06:52:24,951 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 06:53:34,462 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 06:53:59,858 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 07:00:34,542 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 07:05:20,993 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 07:06:58,894 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 08:11:04,093 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 08:16:59,701 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 08:26:15,671 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 08:30:22,191 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 08:37:31,775 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 08:41:58,956 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 08:44:07,495 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 08:44:49,634 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 08:47:42,447 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 08:55:56,672 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-11 13:40:41,550 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-14 03:58:05,592 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:82]
+2022-03-14 04:10:05,537 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-14 04:10:24,508 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:82]

@@ -1,19 +1,4 @@
-2022-03-07 07:23:57,312 ERROR: Exception on /book_insert [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
-    cursor.execute(statement, parameters)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
-    res = self._query(query)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
-    db.query(q)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
-    _mysql.connection.query(self, query)
-MySQLdb._exceptions.IntegrityError: (1364, "Field 'id' doesn't have a default value")
-
-The above exception was the direct cause of the following exception:
-
+2022-03-15 06:47:59,186 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -23,64 +8,44 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 209, in book_insert
-    db.session.commit()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
-    self.transaction.commit()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 503, in commit
-    self._prepare_impl()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
-    self.session.flush()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2479, in flush
-    self._flush(objects)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2617, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
-    raise value
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2577, in _flush
-    flush_context.execute()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
-    uow,
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
-    insert,
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1137, in _emit_insert_statements
-    statement, params
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
-    return meth(self, multiparams, params)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
-    distilled_params,
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
-    e, statement, parameters, cursor, context
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
-    util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
-    raise value.with_traceback(tb)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
-    cursor.execute(statement, parameters)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
-    res = self._query(query)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
-    db.query(q)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
-    _mysql.connection.query(self, query)
-sqlalchemy.exc.IntegrityError: (MySQLdb._exceptions.IntegrityError) (1364, "Field 'id' doesn't have a default value")
-[SQL: INSERT INTO booking_record (faclists, bdate, starttime, endtime, status) VALUES (%s, %s, %s, %s, %s)]
-[parameters: ('ping pong table', '2022-03-04', '15:25', '17:23', 'active')]
-(Background on this error at: http://sqlalche.me/e/gkpj)
-2022-03-07 07:25:08,882 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 07:25:30,635 ERROR: Exception on /book_insert [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
+    return self._run_view(f, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
+    return fn(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
+    return self.render(self._template)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
+    return render_template(template, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+    ctx.app,
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
+    {% extends 'admin/master.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
+    {% extends admin_base_template %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
+    {% block page_body %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
+    {% block main_menu %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
+    {{ layout.menu() }}
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
+    rv = self._func(*arguments)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
+    {%- if item.is_accessible() and item.is_visible() -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
+    return self._view.is_accessible()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 33, in is_accessible
+    return current_user.username == "Test"
+AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
+2022-03-18 02:51:33,992 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:99]
+2022-03-18 03:07:38,354 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:99]
+2022-03-18 03:07:44,002 ERROR: Exception on /auth/login [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -90,19 +55,77 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 207, in book_insert
-    BookingRc = booking_record(id=current_user.id, faclists=faclists, bdate=date, starttime=stime,endtime=etime,status="active")
-  File "<string>", line 4, in __init__
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/state.py", line 441, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
-    raise value
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/state.py", line 438, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/ext/declarative/base.py", line 840, in _declarative_constructor
-    "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
-TypeError: 'id' is an invalid keyword argument for booking_record
-2022-03-07 07:29:02,967 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 07:47:29,833 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 28, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+    ctx.app,
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ec2-user/environment/webApp/app/templates/auth/login.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 74, in block 'navbar'
+    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.admin') }}"class="nav-link pb-1 px-2">Admin</a></li>
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.admin'. Did you mean 'main.index' instead?
+2022-03-18 03:10:16,111 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:99]
+2022-03-18 03:10:18,628 ERROR: Exception on /auth/login [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 28, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+    ctx.app,
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ec2-user/environment/webApp/app/templates/auth/login.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 74, in block 'navbar'
+    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.admin') }}"class="nav-link pb-1 px-2">Admin</a></li>
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.admin'. Did you mean 'main.index' instead?
+2022-03-18 03:14:35,157 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:99]

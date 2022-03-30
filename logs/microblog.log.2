@@ -1,4 +1,4 @@
-2022-03-07 07:56:09,885 ERROR: Exception on /CheckRecord [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-18 06:02:15,465 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,10 +8,14 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 238, in CheckRecord
-    return render_template('Record.html')
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
+    return self._run_view(f, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
+    return fn(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
+    return self.render(self._template)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
+    return render_template(template, **kwargs)
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -20,28 +24,27 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/Record.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 157, in block 'content'
-    {{ wtf.quick_form(form) }}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
+    {% extends 'admin/master.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
+    {% extends admin_base_template %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
+    {% block page_body %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
+    {% block main_menu %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
+    {{ layout.menu() }}
   File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
     rv = self._func(*arguments)
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 200, in template
-    {{ form.hidden_tag() }}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2022-03-07 07:56:14,598 ERROR: Exception on /CheckRecord [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
+    {%- if item.is_accessible() and item.is_visible() -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
+    return self._view.is_accessible()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 33, in is_accessible
+    return login.current_user.is_authenticated()
+AttributeError: 'LoginManager' object has no attribute 'current_user'
+2022-03-18 06:04:11,839 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:99]
+2022-03-18 06:04:14,857 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -51,10 +54,14 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 238, in CheckRecord
-    return render_template('Record.html')
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
+    return self._run_view(f, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
+    return fn(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
+    return self.render(self._template)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
+    return render_template(template, **kwargs)
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -63,69 +70,37 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/Record.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 157, in block 'content'
-    {{ wtf.quick_form(form) }}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
+    {% extends 'admin/master.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
+    {% extends admin_base_template %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
+    {% block page_body %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
+    {% block main_menu %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
+    {{ layout.menu() }}
   File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
     rv = self._func(*arguments)
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 200, in template
-    {{ form.hidden_tag() }}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2022-03-07 07:56:25,988 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 07:56:28,547 ERROR: Exception on /CheckRecord [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 238, in CheckRecord
-    return render_template('Record.html')
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/Record.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 157, in block 'content'
-    {{ wtf.quick_form(form) }}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
-    rv = self._func(*arguments)
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/wtf.html", line 200, in template
-    {{ form.hidden_tag() }}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2022-03-07 07:57:33,480 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
+    {%- if item.is_accessible() and item.is_visible() -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
+    return self._view.is_accessible()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 33, in is_accessible
+    return current_user.is_authenticated()
+TypeError: 'bool' object is not callable
+2022-03-18 06:06:28,051 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:99]
+2022-03-18 06:14:44,538 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:11:43,250 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:21:32,804 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:21:56,348 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:23:44,968 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:25:19,506 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:30:49,905 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:31:22,069 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:32:12,738 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:33:36,755 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:35:28,732 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:36:34,971 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:48:07,641 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:48:46,685 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]

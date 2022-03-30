@@ -2,10 +2,31 @@ from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request, g, session, jsonify
 from flask_login import current_user, login_required
 from flask_babel import _, get_locale
-from app import current_app, db
+from app import current_app, db, admin
 from app.main.forms import EditProfileForm, PostForm, CheckLocationForm, PriceListForm, PayForm , MobPriceListForm, RecordForm, UpgradeForm, BookingForm
-from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, MyTVSuper,permission, governmentfac, facility, booking_record
+from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, MyTVSuper,permission, governmentfac, facility, booking_record, Roles, UserRoles
 from app.main import bp
+from flask_admin.contrib.sqla import ModelView
+
+with current_app.app_context():
+    adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
+    print([row[0] for row in adminviewsql])
+
+#adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
+#print(adminviewsql)
+
+#class SuperAdminView(ModelView):
+#    def is_accessible(self):
+#        return adminviewsql == 0
+#    def inaccessible_callback(self, name, **kwergs):
+#        return redirect(url_for('auth.login'),next=request.url)
+
+
+#admin.add_view(SuperAdminView(User, db.session))
+#admin.add_view(SuperAdminView(governmentfac, db.session))
+#admin.add_view(SuperAdminView(Post, db.session))
+#admin.add_view(SuperAdminView(booking_record, db.session))
+#admin.add_view(SuperAdminView(Roles, db.session))
 
 @bp.before_request
 def before_request():
@@ -189,6 +210,7 @@ def Mobplanlist(page):
         return render_template('MobPlan.html', govlist=govlist, searchbar=searchbar,searchbar1=searchbar1,searchbar2=searchbar2,group2=group2, group=group)
     return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group)
 
+@bp.route('/', methods=['GET', 'POST'])
 @bp.route("/booking",methods=["POST","GET"])
 def booking():
     if request.method == 'POST':
@@ -205,10 +227,40 @@ def book_insert():
         date = request.form['date']
         stime = request.form['stime']
         etime = request.form['etime']
-        BookingRc = booking_record(id=current_user.id, center=center,faclists=faclists, bdate=date, starttime=stime,endtime=etime,status="active")
-        db.session.add(BookingRc)
-        db.session.commit()
-    return jsonify('success')
+        results = db.engine.execute('SELECT STATUS FROM booking_record WHERE center=%s AND faclists=%s AND bdate=%s AND starttime BETWEEN %s AND %s AND endtime BETWEEN %s AND %s AND status="active";',center, faclists, date,stime,etime,stime,etime)
+        checkatc = [row[0] for row in results]
+        if checkatc:
+            print("wrong")
+            return jsonify('rejected')
+        else:
+            print(checkatc)
+            BookingRc = booking_record(id=current_user.id, center=center,faclists=faclists, bdate=date, starttime=stime,endtime=etime,status="active")
+            db.session.add(BookingRc)
+            db.session.commit()
+            return jsonify('success')
+
+
+    
+@bp.route('/TEST', methods=['GET', 'POST'])
+def Test():
+    date = '2022-03-20'
+    stime = '13:34'
+    etime = '14:34'
+    results = db.engine.execute('SELECT STATUS FROM booking_record WHERE bdate=%s AND starttime BETWEEN %s AND %s AND endtime BETWEEN %s AND %s;',date,stime,etime,stime,etime)
+    adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
+    print([row[0] for row in adminviewsql])
+    print([row[0] for row in results])
+    check_datetime= booking_record.query.filter(booking_record.starttime.between(stime, etime))
+    return render_template('TEST.html',check_datetime=check_datetime)
+
+@bp.route('/', methods=['GET', 'POST'])
+def Adminpg():
+    adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
+    print([row[0] for row in adminviewsql])
+    print("Test")
+    return redirect(url_for('/'))
+
+
 
 @bp.route("/cancelbook",methods=["POST","GET"])
 def cancelbook():
@@ -218,6 +270,8 @@ def cancelbook():
     cancel.status = 'Canceled'
     db.session.commit()
     return render_template('Record.html')
+
+
 
 #@bp.route("/timecounting",methods=["POST","GET"])
 #def timecounting():

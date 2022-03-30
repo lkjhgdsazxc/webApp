@@ -1,20 +1,19 @@
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
-from flask import Flask, request, current_app, render_template, jsonify
+from flask import Flask, request, current_app, render_template, jsonify, redirect, url_for
 import mysql.connector
 from flask_sqlalchemy import SQLAlchemy
 from flask_mysqldb import MySQL,MySQLdb
 from flask_migrate import Migrate
-from flask_login import LoginManager
+from flask_login import LoginManager, current_user
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
 from config import Config
-
-
-
+from flask_admin import Admin, AdminIndexView
+from flask_admin.contrib.sqla import ModelView
 
 
 
@@ -29,10 +28,15 @@ moment = Moment()
 babel = Babel()
 
 
+
+
+
+
+admin = Admin()
+
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
-
     db.init_app(app)
     migrate.init_app(app, db)
     login.init_app(app)
@@ -40,7 +44,19 @@ def create_app(config_class=Config):
     bootstrap.init_app(app)
     moment.init_app(app)
     babel.init_app(app)
-
+    admin.init_app(app)
+    with app.app_context():
+        adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
+        print([row[0] for row in adminviewsql])
+        adminviewsql.init_app(app)
+            
+            
+    from app.main import bp as adminviewsql_bp
+    app.register_blueprint(adminviewsql_bp)
+    
+    from app.main import bp as admin_bp
+    app.register_blueprint(admin_bp)
+    
     from app.errors import bp as errors_bp
     app.register_blueprint(errors_bp)
 
@@ -89,3 +105,4 @@ def get_locale():
 
 
 from app import models
+

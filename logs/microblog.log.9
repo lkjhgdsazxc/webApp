@@ -1,4 +1,4 @@
-2022-03-05 06:51:29,503 ERROR: Exception on /booking [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-07 12:01:31,118 ERROR: Exception on /CheckRecord [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,8 +8,10 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 198, in booking
-    return jsonify({'htmlresponse': render_template('booking.html',popup=popup,faclist=faclist)})
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 247, in CheckRecord
+    return render_template('Record.html', Record=Record)
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -18,10 +20,84 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/booking.html", line 16, in top-level template code
-    {% for faclists in faclist %}
-TypeError: 'method' object is not iterable
-2022-03-05 06:51:30,739 ERROR: Exception on /booking [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/templates/Record.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/ec2-user/environment/webApp/app/templates/Record.html", line 30, in block 'content'
+    <td><button type="submit" id="cancelbook" name="cancelbook" data-id='{{ govlists.govid }}' class="cancelbook btn btn-danger">Cancel</button></td>
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'govlists' is undefined
+2022-03-07 12:29:35,604 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:30:43,248 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:31:39,792 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:32:00,910 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:33:46,651 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:38:44,273 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:39:37,383 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:43:04,817 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:44:05,247 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:46:39,132 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:47:00,300 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:47:50,493 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:49:21,154 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:49:35,279 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:52:13,734 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:53:58,520 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:54:22,418 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:57:41,035 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 12:58:28,306 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:02:47,681 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:04:45,604 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:10:16,330 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:11:59,588 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:21:47,251 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:42:16,486 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:42:32,539 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:48:04,702 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:49:51,997 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:51:05,150 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:52:25,760 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:52:56,728 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:53:39,666 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:54:15,546 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 13:56:03,755 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 14:06:33,066 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 14:07:15,154 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 14:08:22,126 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 14:10:33,465 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 14:10:53,903 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 14:11:15,184 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 14:12:31,023 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-07 14:14:14,136 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 01:13:23,970 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 01:16:17,602 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 01:17:17,806 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 01:31:48,032 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 01:32:57,352 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 01:38:37,032 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 01:40:05,290 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 01:43:12,152 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 01:57:16,957 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 01:58:38,136 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 02:02:57,865 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 02:04:34,294 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 02:29:51,251 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 02:31:02,584 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 02:40:04,219 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 05:33:51,159 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 05:41:46,471 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 05:46:38,935 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-08 05:47:05,036 ERROR: Exception on /book_insert [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -31,108 +107,7 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 198, in booking
-    return jsonify({'htmlresponse': render_template('booking.html',popup=popup,faclist=faclist)})
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/booking.html", line 16, in top-level template code
-    {% for faclists in faclist %}
-TypeError: 'method' object is not iterable
-2022-03-05 06:51:31,658 ERROR: Exception on /booking [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 198, in booking
-    return jsonify({'htmlresponse': render_template('booking.html',popup=popup,faclist=faclist)})
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/booking.html", line 16, in top-level template code
-    {% for faclists in faclist %}
-TypeError: 'method' object is not iterable
-2022-03-05 06:51:31,825 ERROR: Exception on /booking [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 198, in booking
-    return jsonify({'htmlresponse': render_template('booking.html',popup=popup,faclist=faclist)})
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/booking.html", line 16, in top-level template code
-    {% for faclists in faclist %}
-TypeError: 'method' object is not iterable
-2022-03-05 06:51:31,913 ERROR: Exception on /booking [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 198, in booking
-    return jsonify({'htmlresponse': render_template('booking.html',popup=popup,faclist=faclist)})
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/booking.html", line 16, in top-level template code
-    {% for faclists in faclist %}
-TypeError: 'method' object is not iterable
-2022-03-05 06:51:32,012 ERROR: Exception on /booking [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 198, in booking
-    return jsonify({'htmlresponse': render_template('booking.html',popup=popup,faclist=faclist)})
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/booking.html", line 16, in top-level template code
-    {% for faclists in faclist %}
-TypeError: 'method' object is not iterable
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 210, in book_insert
+    print(check_datetime.status)
+AttributeError: 'BaseQuery' object has no attribute 'status'
+2022-03-08 05:54:13,691 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]

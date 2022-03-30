@@ -2,6 +2,8 @@ from datetime import datetime
 from hashlib import md5
 from time import time
 from flask import current_app
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
@@ -12,6 +14,16 @@ followers = db.Table(
     db.Column('follower_id', db.Integer, db.ForeignKey('user.id')),
     db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
 )
+
+
+class Roles(db.Model):
+    RolesID = db.Column(db.Integer,db.ForeignKey('UserRoles.RolesID'),primary_key=True)
+    Rolesname = db.Column(db.VARCHAR(50))
+    
+class UserRoles(db.Model):
+    UserRolesID = db.Column(db.Integer, primary_key=True)
+    UserID = db.Column(db.Integer, db.ForeignKey('user.id'))   
+    RolesID = db.Column(db.Integer, db.ForeignKey('Roles.RolesID'))   
 
 class permission(db.Model):
     userID = db.Column(db.Integer,db.ForeignKey('user.id'), primary_key=True)
@@ -168,3 +180,4 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
+        
