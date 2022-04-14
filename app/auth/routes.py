@@ -2,13 +2,14 @@ from flask import current_app, redirect, url_for, flash, request, render_templat
 from flask_babel import _
 from flask_login import current_user, login_user, logout_user
 from werkzeug.urls import url_parse
-
+from flask_wtf.csrf import CSRFProtect
 from app import db
 from app.auth import bp
 from app.auth.email import send_password_reset_email
 from app.auth.forms import LoginForm, RegistrationForm, ResetPasswordRequestForm, ResetPasswordForm
 from app.models import User
 
+csrf = CSRFProtect()
 
 @bp.route('/login', methods=['GET', 'POST'])
 def login():

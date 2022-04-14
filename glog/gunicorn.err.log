@@ -139,3 +139,2630 @@ gunicorn: error: unrecognized arguments: -–workers
 [2022-03-29 08:01:28,243] INFO in __init__: Microblog startup
 [2022-03-29 08:01:28,344] INFO in __init__: Microblog startup
 [2022-03-29 08:01:28,402] INFO in __init__: Microblog startup
+[2022-04-14 14:10:25 +0000] [21770] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 14:10:25 +0000] [21770] [INFO] Listening at: http://0.0.0.0:8080 (21770)
+[2022-04-14 14:10:25 +0000] [21770] [INFO] Using worker: sync
+[2022-04-14 14:10:25 +0000] [21779] [INFO] Booting worker with pid: 21779
+[2022-04-14 14:10:26 +0000] [21784] [INFO] Booting worker with pid: 21784
+[2022-04-14 14:10:26 +0000] [21785] [INFO] Booting worker with pid: 21785
+[2022-04-14 14:10:27,651] INFO in __init__: Microblog startup
+[2022-04-14 14:10:27,655] INFO in __init__: Microblog startup
+[2022-04-14 14:10:27,658] INFO in __init__: Microblog startup
+[2022-04-14 14:12:08 +0000] [21770] [INFO] Handling signal: term
+[2022-04-14 14:12:08 +0000] [21784] [INFO] Worker exiting (pid: 21784)
+[2022-04-14 14:12:08 +0000] [21785] [INFO] Worker exiting (pid: 21785)
+[2022-04-14 14:12:08 +0000] [21779] [INFO] Worker exiting (pid: 21779)
+[2022-04-14 14:12:09 +0000] [21770] [INFO] Shutting down: Master
+[2022-04-14 14:16:50 +0000] [24569] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 14:16:50 +0000] [24569] [INFO] Listening at: http://0.0.0.0:8080 (24569)
+[2022-04-14 14:16:50 +0000] [24569] [INFO] Using worker: sync
+[2022-04-14 14:16:50 +0000] [24572] [INFO] Booting worker with pid: 24572
+[2022-04-14 14:16:50 +0000] [24573] [INFO] Booting worker with pid: 24573
+[2022-04-14 14:16:50 +0000] [24574] [INFO] Booting worker with pid: 24574
+[2022-04-14 14:16:51,760] INFO in __init__: Microblog startup
+[2022-04-14 14:16:52,045] INFO in __init__: Microblog startup
+[2022-04-14 14:16:52,048] INFO in __init__: Microblog startup
+[2022-04-14 14:17:48 +0000] [24569] [INFO] Handling signal: term
+[2022-04-14 14:17:48 +0000] [24572] [INFO] Worker exiting (pid: 24572)
+[2022-04-14 14:17:48 +0000] [24574] [INFO] Worker exiting (pid: 24574)
+[2022-04-14 14:17:48 +0000] [24573] [INFO] Worker exiting (pid: 24573)
+[2022-04-14 14:17:48 +0000] [24569] [INFO] Shutting down: Master
+[2022-04-14 14:17:52 +0000] [25132] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 14:17:52 +0000] [25132] [INFO] Listening at: http://0.0.0.0:8080 (25132)
+[2022-04-14 14:17:52 +0000] [25132] [INFO] Using worker: sync
+[2022-04-14 14:17:52 +0000] [25135] [INFO] Booting worker with pid: 25135
+[2022-04-14 14:17:52 +0000] [25136] [INFO] Booting worker with pid: 25136
+[2022-04-14 14:17:52 +0000] [25137] [INFO] Booting worker with pid: 25137
+[2022-04-14 14:17:53,468] INFO in __init__: Microblog startup
+[2022-04-14 14:17:53,509] INFO in __init__: Microblog startup
+[2022-04-14 14:17:53,538] INFO in __init__: Microblog startup
+[2022-04-14 14:20:52 +0000] [25132] [INFO] Handling signal: term
+[2022-04-14 14:20:52 +0000] [25135] [INFO] Worker exiting (pid: 25135)
+[2022-04-14 14:20:52 +0000] [25137] [INFO] Worker exiting (pid: 25137)
+[2022-04-14 14:20:52 +0000] [25136] [INFO] Worker exiting (pid: 25136)
+[2022-04-14 14:20:52 +0000] [25132] [INFO] Shutting down: Master
+[2022-04-14 14:20:55 +0000] [26466] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 14:20:55 +0000] [26466] [INFO] Listening at: http://0.0.0.0:8080 (26466)
+[2022-04-14 14:20:55 +0000] [26466] [INFO] Using worker: sync
+[2022-04-14 14:20:55 +0000] [26475] [INFO] Booting worker with pid: 26475
+[2022-04-14 14:20:55 +0000] [26476] [INFO] Booting worker with pid: 26476
+[2022-04-14 14:20:55 +0000] [26477] [INFO] Booting worker with pid: 26477
+[2022-04-14 14:20:56,966] INFO in __init__: Microblog startup
+[2022-04-14 14:20:57,067] INFO in __init__: Microblog startup
+[2022-04-14 14:20:57,091] INFO in __init__: Microblog startup
+[2022-04-14 15:09:13 +0000] [26466] [INFO] Handling signal: term
+[2022-04-14 15:09:13 +0000] [26475] [INFO] Worker exiting (pid: 26475)
+[2022-04-14 15:09:13 +0000] [26477] [INFO] Worker exiting (pid: 26477)
+[2022-04-14 15:09:13 +0000] [26476] [INFO] Worker exiting (pid: 26476)
+[2022-04-14 15:09:14 +0000] [26466] [INFO] Shutting down: Master
+[2022-04-14 15:09:37 +0000] [15594] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:09:37 +0000] [15594] [INFO] Listening at: http://0.0.0.0:8080 (15594)
+[2022-04-14 15:09:37 +0000] [15594] [INFO] Using worker: sync
+[2022-04-14 15:09:37 +0000] [15597] [INFO] Booting worker with pid: 15597
+[2022-04-14 15:09:37 +0000] [15605] [INFO] Booting worker with pid: 15605
+[2022-04-14 15:09:37 +0000] [15606] [INFO] Booting worker with pid: 15606
+[2022-04-14 15:09:38,979] INFO in __init__: Microblog startup
+[2022-04-14 15:09:39,109] INFO in __init__: Microblog startup
+[2022-04-14 15:09:39,139] INFO in __init__: Microblog startup
+[2022-04-14 15:10:19 +0000] [15594] [INFO] Handling signal: term
+[2022-04-14 15:10:19 +0000] [15606] [INFO] Worker exiting (pid: 15606)
+[2022-04-14 15:10:19 +0000] [15597] [INFO] Worker exiting (pid: 15597)
+[2022-04-14 15:10:19 +0000] [15605] [INFO] Worker exiting (pid: 15605)
+[2022-04-14 15:10:19 +0000] [15594] [INFO] Shutting down: Master
+[2022-04-14 15:10:35 +0000] [16158] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:10:35 +0000] [16158] [INFO] Listening at: http://0.0.0.0:8080 (16158)
+[2022-04-14 15:10:35 +0000] [16158] [INFO] Using worker: sync
+[2022-04-14 15:10:35 +0000] [16161] [INFO] Booting worker with pid: 16161
+[2022-04-14 15:10:35 +0000] [16162] [INFO] Booting worker with pid: 16162
+[2022-04-14 15:10:35 +0000] [16163] [INFO] Booting worker with pid: 16163
+[2022-04-14 15:10:37,278] INFO in __init__: Microblog startup
+[2022-04-14 15:10:37,285] INFO in __init__: Microblog startup
+[2022-04-14 15:10:37,298] INFO in __init__: Microblog startup
+[2022-04-14 15:11:00 +0000] [16158] [INFO] Handling signal: term
+[2022-04-14 15:11:00 +0000] [16161] [INFO] Worker exiting (pid: 16161)
+[2022-04-14 15:11:00 +0000] [16162] [INFO] Worker exiting (pid: 16162)
+[2022-04-14 15:11:00 +0000] [16163] [INFO] Worker exiting (pid: 16163)
+[2022-04-14 15:11:00 +0000] [16158] [INFO] Shutting down: Master
+[2022-04-14 15:11:56 +0000] [16836] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:11:56 +0000] [16836] [INFO] Listening at: http://0.0.0.0:8080 (16836)
+[2022-04-14 15:11:56 +0000] [16836] [INFO] Using worker: sync
+[2022-04-14 15:11:56 +0000] [16839] [INFO] Booting worker with pid: 16839
+[2022-04-14 15:11:56 +0000] [16840] [INFO] Booting worker with pid: 16840
+[2022-04-14 15:11:56 +0000] [16841] [INFO] Booting worker with pid: 16841
+[2022-04-14 15:11:58,043] INFO in __init__: Microblog startup
+[2022-04-14 15:11:58,155] INFO in __init__: Microblog startup
+[2022-04-14 15:11:58,193] INFO in __init__: Microblog startup
+[2022-04-14 15:13:40 +0000] [16836] [INFO] Handling signal: term
+[2022-04-14 15:13:40 +0000] [16839] [INFO] Worker exiting (pid: 16839)
+[2022-04-14 15:13:40 +0000] [16840] [INFO] Worker exiting (pid: 16840)
+[2022-04-14 15:13:40 +0000] [16841] [INFO] Worker exiting (pid: 16841)
+[2022-04-14 15:13:41 +0000] [16836] [INFO] Shutting down: Master
+[2022-04-14 15:14:29 +0000] [18034] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:14:29 +0000] [18034] [INFO] Listening at: http://0.0.0.0:8080 (18034)
+[2022-04-14 15:14:29 +0000] [18034] [INFO] Using worker: sync
+[2022-04-14 15:14:29 +0000] [18037] [INFO] Booting worker with pid: 18037
+[2022-04-14 15:14:29 +0000] [18038] [INFO] Booting worker with pid: 18038
+[2022-04-14 15:14:29 +0000] [18039] [INFO] Booting worker with pid: 18039
+[2022-04-14 15:14:30,395] INFO in __init__: Microblog startup
+[2022-04-14 15:14:30,536] INFO in __init__: Microblog startup
+[2022-04-14 15:14:30,598] INFO in __init__: Microblog startup
+[2022-04-14 15:14:46 +0000] [18034] [INFO] Handling signal: term
+[2022-04-14 15:14:46 +0000] [18038] [INFO] Worker exiting (pid: 18038)
+[2022-04-14 15:14:46 +0000] [18037] [INFO] Worker exiting (pid: 18037)
+[2022-04-14 15:14:46 +0000] [18039] [INFO] Worker exiting (pid: 18039)
+[2022-04-14 15:14:46 +0000] [18034] [INFO] Shutting down: Master
+[2022-04-14 15:16:39 +0000] [19043] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:16:39 +0000] [19043] [INFO] Listening at: http://0.0.0.0:8080 (19043)
+[2022-04-14 15:16:39 +0000] [19043] [INFO] Using worker: sync
+[2022-04-14 15:16:39 +0000] [19046] [INFO] Booting worker with pid: 19046
+[2022-04-14 15:16:39 +0000] [19047] [INFO] Booting worker with pid: 19047
+[2022-04-14 15:16:39 +0000] [19048] [INFO] Booting worker with pid: 19048
+[2022-04-14 15:16:40,911] INFO in __init__: Microblog startup
+[2022-04-14 15:16:41,025] INFO in __init__: Microblog startup
+[2022-04-14 15:16:41,058] INFO in __init__: Microblog startup
+[2022-04-14 15:16:53 +0000] [19043] [INFO] Handling signal: term
+[2022-04-14 15:16:53 +0000] [19046] [INFO] Worker exiting (pid: 19046)
+[2022-04-14 15:16:53 +0000] [19048] [INFO] Worker exiting (pid: 19048)
+[2022-04-14 15:16:53 +0000] [19047] [INFO] Worker exiting (pid: 19047)
+[2022-04-14 15:16:53 +0000] [19043] [INFO] Shutting down: Master
+[2022-04-14 15:18:22 +0000] [19945] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:18:22 +0000] [19945] [INFO] Listening at: http://0.0.0.0:8080 (19945)
+[2022-04-14 15:18:22 +0000] [19945] [INFO] Using worker: sync
+[2022-04-14 15:18:22 +0000] [19954] [INFO] Booting worker with pid: 19954
+[2022-04-14 15:18:22 +0000] [19955] [INFO] Booting worker with pid: 19955
+[2022-04-14 15:18:22 +0000] [19956] [INFO] Booting worker with pid: 19956
+[2022-04-14 15:18:24,080] INFO in __init__: Microblog startup
+[2022-04-14 15:18:24,205] INFO in __init__: Microblog startup
+[2022-04-14 15:18:24,290] INFO in __init__: Microblog startup
+[2022-04-14 15:32:05 +0000] [19945] [INFO] Handling signal: term
+[2022-04-14 15:32:05 +0000] [19954] [INFO] Worker exiting (pid: 19954)
+[2022-04-14 15:32:05 +0000] [19955] [INFO] Worker exiting (pid: 19955)
+[2022-04-14 15:32:05 +0000] [19956] [INFO] Worker exiting (pid: 19956)
+[2022-04-14 15:32:05 +0000] [19945] [INFO] Shutting down: Master
+[2022-04-14 15:32:08 +0000] [26075] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:08 +0000] [26075] [INFO] Listening at: http://0.0.0.0:8080 (26075)
+[2022-04-14 15:32:08 +0000] [26075] [INFO] Using worker: sync
+[2022-04-14 15:32:08 +0000] [26078] [INFO] Booting worker with pid: 26078
+[2022-04-14 15:32:08 +0000] [26079] [INFO] Booting worker with pid: 26079
+[2022-04-14 15:32:08 +0000] [26080] [INFO] Booting worker with pid: 26080
+[2022-04-14 15:32:09 +0000] [26078] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:09 +0000] [26078] [INFO] Worker exiting (pid: 26078)
+[2022-04-14 15:32:09 +0000] [26079] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:09 +0000] [26079] [INFO] Worker exiting (pid: 26079)
+[2022-04-14 15:32:09 +0000] [26080] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:09 +0000] [26080] [INFO] Worker exiting (pid: 26080)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:32:11 +0000] [26093] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:11 +0000] [26093] [INFO] Listening at: http://0.0.0.0:8080 (26093)
+[2022-04-14 15:32:11 +0000] [26093] [INFO] Using worker: sync
+[2022-04-14 15:32:11 +0000] [26096] [INFO] Booting worker with pid: 26096
+[2022-04-14 15:32:11 +0000] [26097] [INFO] Booting worker with pid: 26097
+[2022-04-14 15:32:11 +0000] [26103] [INFO] Booting worker with pid: 26103
+[2022-04-14 15:32:12 +0000] [26096] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:12 +0000] [26096] [INFO] Worker exiting (pid: 26096)
+[2022-04-14 15:32:12 +0000] [26097] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:12 +0000] [26097] [INFO] Worker exiting (pid: 26097)
+[2022-04-14 15:32:12 +0000] [26103] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:12 +0000] [26103] [INFO] Worker exiting (pid: 26103)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:32:13 +0000] [26145] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:13 +0000] [26145] [INFO] Listening at: http://0.0.0.0:8080 (26145)
+[2022-04-14 15:32:13 +0000] [26145] [INFO] Using worker: sync
+[2022-04-14 15:32:13 +0000] [26148] [INFO] Booting worker with pid: 26148
+[2022-04-14 15:32:13 +0000] [26149] [INFO] Booting worker with pid: 26149
+[2022-04-14 15:32:13 +0000] [26150] [INFO] Booting worker with pid: 26150
+[2022-04-14 15:32:14 +0000] [26148] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:14 +0000] [26148] [INFO] Worker exiting (pid: 26148)
+[2022-04-14 15:32:14 +0000] [26149] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:14 +0000] [26149] [INFO] Worker exiting (pid: 26149)
+[2022-04-14 15:32:14 +0000] [26150] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:14 +0000] [26150] [INFO] Worker exiting (pid: 26150)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:32:16 +0000] [26163] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:16 +0000] [26163] [INFO] Listening at: http://0.0.0.0:8080 (26163)
+[2022-04-14 15:32:16 +0000] [26163] [INFO] Using worker: sync
+[2022-04-14 15:32:16 +0000] [26166] [INFO] Booting worker with pid: 26166
+[2022-04-14 15:32:16 +0000] [26167] [INFO] Booting worker with pid: 26167
+[2022-04-14 15:32:16 +0000] [26173] [INFO] Booting worker with pid: 26173
+[2022-04-14 15:32:17 +0000] [26166] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:17 +0000] [26166] [INFO] Worker exiting (pid: 26166)
+[2022-04-14 15:32:17 +0000] [26167] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:17 +0000] [26167] [INFO] Worker exiting (pid: 26167)
+[2022-04-14 15:32:17 +0000] [26173] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:17 +0000] [26173] [INFO] Worker exiting (pid: 26173)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:32:18 +0000] [26218] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:18 +0000] [26218] [INFO] Listening at: http://0.0.0.0:8080 (26218)
+[2022-04-14 15:32:18 +0000] [26218] [INFO] Using worker: sync
+[2022-04-14 15:32:18 +0000] [26221] [INFO] Booting worker with pid: 26221
+[2022-04-14 15:32:18 +0000] [26222] [INFO] Booting worker with pid: 26222
+[2022-04-14 15:32:18 +0000] [26223] [INFO] Booting worker with pid: 26223
+[2022-04-14 15:32:19 +0000] [26221] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:19 +0000] [26221] [INFO] Worker exiting (pid: 26221)
+[2022-04-14 15:32:19 +0000] [26222] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:19 +0000] [26222] [INFO] Worker exiting (pid: 26222)
+[2022-04-14 15:32:19 +0000] [26223] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:19 +0000] [26223] [INFO] Worker exiting (pid: 26223)
+[2022-04-14 15:32:20 +0000] [26218] [INFO] Shutting down: Master
+[2022-04-14 15:32:20 +0000] [26218] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:32:21 +0000] [26238] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:21 +0000] [26238] [INFO] Listening at: http://0.0.0.0:8080 (26238)
+[2022-04-14 15:32:21 +0000] [26238] [INFO] Using worker: sync
+[2022-04-14 15:32:21 +0000] [26241] [INFO] Booting worker with pid: 26241
+[2022-04-14 15:32:21 +0000] [26248] [INFO] Booting worker with pid: 26248
+[2022-04-14 15:32:21 +0000] [26249] [INFO] Booting worker with pid: 26249
+[2022-04-14 15:32:22 +0000] [26241] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:22 +0000] [26241] [INFO] Worker exiting (pid: 26241)
+[2022-04-14 15:32:22 +0000] [26248] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:22 +0000] [26248] [INFO] Worker exiting (pid: 26248)
+[2022-04-14 15:32:22 +0000] [26249] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:22 +0000] [26249] [INFO] Worker exiting (pid: 26249)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:32:23 +0000] [26288] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:23 +0000] [26288] [INFO] Listening at: http://0.0.0.0:8080 (26288)
+[2022-04-14 15:32:23 +0000] [26288] [INFO] Using worker: sync
+[2022-04-14 15:32:23 +0000] [26296] [INFO] Booting worker with pid: 26296
+[2022-04-14 15:32:23 +0000] [26297] [INFO] Booting worker with pid: 26297
+[2022-04-14 15:32:24 +0000] [26298] [INFO] Booting worker with pid: 26298
+[2022-04-14 15:32:24 +0000] [26296] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:24 +0000] [26296] [INFO] Worker exiting (pid: 26296)
+[2022-04-14 15:32:25 +0000] [26297] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:25 +0000] [26297] [INFO] Worker exiting (pid: 26297)
+[2022-04-14 15:32:25 +0000] [26298] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:25 +0000] [26298] [INFO] Worker exiting (pid: 26298)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:32:25 +0000] [26305] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:25 +0000] [26305] [INFO] Listening at: http://0.0.0.0:8080 (26305)
+[2022-04-14 15:32:25 +0000] [26305] [INFO] Using worker: sync
+[2022-04-14 15:32:25 +0000] [26314] [INFO] Booting worker with pid: 26314
+[2022-04-14 15:32:25 +0000] [26315] [INFO] Booting worker with pid: 26315
+[2022-04-14 15:32:25 +0000] [26316] [INFO] Booting worker with pid: 26316
+[2022-04-14 15:32:26 +0000] [26314] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:26 +0000] [26314] [INFO] Worker exiting (pid: 26314)
+[2022-04-14 15:32:26 +0000] [26315] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:26 +0000] [26315] [INFO] Worker exiting (pid: 26315)
+[2022-04-14 15:32:26 +0000] [26316] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:26 +0000] [26316] [INFO] Worker exiting (pid: 26316)
+[2022-04-14 15:32:26 +0000] [26305] [INFO] Shutting down: Master
+[2022-04-14 15:32:26 +0000] [26305] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:32:27 +0000] [26329] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:27 +0000] [26329] [INFO] Listening at: http://0.0.0.0:8080 (26329)
+[2022-04-14 15:32:27 +0000] [26329] [INFO] Using worker: sync
+[2022-04-14 15:32:27 +0000] [26332] [INFO] Booting worker with pid: 26332
+[2022-04-14 15:32:27 +0000] [26333] [INFO] Booting worker with pid: 26333
+[2022-04-14 15:32:28 +0000] [26334] [INFO] Booting worker with pid: 26334
+[2022-04-14 15:32:29 +0000] [26332] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:29 +0000] [26332] [INFO] Worker exiting (pid: 26332)
+[2022-04-14 15:32:29 +0000] [26333] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:29 +0000] [26333] [INFO] Worker exiting (pid: 26333)
+[2022-04-14 15:32:29 +0000] [26334] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:29 +0000] [26334] [INFO] Worker exiting (pid: 26334)
+[2022-04-14 15:32:29 +0000] [26329] [INFO] Shutting down: Master
+[2022-04-14 15:32:29 +0000] [26329] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:32:30 +0000] [26378] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:30 +0000] [26378] [INFO] Listening at: http://0.0.0.0:8080 (26378)
+[2022-04-14 15:32:30 +0000] [26378] [INFO] Using worker: sync
+[2022-04-14 15:32:30 +0000] [26381] [INFO] Booting worker with pid: 26381
+[2022-04-14 15:32:30 +0000] [26382] [INFO] Booting worker with pid: 26382
+[2022-04-14 15:32:30 +0000] [26383] [INFO] Booting worker with pid: 26383
+[2022-04-14 15:32:31 +0000] [26381] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:31 +0000] [26381] [INFO] Worker exiting (pid: 26381)
+[2022-04-14 15:32:32 +0000] [26382] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:32 +0000] [26382] [INFO] Worker exiting (pid: 26382)
+[2022-04-14 15:32:32 +0000] [26383] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:32 +0000] [26383] [INFO] Worker exiting (pid: 26383)
+[2022-04-14 15:32:32 +0000] [26378] [INFO] Shutting down: Master
+[2022-04-14 15:32:32 +0000] [26378] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:32:33 +0000] [26400] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:33 +0000] [26400] [INFO] Listening at: http://0.0.0.0:8080 (26400)
+[2022-04-14 15:32:33 +0000] [26400] [INFO] Using worker: sync
+[2022-04-14 15:32:33 +0000] [26409] [INFO] Booting worker with pid: 26409
+[2022-04-14 15:32:33 +0000] [26410] [INFO] Booting worker with pid: 26410
+[2022-04-14 15:32:33 +0000] [26411] [INFO] Booting worker with pid: 26411
+[2022-04-14 15:32:34 +0000] [26409] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:34 +0000] [26409] [INFO] Worker exiting (pid: 26409)
+[2022-04-14 15:32:34 +0000] [26410] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:34 +0000] [26411] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:34 +0000] [26410] [INFO] Worker exiting (pid: 26410)
+[2022-04-14 15:32:34 +0000] [26411] [INFO] Worker exiting (pid: 26411)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:32:36 +0000] [26449] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:36 +0000] [26449] [INFO] Listening at: http://0.0.0.0:8080 (26449)
+[2022-04-14 15:32:36 +0000] [26449] [INFO] Using worker: sync
+[2022-04-14 15:32:36 +0000] [26452] [INFO] Booting worker with pid: 26452
+[2022-04-14 15:32:36 +0000] [26453] [INFO] Booting worker with pid: 26453
+[2022-04-14 15:32:36 +0000] [26454] [INFO] Booting worker with pid: 26454
+[2022-04-14 15:32:37 +0000] [26452] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:37 +0000] [26452] [INFO] Worker exiting (pid: 26452)
+[2022-04-14 15:32:37 +0000] [26453] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:37 +0000] [26453] [INFO] Worker exiting (pid: 26453)
+[2022-04-14 15:32:37 +0000] [26454] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:37 +0000] [26454] [INFO] Worker exiting (pid: 26454)
+[2022-04-14 15:32:37 +0000] [26449] [INFO] Shutting down: Master
+[2022-04-14 15:32:37 +0000] [26449] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:32:38 +0000] [26473] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:38 +0000] [26473] [INFO] Listening at: http://0.0.0.0:8080 (26473)
+[2022-04-14 15:32:38 +0000] [26473] [INFO] Using worker: sync
+[2022-04-14 15:32:38 +0000] [26476] [INFO] Booting worker with pid: 26476
+[2022-04-14 15:32:38 +0000] [26477] [INFO] Booting worker with pid: 26477
+[2022-04-14 15:32:38 +0000] [26478] [INFO] Booting worker with pid: 26478
+[2022-04-14 15:32:39 +0000] [26476] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:39 +0000] [26476] [INFO] Worker exiting (pid: 26476)
+[2022-04-14 15:32:39 +0000] [26477] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:39 +0000] [26477] [INFO] Worker exiting (pid: 26477)
+[2022-04-14 15:32:39 +0000] [26478] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:39 +0000] [26478] [INFO] Worker exiting (pid: 26478)
+[2022-04-14 15:32:40 +0000] [26473] [INFO] Shutting down: Master
+[2022-04-14 15:32:40 +0000] [26473] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:32:41 +0000] [26516] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:41 +0000] [26516] [INFO] Listening at: http://0.0.0.0:8080 (26516)
+[2022-04-14 15:32:41 +0000] [26516] [INFO] Using worker: sync
+[2022-04-14 15:32:41 +0000] [26519] [INFO] Booting worker with pid: 26519
+[2022-04-14 15:32:41 +0000] [26520] [INFO] Booting worker with pid: 26520
+[2022-04-14 15:32:41 +0000] [26521] [INFO] Booting worker with pid: 26521
+[2022-04-14 15:32:42 +0000] [26519] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:42 +0000] [26519] [INFO] Worker exiting (pid: 26519)
+[2022-04-14 15:32:42 +0000] [26520] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:42 +0000] [26520] [INFO] Worker exiting (pid: 26520)
+[2022-04-14 15:32:42 +0000] [26521] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:42 +0000] [26521] [INFO] Worker exiting (pid: 26521)
+[2022-04-14 15:32:42 +0000] [26516] [INFO] Shutting down: Master
+[2022-04-14 15:32:42 +0000] [26516] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:32:43 +0000] [26537] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:32:43 +0000] [26537] [INFO] Listening at: http://0.0.0.0:8080 (26537)
+[2022-04-14 15:32:43 +0000] [26537] [INFO] Using worker: sync
+[2022-04-14 15:32:43 +0000] [26540] [INFO] Booting worker with pid: 26540
+[2022-04-14 15:32:43 +0000] [26541] [INFO] Booting worker with pid: 26541
+[2022-04-14 15:32:43 +0000] [26542] [INFO] Booting worker with pid: 26542
+[2022-04-14 15:32:44 +0000] [26540] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:44 +0000] [26540] [INFO] Worker exiting (pid: 26540)
+[2022-04-14 15:32:44 +0000] [26541] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:44 +0000] [26541] [INFO] Worker exiting (pid: 26541)
+[2022-04-14 15:32:44 +0000] [26542] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:32:44 +0000] [26542] [INFO] Worker exiting (pid: 26542)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:34:02 +0000] [27251] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:34:02 +0000] [27251] [INFO] Listening at: http://0.0.0.0:8080 (27251)
+[2022-04-14 15:34:02 +0000] [27251] [INFO] Using worker: sync
+[2022-04-14 15:34:02 +0000] [27254] [INFO] Booting worker with pid: 27254
+[2022-04-14 15:34:02 +0000] [27255] [INFO] Booting worker with pid: 27255
+[2022-04-14 15:34:02 +0000] [27256] [INFO] Booting worker with pid: 27256
+[2022-04-14 15:34:03 +0000] [27254] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:03 +0000] [27254] [INFO] Worker exiting (pid: 27254)
+[2022-04-14 15:34:03 +0000] [27255] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:03 +0000] [27255] [INFO] Worker exiting (pid: 27255)
+[2022-04-14 15:34:03 +0000] [27256] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:03 +0000] [27256] [INFO] Worker exiting (pid: 27256)
+[2022-04-14 15:34:04 +0000] [27251] [INFO] Shutting down: Master
+[2022-04-14 15:34:04 +0000] [27251] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:34:05 +0000] [27269] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:34:05 +0000] [27269] [INFO] Listening at: http://0.0.0.0:8080 (27269)
+[2022-04-14 15:34:05 +0000] [27269] [INFO] Using worker: sync
+[2022-04-14 15:34:05 +0000] [27278] [INFO] Booting worker with pid: 27278
+[2022-04-14 15:34:05 +0000] [27279] [INFO] Booting worker with pid: 27279
+[2022-04-14 15:34:05 +0000] [27280] [INFO] Booting worker with pid: 27280
+[2022-04-14 15:34:06 +0000] [27278] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:06 +0000] [27278] [INFO] Worker exiting (pid: 27278)
+[2022-04-14 15:34:06 +0000] [27279] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:06 +0000] [27280] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:06 +0000] [27280] [INFO] Worker exiting (pid: 27280)
+[2022-04-14 15:34:06 +0000] [27279] [INFO] Worker exiting (pid: 27279)
+[2022-04-14 15:34:06 +0000] [27269] [INFO] Shutting down: Master
+[2022-04-14 15:34:06 +0000] [27269] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:34:08 +0000] [27318] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:34:08 +0000] [27318] [INFO] Listening at: http://0.0.0.0:8080 (27318)
+[2022-04-14 15:34:08 +0000] [27318] [INFO] Using worker: sync
+[2022-04-14 15:34:08 +0000] [27321] [INFO] Booting worker with pid: 27321
+[2022-04-14 15:34:08 +0000] [27327] [INFO] Booting worker with pid: 27327
+[2022-04-14 15:34:08 +0000] [27329] [INFO] Booting worker with pid: 27329
+[2022-04-14 15:34:09 +0000] [27321] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:09 +0000] [27321] [INFO] Worker exiting (pid: 27321)
+[2022-04-14 15:34:09 +0000] [27327] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:09 +0000] [27327] [INFO] Worker exiting (pid: 27327)
+[2022-04-14 15:34:09 +0000] [27329] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:09 +0000] [27329] [INFO] Worker exiting (pid: 27329)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:34:10 +0000] [27346] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:34:10 +0000] [27346] [INFO] Listening at: http://0.0.0.0:8080 (27346)
+[2022-04-14 15:34:10 +0000] [27346] [INFO] Using worker: sync
+[2022-04-14 15:34:10 +0000] [27349] [INFO] Booting worker with pid: 27349
+[2022-04-14 15:34:10 +0000] [27350] [INFO] Booting worker with pid: 27350
+[2022-04-14 15:34:10 +0000] [27351] [INFO] Booting worker with pid: 27351
+[2022-04-14 15:34:11 +0000] [27349] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:11 +0000] [27349] [INFO] Worker exiting (pid: 27349)
+[2022-04-14 15:34:12 +0000] [27350] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:12 +0000] [27350] [INFO] Worker exiting (pid: 27350)
+[2022-04-14 15:34:12 +0000] [27351] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:12 +0000] [27351] [INFO] Worker exiting (pid: 27351)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:34:13 +0000] [27382] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:34:13 +0000] [27382] [INFO] Listening at: http://0.0.0.0:8080 (27382)
+[2022-04-14 15:34:13 +0000] [27382] [INFO] Using worker: sync
+[2022-04-14 15:34:13 +0000] [27392] [INFO] Booting worker with pid: 27392
+[2022-04-14 15:34:13 +0000] [27399] [INFO] Booting worker with pid: 27399
+[2022-04-14 15:34:13 +0000] [27400] [INFO] Booting worker with pid: 27400
+[2022-04-14 15:34:14 +0000] [27392] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:14 +0000] [27392] [INFO] Worker exiting (pid: 27392)
+[2022-04-14 15:34:14 +0000] [27399] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:14 +0000] [27399] [INFO] Worker exiting (pid: 27399)
+[2022-04-14 15:34:14 +0000] [27400] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:14 +0000] [27400] [INFO] Worker exiting (pid: 27400)
+[2022-04-14 15:34:14 +0000] [27382] [INFO] Shutting down: Master
+[2022-04-14 15:34:14 +0000] [27382] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:34:15 +0000] [27413] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:34:15 +0000] [27413] [INFO] Listening at: http://0.0.0.0:8080 (27413)
+[2022-04-14 15:34:15 +0000] [27413] [INFO] Using worker: sync
+[2022-04-14 15:34:15 +0000] [27419] [INFO] Booting worker with pid: 27419
+[2022-04-14 15:34:15 +0000] [27420] [INFO] Booting worker with pid: 27420
+[2022-04-14 15:34:15 +0000] [27421] [INFO] Booting worker with pid: 27421
+[2022-04-14 15:34:16 +0000] [27419] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:16 +0000] [27419] [INFO] Worker exiting (pid: 27419)
+[2022-04-14 15:34:16 +0000] [27420] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:16 +0000] [27420] [INFO] Worker exiting (pid: 27420)
+[2022-04-14 15:34:16 +0000] [27421] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:16 +0000] [27421] [INFO] Worker exiting (pid: 27421)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:34:17 +0000] [27428] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:34:17 +0000] [27428] [INFO] Listening at: http://0.0.0.0:8080 (27428)
+[2022-04-14 15:34:17 +0000] [27428] [INFO] Using worker: sync
+[2022-04-14 15:34:17 +0000] [27437] [INFO] Booting worker with pid: 27437
+[2022-04-14 15:34:17 +0000] [27438] [INFO] Booting worker with pid: 27438
+[2022-04-14 15:34:17 +0000] [27439] [INFO] Booting worker with pid: 27439
+[2022-04-14 15:34:18 +0000] [27437] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:18 +0000] [27437] [INFO] Worker exiting (pid: 27437)
+[2022-04-14 15:34:18 +0000] [27438] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:18 +0000] [27438] [INFO] Worker exiting (pid: 27438)
+[2022-04-14 15:34:18 +0000] [27439] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:18 +0000] [27439] [INFO] Worker exiting (pid: 27439)
+[2022-04-14 15:34:19 +0000] [27428] [INFO] Shutting down: Master
+[2022-04-14 15:34:19 +0000] [27428] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:34:20 +0000] [27478] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:34:20 +0000] [27478] [INFO] Listening at: http://0.0.0.0:8080 (27478)
+[2022-04-14 15:34:20 +0000] [27478] [INFO] Using worker: sync
+[2022-04-14 15:34:20 +0000] [27481] [INFO] Booting worker with pid: 27481
+[2022-04-14 15:34:20 +0000] [27488] [INFO] Booting worker with pid: 27488
+[2022-04-14 15:34:20 +0000] [27489] [INFO] Booting worker with pid: 27489
+[2022-04-14 15:34:21 +0000] [27481] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:21 +0000] [27481] [INFO] Worker exiting (pid: 27481)
+[2022-04-14 15:34:21 +0000] [27488] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:21 +0000] [27488] [INFO] Worker exiting (pid: 27488)
+[2022-04-14 15:34:21 +0000] [27489] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:21 +0000] [27489] [INFO] Worker exiting (pid: 27489)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:34:22 +0000] [27503] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:34:22 +0000] [27503] [INFO] Listening at: http://0.0.0.0:8080 (27503)
+[2022-04-14 15:34:22 +0000] [27503] [INFO] Using worker: sync
+[2022-04-14 15:34:22 +0000] [27506] [INFO] Booting worker with pid: 27506
+[2022-04-14 15:34:22 +0000] [27507] [INFO] Booting worker with pid: 27507
+[2022-04-14 15:34:22 +0000] [27508] [INFO] Booting worker with pid: 27508
+[2022-04-14 15:34:23 +0000] [27506] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:23 +0000] [27506] [INFO] Worker exiting (pid: 27506)
+[2022-04-14 15:34:23 +0000] [27507] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:23 +0000] [27507] [INFO] Worker exiting (pid: 27507)
+[2022-04-14 15:34:23 +0000] [27508] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:23 +0000] [27508] [INFO] Worker exiting (pid: 27508)
+[2022-04-14 15:34:24 +0000] [27503] [INFO] Shutting down: Master
+[2022-04-14 15:34:24 +0000] [27503] [INFO] Reason: Worker failed to boot.
+[2022-04-14 15:34:25 +0000] [27552] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:34:25 +0000] [27552] [INFO] Listening at: http://0.0.0.0:8080 (27552)
+[2022-04-14 15:34:25 +0000] [27552] [INFO] Using worker: sync
+[2022-04-14 15:34:25 +0000] [27561] [INFO] Booting worker with pid: 27561
+[2022-04-14 15:34:25 +0000] [27562] [INFO] Booting worker with pid: 27562
+[2022-04-14 15:34:25 +0000] [27563] [INFO] Booting worker with pid: 27563
+[2022-04-14 15:34:26 +0000] [27561] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:26 +0000] [27561] [INFO] Worker exiting (pid: 27561)
+[2022-04-14 15:34:26 +0000] [27562] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:26 +0000] [27562] [INFO] Worker exiting (pid: 27562)
+[2022-04-14 15:34:26 +0000] [27563] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:26 +0000] [27563] [INFO] Worker exiting (pid: 27563)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 210, in run
+    self.sleep()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 232, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-14 15:34:26 +0000] [27570] [INFO] Starting gunicorn 19.10.0
+[2022-04-14 15:34:26 +0000] [27570] [INFO] Listening at: http://0.0.0.0:8080 (27570)
+[2022-04-14 15:34:26 +0000] [27570] [INFO] Using worker: sync
+[2022-04-14 15:34:26 +0000] [27573] [INFO] Booting worker with pid: 27573
+[2022-04-14 15:34:27 +0000] [27574] [INFO] Booting worker with pid: 27574
+[2022-04-14 15:34:27 +0000] [27575] [INFO] Booting worker with pid: 27575
+[2022-04-14 15:34:27 +0000] [27570] [INFO] Handling signal: term
+[2022-04-14 15:34:27 +0000] [27573] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:27 +0000] [27573] [INFO] Worker exiting (pid: 27573)
+[2022-04-14 15:34:28 +0000] [27574] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/ec2-user/environment/webApp/wsgi.py", line 2, in <module>
+    app = create_app()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 40, in create_app
+    from app.auth import bp as auth_bp
+  File "/home/ec2-user/environment/webApp/app/auth/__init__.py", line 3, in <module>
+    bp = Blueprint('auth', __name__, instance_relative_config=True)
+TypeError: __init__() got an unexpected keyword argument 'instance_relative_config'
+[2022-04-14 15:34:28 +0000] [27574] [INFO] Worker exiting (pid: 27574)
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 225, in run
+    handler()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 260, in handle_term
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/environment/webApp/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 245, in handle_chld
+    self.reap_workers()
+  File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
