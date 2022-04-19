@@ -8,25 +8,24 @@ from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EServ
 from app.main import bp
 from flask_admin.contrib.sqla import ModelView
 
-with current_app.app_context():
-    adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
-    print([row[0] for row in adminviewsql])
-
 #adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
-#print(adminviewsql)
+#print(adminviewsql[0])
 
-#class SuperAdminView(ModelView):
-#    def is_accessible(self):
-#        return adminviewsql == 0
-#    def inaccessible_callback(self, name, **kwergs):
-#        return redirect(url_for('auth.login'),next=request.url)
+class SuperAdminView(ModelView):
+    def is_accessible(self):
+        adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
+        checkatc1 = [row[0] for row in adminviewsql]
+        print(checkatc1[0])
+        return checkatc1[0] == 0
+    def inaccessible_callback(self, name, **kwergs):
+        return redirect(url_for('auth.login'),next=request.url)
 
+admin.add_view(SuperAdminView(User, db.session))
+admin.add_view(SuperAdminView(governmentfac, db.session))
+admin.add_view(SuperAdminView(Post, db.session))
+admin.add_view(SuperAdminView(booking_record, db.session))
+admin.add_view(SuperAdminView(Roles, db.session))
 
-#admin.add_view(SuperAdminView(User, db.session))
-#admin.add_view(SuperAdminView(governmentfac, db.session))
-#admin.add_view(SuperAdminView(Post, db.session))
-#admin.add_view(SuperAdminView(booking_record, db.session))
-#admin.add_view(SuperAdminView(Roles, db.session))
 
 @bp.before_request
 def before_request():

@@ -1,28 +1,4 @@
-2022-03-14 04:19:33,972 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 05:14:01,797 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
-2022-03-14 05:27:02,167 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:82]
-2022-03-14 05:29:59,984 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:82]
-2022-03-14 05:31:18,124 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-14 05:31:39,608 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
-2022-03-14 05:40:55,743 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
-2022-03-14 05:41:15,056 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
-2022-03-14 05:42:42,573 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
-2022-03-14 06:52:33,669 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:28:34,934 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:37:24,174 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:40:04,438 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:51:13,536 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:54:59,241 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:58:23,430 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-15 04:23:36,911 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
-2022-03-15 04:26:16,303 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
-2022-03-15 04:39:01,059 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-03-15 04:42:48,411 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-15 04:43:39,435 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-15 04:50:15,266 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
-2022-03-15 04:51:05,622 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
-2022-03-15 06:35:51,096 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
-2022-03-15 06:36:11,307 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-18 08:49:05,711 ERROR: Exception on /TEST [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -32,14 +8,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
-    return self._run_view(f, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
-    return fn(self, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
-    return self.render(self._template)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
-    return render_template(template, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 254, in Test
+    return render_template('TEST.html',check_datetime=check_datetime)
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -48,27 +18,28 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
-    {% extends 'admin/master.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
-    {% extends admin_base_template %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
-    {% block page_body %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
-    {% block main_menu %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
-    {{ layout.menu() }}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
-    rv = self._func(*arguments)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
-    {%- if item.is_accessible() and item.is_visible() -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
-    return self._view.is_accessible()
-  File "/home/ec2-user/environment/webApp/app/__init__.py", line 33, in is_accessible
-    return current_user.username == "Test"
-AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
-2022-03-15 06:47:34,406 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
-2022-03-15 06:47:58,592 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/templates/TEST.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 74, in block 'navbar'
+    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.TTest') }}"class="nav-link pb-1 px-2">Admin</a></li>
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.TTest'. Did you mean 'main.Test' instead?
+2022-03-18 08:49:25,311 ERROR: Exception on /TEST [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -78,14 +49,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
-    return self._run_view(f, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
-    return fn(self, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
-    return self.render(self._template)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
-    return render_template(template, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 254, in Test
+    return render_template('TEST.html',check_datetime=check_datetime)
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -94,22 +59,72 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
-    {% extends 'admin/master.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
-    {% extends admin_base_template %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
-    {% block page_body %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
-    {% block main_menu %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
-    {{ layout.menu() }}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
-    rv = self._func(*arguments)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
-    {%- if item.is_accessible() and item.is_visible() -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
-    return self._view.is_accessible()
-  File "/home/ec2-user/environment/webApp/app/__init__.py", line 33, in is_accessible
-    return current_user.username == "Test"
-AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
+  File "/home/ec2-user/environment/webApp/app/templates/TEST.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 74, in block 'navbar'
+    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.adminpg') }}"class="nav-link pb-1 px-2">Admin</a></li>
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.TTest'. Did you mean 'main.Test' instead?
+2022-03-18 08:49:32,079 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:50:29,731 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:51:21,752 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:51:27,221 ERROR: Exception on / [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 59, in index
+    prev_url=prev_url)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+    ctx.app,
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 74, in block 'navbar'
+    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.adminpg') }}"class="nav-link pb-1 px-2">Admin</a></li>
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.adminpg'. Did you mean 'main.booking' instead?
+2022-03-18 08:51:54,895 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:58:38,652 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]

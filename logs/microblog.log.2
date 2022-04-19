@@ -1,4 +1,19 @@
-2022-03-18 06:02:15,465 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-04-19 09:02:32,443 ERROR: Exception on /entertainment [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'FYP_DATABASE.my_tv_super' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,43 +23,70 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
-    return self._run_view(f, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
-    return fn(self, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
-    return self.render(self._template)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
-    return render_template(template, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
-    {% extends 'admin/master.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
-    {% extends admin_base_template %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
-    {% block page_body %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
-    {% block main_menu %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
-    {{ layout.menu() }}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
-    rv = self._func(*arguments)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
-    {%- if item.is_accessible() and item.is_visible() -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
-    return self._view.is_accessible()
-  File "/home/ec2-user/environment/webApp/app/__init__.py", line 33, in is_accessible
-    return login.current_user.is_authenticated()
-AttributeError: 'LoginManager' object has no attribute 'current_user'
-2022-03-18 06:04:11,839 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:99]
-2022-03-18 06:04:14,857 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 366, in entertainment
+    Plan1 = MyTVSuper.query.get(1)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 1004, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 1116, in _get_impl
+    return db_load_fn(self, primary_key_identity)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/loading.py", line 284, in load_on_pk_identity
+    return q.one()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3347, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3316, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'FYP_DATABASE.my_tv_super' doesn't exist")
+[SQL: SELECT my_tv_super.`PlanID` AS `my_tv_super_PlanID`, my_tv_super.`PlanLevel` AS `my_tv_super_PlanLevel`, my_tv_super.channel AS my_tv_super_channel 
+FROM my_tv_super 
+WHERE my_tv_super.`PlanID` = %s]
+[parameters: (1,)]
+(Background on this error at: http://sqlalche.me/e/f405)
+2022-04-19 09:02:40,519 ERROR: Exception on /Service [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'FYP_DATABASE.e_service' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -54,53 +96,41 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
-    return self._run_view(f, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
-    return fn(self, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
-    return self.render(self._template)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
-    return render_template(template, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
-    {% extends 'admin/master.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
-    {% extends admin_base_template %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
-    {% block page_body %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
-    {% block main_menu %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
-    {{ layout.menu() }}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
-    rv = self._func(*arguments)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
-    {%- if item.is_accessible() and item.is_visible() -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
-    return self._view.is_accessible()
-  File "/home/ec2-user/environment/webApp/app/__init__.py", line 33, in is_accessible
-    return current_user.is_authenticated()
-TypeError: 'bool' object is not callable
-2022-03-18 06:06:28,051 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:99]
-2022-03-18 06:14:44,538 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:11:43,250 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:21:32,804 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:21:56,348 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:23:44,968 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:25:19,506 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:30:49,905 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:31:22,069 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:32:12,738 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:33:36,755 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:35:28,732 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:36:34,971 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:48:07,641 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:48:46,685 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 332, in Service
+    Servies = EService.query.all()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3233, in all
+    return list(self)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'FYP_DATABASE.e_service' doesn't exist")
+[SQL: SELECT e_service.`ServiceID` AS `e_service_ServiceID`, e_service.`ServiceName` AS `e_service_ServiceName` 
+FROM e_service]
+(Background on this error at: http://sqlalche.me/e/f405)

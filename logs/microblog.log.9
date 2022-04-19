@@ -1,4 +1,28 @@
-2022-03-07 12:01:31,118 ERROR: Exception on /CheckRecord [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-14 04:19:33,972 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
+2022-03-14 05:14:01,797 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+2022-03-14 05:27:02,167 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:82]
+2022-03-14 05:29:59,984 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:82]
+2022-03-14 05:31:18,124 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+2022-03-14 05:31:39,608 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
+2022-03-14 05:40:55,743 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
+2022-03-14 05:41:15,056 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
+2022-03-14 05:42:42,573 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
+2022-03-14 06:52:33,669 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
+2022-03-14 07:28:34,934 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
+2022-03-14 07:37:24,174 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
+2022-03-14 07:40:04,438 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
+2022-03-14 07:51:13,536 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
+2022-03-14 07:54:59,241 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
+2022-03-14 07:58:23,430 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
+2022-03-15 04:23:36,911 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+2022-03-15 04:26:16,303 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+2022-03-15 04:39:01,059 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-03-15 04:42:48,411 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-15 04:43:39,435 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-15 04:50:15,266 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
+2022-03-15 04:51:05,622 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
+2022-03-15 06:35:51,096 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
+2022-03-15 06:36:11,307 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,10 +32,14 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 247, in CheckRecord
-    return render_template('Record.html', Record=Record)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
+    return self._run_view(f, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
+    return fn(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
+    return self.render(self._template)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
+    return render_template(template, **kwargs)
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -20,84 +48,27 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/Record.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/Record.html", line 30, in block 'content'
-    <td><button type="submit" id="cancelbook" name="cancelbook" data-id='{{ govlists.govid }}' class="cancelbook btn btn-danger">Cancel</button></td>
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'govlists' is undefined
-2022-03-07 12:29:35,604 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:30:43,248 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:31:39,792 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:32:00,910 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:33:46,651 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:38:44,273 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:39:37,383 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:43:04,817 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:44:05,247 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:46:39,132 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:47:00,300 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:47:50,493 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:49:21,154 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:49:35,279 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:52:13,734 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:53:58,520 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:54:22,418 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:57:41,035 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 12:58:28,306 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:02:47,681 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:04:45,604 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:10:16,330 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:11:59,588 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:21:47,251 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:42:16,486 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:42:32,539 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:48:04,702 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:49:51,997 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:51:05,150 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:52:25,760 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:52:56,728 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:53:39,666 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:54:15,546 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 13:56:03,755 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 14:06:33,066 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 14:07:15,154 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 14:08:22,126 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 14:10:33,465 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 14:10:53,903 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 14:11:15,184 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 14:12:31,023 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-07 14:14:14,136 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 01:13:23,970 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 01:16:17,602 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 01:17:17,806 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 01:31:48,032 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 01:32:57,352 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 01:38:37,032 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 01:40:05,290 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 01:43:12,152 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 01:57:16,957 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 01:58:38,136 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 02:02:57,865 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 02:04:34,294 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 02:29:51,251 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 02:31:02,584 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 02:40:04,219 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 05:33:51,159 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 05:41:46,471 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 05:46:38,935 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-08 05:47:05,036 ERROR: Exception on /book_insert [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
+    {% extends 'admin/master.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
+    {% extends admin_base_template %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
+    {% block page_body %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
+    {% block main_menu %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
+    {{ layout.menu() }}
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
+    rv = self._func(*arguments)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
+    {%- if item.is_accessible() and item.is_visible() -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
+    return self._view.is_accessible()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 33, in is_accessible
+    return current_user.username == "Test"
+AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
+2022-03-15 06:47:34,406 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
+2022-03-15 06:47:58,592 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -107,7 +78,38 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 210, in book_insert
-    print(check_datetime.status)
-AttributeError: 'BaseQuery' object has no attribute 'status'
-2022-03-08 05:54:13,691 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
+    return self._run_view(f, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
+    return fn(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
+    return self.render(self._template)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
+    return render_template(template, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+    ctx.app,
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
+    {% extends 'admin/master.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
+    {% extends admin_base_template %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
+    {% block page_body %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
+    {% block main_menu %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
+    {{ layout.menu() }}
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
+    rv = self._func(*arguments)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
+    {%- if item.is_accessible() and item.is_visible() -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
+    return self._view.is_accessible()
+  File "/home/ec2-user/environment/webApp/app/__init__.py", line 33, in is_accessible
+    return current_user.username == "Test"
+AttributeError: 'AnonymousUserMixin' object has no attribute 'username'

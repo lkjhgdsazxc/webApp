@@ -26,12 +26,6 @@ mail = Mail()
 bootstrap = Bootstrap()
 moment = Moment()
 babel = Babel()
-
-
-
-
-
-
 admin = Admin()
 
 def create_app(config_class=Config):
@@ -45,14 +39,7 @@ def create_app(config_class=Config):
     moment.init_app(app)
     babel.init_app(app)
     admin.init_app(app)
-    with app.app_context():
-        adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
-        print([row[0] for row in adminviewsql])
-        adminviewsql.init_app(app)
-            
-            
-    from app.main import bp as adminviewsql_bp
-    app.register_blueprint(adminviewsql_bp)
+
     
     from app.main import bp as admin_bp
     app.register_blueprint(admin_bp)
