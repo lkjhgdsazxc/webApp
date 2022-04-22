@@ -1,28 +1,4 @@
-2022-03-14 04:19:33,972 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 05:14:01,797 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
-2022-03-14 05:27:02,167 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:82]
-2022-03-14 05:29:59,984 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:82]
-2022-03-14 05:31:18,124 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:81]
-2022-03-14 05:31:39,608 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
-2022-03-14 05:40:55,743 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
-2022-03-14 05:41:15,056 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
-2022-03-14 05:42:42,573 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:80]
-2022-03-14 06:52:33,669 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:28:34,934 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:37:24,174 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:40:04,438 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:51:13,536 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:54:59,241 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-14 07:58:23,430 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-03-15 04:23:36,911 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
-2022-03-15 04:26:16,303 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
-2022-03-15 04:39:01,059 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-03-15 04:42:48,411 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-15 04:43:39,435 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-15 04:50:15,266 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
-2022-03-15 04:51:05,622 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
-2022-03-15 06:35:51,096 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
-2022-03-15 06:36:11,307 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-03-18 06:02:15,465 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -65,10 +41,10 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
     return self._view.is_accessible()
   File "/home/ec2-user/environment/webApp/app/__init__.py", line 33, in is_accessible
-    return current_user.username == "Test"
-AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
-2022-03-15 06:47:34,406 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:91]
-2022-03-15 06:47:58,592 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+    return login.current_user.is_authenticated()
+AttributeError: 'LoginManager' object has no attribute 'current_user'
+2022-03-18 06:04:11,839 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:99]
+2022-03-18 06:04:14,857 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -111,5 +87,20 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
     return self._view.is_accessible()
   File "/home/ec2-user/environment/webApp/app/__init__.py", line 33, in is_accessible
-    return current_user.username == "Test"
-AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
+    return current_user.is_authenticated()
+TypeError: 'bool' object is not callable
+2022-03-18 06:06:28,051 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:99]
+2022-03-18 06:14:44,538 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:11:43,250 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:21:32,804 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:21:56,348 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:23:44,968 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:25:19,506 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:30:49,905 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:31:22,069 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:32:12,738 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:33:36,755 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:35:28,732 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:36:34,971 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:48:07,641 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+2022-03-18 08:48:46,685 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+
+{% for An in announcements %}
+<div class="card" style="width: 18rem;">
+  <img src="{{An.img}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{An.title}}</h5>
+    <p class="card-text">{{An.contents}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

@@ -15,7 +15,12 @@ followers = db.Table(
     db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
 )
 
-
+class Announcement(db.Model):
+    Aid = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.VARCHAR(100))
+    contents = db.Column(db.VARCHAR(100))
+    img = db.Column(db.VARCHAR(200))
+    
 class Roles(db.Model):
     RolesID = db.Column(db.Integer,db.ForeignKey('UserRoles.RolesID'),primary_key=True)
     Rolesname = db.Column(db.VARCHAR(50))

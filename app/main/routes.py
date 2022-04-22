@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from app import current_app, db, admin
 from app.main.forms import EditProfileForm, PostForm, CheckLocationForm, PriceListForm, PayForm , MobPriceListForm, RecordForm, UpgradeForm, BookingForm
-from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, MyTVSuper,permission, governmentfac, facility, booking_record, Roles, UserRoles
+from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, Announcement,permission, governmentfac, facility, booking_record, Roles, UserRoles
 from app.main import bp
 from flask_admin.contrib.sqla import ModelView
 
@@ -13,10 +13,10 @@ from flask_admin.contrib.sqla import ModelView
 
 class SuperAdminView(ModelView):
     def is_accessible(self):
-        adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
+        adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=%s;',current_user.id)
         checkatc1 = [row[0] for row in adminviewsql]
-        print(checkatc1[0])
-        return checkatc1[0] == 0
+        SuperAdmin = 0
+        return checkatc1[0] == SuperAdmin
     def inaccessible_callback(self, name, **kwergs):
         return redirect(url_for('auth.login'),next=request.url)
 
@@ -331,20 +331,11 @@ def GlobalSite():
     return render_template('Global.html', form=form,Globfun1=Globfun1,Globfun2=Globfun2,Globfun3=Globfun3)
 
 
-@bp.route('/Service', methods=['GET', 'POST'])
+@bp.route('/CONTACT', methods=['GET', 'POST'])
 @login_required
-def Service():
+def CONTACT():
     form = MobPriceListForm()
-    Servies = EService.query.all()
-    Ser1 = EService.query.get(1)
-    Ser2 = EService.query.get(2)
-    Ser3 = EService.query.get(3)
-    Ser4 = EService.query.get(4)
-    Ser5 = EService.query.get(5)
-    Ser6 = EService.query.get(6)
-    return render_template('Service.html', form=form,Servies=Servies
-                           ,Ser1=Ser1,Ser2=Ser2,Ser3=Ser3,Ser4=Ser4,
-                           Ser5=Ser5,Ser6=Ser6)
+    return render_template('CONTACT.html')
 
 @bp.route('/aboutus', methods=['GET', 'POST'])
 @login_required
@@ -365,11 +356,9 @@ def Referral():
     Plan2 = ReferralRewards.query.get(2)
     return render_template('Referral.html', form=form,Plan1=Plan1,Plan2=Plan2)
 
-@bp.route('/entertainment', methods=['GET', 'POST'])
+@bp.route('/announcement', methods=['GET', 'POST'])
 @login_required
-def entertainment():
-    form = MobPriceListForm()
-    Plan1 = MyTVSuper.query.get(1)
-    Plan2 = MyTVSuper.query.get(2)
-    return render_template('MyTVSuper.html', form=form,Plan1=Plan1,Plan2=Plan2)
+def announcement():
+    announcements = Announcement.query.all()
+    return render_template('Announcement.html',announcements=announcements)
     

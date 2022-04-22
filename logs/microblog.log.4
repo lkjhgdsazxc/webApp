@@ -1,53 +1,4 @@
-2022-03-18 08:58:42,595 ERROR: Exception on / [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 59, in index
-    prev_url=prev_url)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
-    {% block navbar %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 74, in block 'navbar'
-    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.adminpg') }}"class="nav-link pb-1 px-2">Admin</a></li>
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'main.adminpg'. Did you mean 'main.Adminpg' instead?
-2022-03-18 08:59:05,975 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 09:02:59,720 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:92]
-2022-04-19 07:24:54,564 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:83]
-2022-04-19 08:28:13,276 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
-2022-04-19 08:29:39,540 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
-2022-04-19 08:59:27,600 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
-2022-04-19 09:00:04,941 ERROR: Exception on /admin/roles/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-04-19 09:02:44,295 ERROR: Exception on /Service [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context
@@ -59,7 +10,7 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-MySQLdb._exceptions.ProgrammingError: (1146, "Table 'FYP_DATABASE.roles' doesn't exist")
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'FYP_DATABASE.e_service' doesn't exist")
 
 The above exception was the direct cause of the following exception:
 
@@ -72,20 +23,12 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
-    return self._run_view(f, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
-    return fn(self, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/model/base.py", line 1969, in index_view
-    view_args.search, view_args.filters, page_size=page_size)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/contrib/sqla/view.py", line 1086, in get_list
-    count = count_query.scalar() if count_query else None
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3377, in scalar
-    ret = self.one()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3347, in one
-    ret = self.one_or_none()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3316, in one_or_none
-    ret = list(self)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 332, in Service
+    Servies = EService.query.all()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3233, in all
+    return list(self)
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
     return self._execute_and_instances(context)
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
@@ -114,9 +57,60 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'FYP_DATABASE.roles' doesn't exist")
-[SQL: SELECT count(%s) AS count_1 
-FROM roles]
-[parameters: ('*',)]
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'FYP_DATABASE.e_service' doesn't exist")
+[SQL: SELECT e_service.`ServiceID` AS `e_service_ServiceID`, e_service.`ServiceName` AS `e_service_ServiceName` 
+FROM e_service]
 (Background on this error at: http://sqlalche.me/e/f405)
-2022-04-19 09:00:12,112 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+2022-04-19 09:07:11,400 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+2022-04-19 09:07:21,725 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+2022-04-19 09:07:51,733 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+2022-04-19 09:08:22,967 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+2022-04-19 09:08:24,931 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
+    return self._run_view(f, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
+    return fn(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
+    return self.render(self._template)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
+    return render_template(template, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+    ctx.app,
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
+    {% extends 'admin/master.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
+    {% extends admin_base_template %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
+    {% block page_body %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
+    {% block main_menu %}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
+    {{ layout.menu() }}
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
+    rv = self._func(*arguments)
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
+    {%- if item.is_accessible() and item.is_visible() -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
+    return self._view.is_accessible()
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 17, in is_accessible
+    print(adminviewsql[0])
+TypeError: 'ResultProxy' object is not subscriptable
+2022-04-19 09:09:20,384 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+2022-04-19 09:09:53,037 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+2022-04-19 09:10:23,519 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+2022-04-19 09:11:24,121 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
