@@ -78,3 +78,7 @@
 2022-04-14 15:18:24,080 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
 2022-04-14 15:18:24,205 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
 2022-04-14 15:18:24,290 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-04-23 19:41:58,125 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-04-23 19:41:58,723 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-04-23 19:53:43,411 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
+2022-04-23 19:53:43,995 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:74]
