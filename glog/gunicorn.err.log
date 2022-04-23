@@ -2766,3 +2766,12 @@ Traceback (most recent call last):
   File "/home/ec2-user/environment/webApp/venv/lib64/python3.7/site-packages/gunicorn/arbiter.py", line 528, in reap_workers
     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
 gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2022-04-23 20:22:41 +0000] [32270] [INFO] Starting gunicorn 19.10.0
+[2022-04-23 20:22:41 +0000] [32270] [INFO] Listening at: http://0.0.0.0:8080 (32270)
+[2022-04-23 20:22:41 +0000] [32270] [INFO] Using worker: sync
+[2022-04-23 20:22:41 +0000] [32306] [INFO] Booting worker with pid: 32306
+[2022-04-23 20:22:41 +0000] [32307] [INFO] Booting worker with pid: 32307
+[2022-04-23 20:22:41 +0000] [32308] [INFO] Booting worker with pid: 32308
+[2022-04-23 20:22:58,235] INFO in __init__: Microblog startup
+[2022-04-23 20:22:58,240] INFO in __init__: Microblog startup
+[2022-04-23 20:22:58,241] INFO in __init__: Microblog startup
