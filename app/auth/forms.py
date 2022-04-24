@@ -10,7 +10,7 @@ class LoginForm(FlaskForm):
     username = StringField(_l('username'), validators=[DataRequired()])
     password = PasswordField(_l('password'), validators=[DataRequired()])
     remember_me = BooleanField(_l('Remember Me'))
-    #recaptcha = RecaptchaField()
+    recaptcha = RecaptchaField()
     submit = SubmitField(_l('Sign In'))
 
 
@@ -21,7 +21,7 @@ class RegistrationForm(FlaskForm):
     password2 = PasswordField(
         _l('Repeat Password'), validators=[DataRequired(),
                                            EqualTo('password')], render_kw={"placeholder": "Type your password again in here"})
-    #recaptcha = RecaptchaField()
+    recaptcha = RecaptchaField()
     submit = SubmitField(_l('Register'))
 
     def validate_username(self, username):
@@ -56,7 +56,7 @@ class ResetPasswordForm(FlaskForm):
     password2 = PasswordField(
         _l('Repeat Password'), validators=[DataRequired(),
                                            EqualTo('password')], render_kw={"placeholder": "Type your password again in here"})
-    #recaptcha = RecaptchaField()                                       
+    recaptcha = RecaptchaField()                                       
     submit = SubmitField(_l('Request Password Reset'))
     
     def validate_password(self, password):
