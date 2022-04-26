@@ -7,7 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_mysqldb import MySQL,MySQLdb
 from flask_migrate import Migrate
 from flask_login import LoginManager, current_user
-from flask_mail import Mail
+from flask_mail import Mail, Message
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
@@ -28,8 +28,12 @@ moment = Moment()
 babel = Babel()
 admin = Admin()
 
+
+
+
 def create_app(config_class=Config):
     app = Flask(__name__)
+    app.debug = True
     app.config.from_object(config_class)
     db.init_app(app)
     migrate.init_app(app, db)
@@ -39,8 +43,8 @@ def create_app(config_class=Config):
     moment.init_app(app)
     babel.init_app(app)
     admin.init_app(app)
-
     
+        
     from app.main import bp as admin_bp
     app.register_blueprint(admin_bp)
     

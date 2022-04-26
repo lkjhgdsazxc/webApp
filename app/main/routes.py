@@ -2,11 +2,12 @@ from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request, g, session, jsonify
 from flask_login import current_user, login_required
 from flask_babel import _, get_locale
-from app import current_app, db, admin
+from app import current_app, db, admin, mail
 from app.main.forms import EditProfileForm, PostForm, CheckLocationForm, PriceListForm, PayForm , MobPriceListForm, RecordForm, UpgradeForm, BookingForm
-from app.models import User, Post, Location, Plan, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, Announcement,permission, governmentfac, facility, booking_record, Roles, UserRoles
+from app.models import User, Post, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, Announcement,permission, governmentfac, facility, booking_record, Roles, UserRoles
 from app.main import bp
 from flask_admin.contrib.sqla import ModelView
+from flask_mail import Message
 
 #adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
 #print(adminviewsql[0])
@@ -160,33 +161,6 @@ def unfollow(username):
     return redirect(url_for('main.user', username=username))
 
 
-@bp.route('/check_location', methods=['GET', 'POST'])
-@login_required
-def check_location():
-    form = CheckLocationForm()
-    location = bool(Location.query.filter_by(Street=form.loca.data).first())
-    if form.validate_on_submit():
-        print(location)
-        if location == True :
-            flash(_('Choose your plan!'))
-            return redirect(url_for('main.planlist'))
-            endif
-        elif location == False:
-            flash(_('Sorry, There not service support'))
-            return redirect(url_for('main.check_location'))
-    return render_template('check_location.html',
-                           form=form)
-
-
-@bp.route('/planlist', methods=['GET', 'POST'])
-@login_required
-def planlist():
-    form = PriceListForm()
-    list = Plan.query.all()
-    listone = Plan.query.get(1)
-    listtwo = Plan.query.get(2)
-    listthree = Plan.query.get(3)
-    return render_template('plan.html', form=form, list=list, listone=listone, listtwo=listtwo, listthree=listthree)
 
 @bp.route('/Mobplanlist', methods=['GET', 'POST'], defaults={"page": 1})
 @bp.route('/Mobplanlist/<int:page>', methods=['GET', 'POST'])
@@ -251,6 +225,14 @@ def Test():
     print([row[0] for row in results])
     check_datetime= booking_record.query.filter(booking_record.starttime.between(stime, etime))
     return render_template('TEST.html',check_datetime=check_datetime)
+
+@bp.route('/Sendmail', methods=['GET', 'POST'])
+def Sendmail():
+   msg = Message('Hello', sender = 'nineho3@gmail.com', recipients = ['lkjhgdsazxc@gmail.com'])
+   msg.body = "This is the email body"
+   mail.send(msg)
+   print('sent mail!!')
+   return render_template('CONTACT.html', success=True)
 
 @bp.route('/', methods=['GET', 'POST'])
 def Adminpg():
