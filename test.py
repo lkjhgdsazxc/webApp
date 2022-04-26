@@ -9,8 +9,8 @@ app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PROT=465,
     MAIL_USE_TLS=True,
-    MAIL_USERNAME='nineho3@gmail.com',
-    MAIL_PASSWORD='asdghjkl456'
+    MAIL_USERNAME='##@gmail.com',
+    MAIL_PASSWORD='##'
 )
 #  記得先設置參數再做實作mail
 mail = Mail(app)
@@ -21,9 +21,9 @@ def index():
     #  主旨
     msg_title = 'Hello It is Flask-Mail'
     #  寄件者，若參數有設置就不需再另外設置
-    msg_sender = 'nineho3@gmail.com'
+    msg_sender = '##@gmail.com'
     #  收件者，格式為list，否則報錯
-    msg_recipients = ['lkjhgdsazxc@gmail.com']
+    msg_recipients = ['##@gmail.com']
     #  郵件內容
     msg_body = 'Hey, I am mail body!'
     #  也可以使用html
