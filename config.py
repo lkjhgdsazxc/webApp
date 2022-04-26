@@ -9,8 +9,8 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     MAIL_SERVER='smtp.gmail.com'
     MAIL_PORT = 465
-    MAIL_USERNAME = 'nineho3@gmail.com'
-    MAIL_PASSWORD = 'asdghjkl456'
+    MAIL_USERNAME = '##@gmail.com'
+    MAIL_PASSWORD = '##'
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
     ADMINS = ['nineho@gmail.com']
