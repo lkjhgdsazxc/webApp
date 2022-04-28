@@ -97,6 +97,7 @@ class governmentfac(db.Model):
     Address = db.Column(db.VARCHAR(100))
     govimg = db.Column(db.VARCHAR(200))
     Likes = db.Column(db.Integer)
+    
 class facility(db.Model):
     fid = db.Column(db.Integer, primary_key=True)
     fname = db.Column(db.VARCHAR(100))
