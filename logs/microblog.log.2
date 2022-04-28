@@ -1,4 +1,24 @@
-2022-04-22 08:32:25,411 ERROR: Exception on /aboutus [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-04-28 16:57:59,247 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:59:26,647 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:00:52,073 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:01:47,928 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:03:05,790 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:04:10,879 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:04:39,096 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:06:08,305 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:06:32,623 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:07:01,892 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:08:30,472 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:14:10,563 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:14:33,365 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:14:40,623 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:15:28,052 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:17:16,309 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 17:59:24,622 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 18:06:45,793 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 18:08:25,832 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 18:08:59,897 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 18:09:04,210 ERROR: Exception on /Like [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
     cursor, statement, parameters, context
@@ -10,7 +30,7 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-MySQLdb._exceptions.ProgrammingError: (1146, "Table 'FYP_DATABASE.support_tel' doesn't exist")
+MySQLdb._exceptions.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Like WHERE uid=0 AND fid='1'' at line 1")
 
 The above exception was the direct cause of the following exception:
 
@@ -23,30 +43,14 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 344, in aboutus
-    Tel1 = SupportTel.query.get(11112222)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 1004, in get
-    return self._get_impl(ident, loading.load_on_pk_identity)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 1116, in _get_impl
-    return db_load_fn(self, primary_key_identity)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/loading.py", line 284, in load_on_pk_identity
-    return q.one()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3347, in one
-    ret = self.one_or_none()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3316, in one_or_none
-    ret = list(self)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3389, in __iter__
-    return self._execute_and_instances(context)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/query.py", line 3414, in _execute_and_instances
-    result = conn.execute(querycontext.statement, self._params)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
-    return meth(self, multiparams, params)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
-    distilled_params,
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 232, in Likee
+    iscoll = db.engine.execute('SELECT uid, fid FROM Like WHERE uid=%s AND fid=%s;',current_user.id,_collid)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 2182, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 976, in execute
+    return self._execute_text(object_, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1149, in _execute_text
+    parameters,
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
     e, statement, parameters, cursor, context
   File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
@@ -65,65 +69,8 @@ Traceback (most recent call last):
     db.query(q)
   File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
     _mysql.connection.query(self, query)
-sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'FYP_DATABASE.support_tel' doesn't exist")
-[SQL: SELECT support_tel.`Telno` AS `support_tel_Telno`, support_tel.`Service` AS `support_tel_Service` 
-FROM support_tel 
-WHERE support_tel.`Telno` = %s]
-[parameters: (11112222,)]
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Like WHERE uid=0 AND fid='1'' at line 1")
+[SQL: SELECT uid, fid FROM Like WHERE uid=%s AND fid=%s;]
+[parameters: (0, '1')]
 (Background on this error at: http://sqlalche.me/e/f405)
-2022-04-25 12:06:26,256 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
-2022-04-25 13:31:22,267 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-25 13:34:41,625 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-25 13:36:55,719 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-25 13:37:01,615 ERROR: Exception on /mail [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 233, in Sendmail
-    mail.send(msg)
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 491, in send
-    with self.connect() as connection:
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
-    self.host = self.configure_host()
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 165, in configure_host
-    host.login(self.mail.username, self.mail.password)
-  File "/usr/lib64/python3.7/smtplib.py", line 730, in login
-    raise last_exception
-  File "/usr/lib64/python3.7/smtplib.py", line 721, in login
-    initial_response_ok=initial_response_ok)
-  File "/usr/lib64/python3.7/smtplib.py", line 642, in auth
-    raise SMTPAuthenticationError(code, resp)
-smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired p12-20020a05622a00cc00b002ebdd6ef303sm6617393qtw.43 - gsmtp')
-2022-04-25 13:43:00,303 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-25 13:43:04,614 ERROR: Exception on /mail [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 233, in Sendmail
-    mail.send(msg)
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 491, in send
-    with self.connect() as connection:
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
-    self.host = self.configure_host()
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 165, in configure_host
-    host.login(self.mail.username, self.mail.password)
-  File "/usr/lib64/python3.7/smtplib.py", line 730, in login
-    raise last_exception
-  File "/usr/lib64/python3.7/smtplib.py", line 721, in login
-    initial_response_ok=initial_response_ok)
-  File "/usr/lib64/python3.7/smtplib.py", line 642, in auth
-    raise SMTPAuthenticationError(code, resp)
-smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired g81-20020a379d54000000b0069e9f9f740esm4979377qke.100 - gsmtp')
-2022-04-25 14:13:10,724 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 18:11:11,719 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]

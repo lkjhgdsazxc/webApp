@@ -1,4 +1,4 @@
-2022-03-18 08:49:05,711 ERROR: Exception on /TEST [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-04-25 14:13:18,298 ERROR: Exception on /mail [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,38 +8,23 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 254, in Test
-    return render_template('TEST.html',check_datetime=check_datetime)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/TEST.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
-    {% block navbar %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 74, in block 'navbar'
-    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.TTest') }}"class="nav-link pb-1 px-2">Admin</a></li>
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'main.TTest'. Did you mean 'main.Test' instead?
-2022-03-18 08:49:25,311 ERROR: Exception on /TEST [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 233, in Sendmail
+    mail.send(msg)
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 165, in configure_host
+    host.login(self.mail.username, self.mail.password)
+  File "/usr/lib64/python3.7/smtplib.py", line 730, in login
+    raise last_exception
+  File "/usr/lib64/python3.7/smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "/usr/lib64/python3.7/smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired d1-20020a05622a15c100b002f373d233d3sm40099qty.71 - gsmtp')
+2022-04-25 14:17:45,773 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:85]
+2022-04-25 14:17:49,655 ERROR: Exception on /mail [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -49,41 +34,23 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 254, in Test
-    return render_template('TEST.html',check_datetime=check_datetime)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/TEST.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
-    {% block navbar %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 74, in block 'navbar'
-    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.adminpg') }}"class="nav-link pb-1 px-2">Admin</a></li>
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'main.TTest'. Did you mean 'main.Test' instead?
-2022-03-18 08:49:32,079 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:50:29,731 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:51:21,752 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:51:27,221 ERROR: Exception on / [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 233, in Sendmail
+    mail.send(msg)
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 165, in configure_host
+    host.login(self.mail.username, self.mail.password)
+  File "/usr/lib64/python3.7/smtplib.py", line 730, in login
+    raise last_exception
+  File "/usr/lib64/python3.7/smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "/usr/lib64/python3.7/smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired t186-20020a372dc3000000b0069ec8a9254esm5107049qkh.73 - gsmtp')
+2022-04-25 14:31:13,678 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:85]
+2022-04-25 14:31:21,614 ERROR: Exception on /mail [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -93,38 +60,71 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 59, in index
-    prev_url=prev_url)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
-    {% block navbar %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 74, in block 'navbar'
-    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.adminpg') }}"class="nav-link pb-1 px-2">Admin</a></li>
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'main.adminpg'. Did you mean 'main.booking' instead?
-2022-03-18 08:51:54,895 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
-2022-03-18 08:58:38,652 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:90]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 233, in Sendmail
+    mail.send(msg)
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 165, in configure_host
+    host.login(self.mail.username, self.mail.password)
+  File "/usr/lib64/python3.7/smtplib.py", line 730, in login
+    raise last_exception
+  File "/usr/lib64/python3.7/smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "/usr/lib64/python3.7/smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired e13-20020a05620a12cd00b0069e908ab48dsm4917626qkl.106 - gsmtp')
+2022-04-25 14:33:35,158 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:85]
+2022-04-25 14:33:42,973 ERROR: Exception on /Sendmail [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 233, in Sendmail
+    mail.send(msg)
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 165, in configure_host
+    host.login(self.mail.username, self.mail.password)
+  File "/usr/lib64/python3.7/smtplib.py", line 730, in login
+    raise last_exception
+  File "/usr/lib64/python3.7/smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "/usr/lib64/python3.7/smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired t193-20020a3746ca000000b0069f70bc6cf5sm253912qka.1 - gsmtp')
+2022-04-25 14:34:20,145 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:85]
+2022-04-25 14:34:28,371 ERROR: Exception on /Sendmail [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 233, in Sendmail
+    mail.send(msg)
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 165, in configure_host
+    host.login(self.mail.username, self.mail.password)
+  File "/usr/lib64/python3.7/smtplib.py", line 730, in login
+    raise last_exception
+  File "/usr/lib64/python3.7/smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "/usr/lib64/python3.7/smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired j12-20020a05622a038c00b002f340aeffb3sm6340496qtx.85 - gsmtp')
+2022-04-25 14:36:07,891 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:93]

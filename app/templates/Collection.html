@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<form action="" id="cancelbook" method="post" autocompleted="off">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Bookong ID</th>
+      <th scope="col">Center</th>
+      <th scope="col">Facility</th>
+      <th scope="col">Date</th>
+      <th scope="col">Start time</th>
+      <th scope="col">End time</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    {% for bookrc in Record %}
+      <th scope="row">{{ bookrc.bid }}</th>
+      <td>{{ bookrc.center }}</td>
+      <td>{{ bookrc.faclists }}</td>
+      <td>{{ bookrc.bdate }}</td>
+      <td>{{ bookrc.starttime }}</td>
+      <td>{{ bookrc.endtime }}</td>
+      <td>{{ bookrc.status }}</td>
+      <td><button type="submit" name="cancelbook" id="{{ bookrc.bid }}" class="cancelbook btn btn-danger">Cancel</button></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</form>
+
+<script type='text/javascript'>
+$(document).on("click", ".cancelbook", function(){
+    var id = $(this).attr("id");
+    var string = id;
+    $.post("/cancelbook", { string: string}, function(data) {
+        $("#displaymessage").html(data);
+        $("#displaymessage").show();
+    });
+});
+</script>
+
+
+
+{% endblock %}

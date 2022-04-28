@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<form action="" id="cancelbook" method="post" autocompleted="off">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">District</th>
+      <th scope="col">Category</th>
+      <th scope="col">Venue Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    {% for coll in likels %}
+      <td>{{ coll.District }}</td>
+      <td>{{ coll.Category }}</td>
+      <td>{{ coll.Venue_Name }}</td>
+      <td>{{ coll.Address }}</td>
+      <td><button type="submit" name="RemoveColl" id="{{ coll.cid }}" class="RemoveColl btn btn-danger">Remove</button></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</form>
+
+<script type='text/javascript'>
+$(document).on("click", ".RemoveColl", function(){
+    var id = $(this).attr("id");
+    var string = id;
+    $.post("/RemoveColl", { string: string}, function(data) {
+        $("#displaymessage").html(data);
+        $("#displaymessage").show();
+    });
+});
+</script>
+
+
+
+{% endblock %}

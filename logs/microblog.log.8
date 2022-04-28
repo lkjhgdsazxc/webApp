@@ -1,4 +1,4 @@
-2022-04-19 09:00:24,909 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-04-28 14:03:19,351 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,14 +8,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
-    return self._run_view(f, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
-    return fn(self, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
-    return self.render(self._template)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
-    return render_template(template, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 222, in collectionfc
+    return render_template('MobPlan.html')
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -24,26 +18,24 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
-    {% extends 'admin/master.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
-    {% extends admin_base_template %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
-    {% block page_body %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
-    {% block main_menu %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
-    {{ layout.menu() }}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
-    rv = self._func(*arguments)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
-    {%- if item.is_accessible() and item.is_visible() -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
-    return self._view.is_accessible()
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 13, in is_accessible
-    return current_user.id == 0
-AttributeError: 'AnonymousUserMixin' object has no attribute 'id'
-2022-04-19 09:00:28,467 ERROR: Exception on /admin/ [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
+    {% for govlists in govlist.items %}
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'govlist' is undefined
+2022-04-28 14:03:24,075 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -53,14 +45,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
-    return self._run_view(f, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
-    return fn(self, *args, **kwargs)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
-    return self.render(self._template)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
-    return render_template(template, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 222, in collectionfc
+    return render_template('MobPlan.html')
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -69,23 +55,59 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
-    {% extends 'admin/master.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
-    {% extends admin_base_template %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
-    {% block page_body %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block 'page_body'
-    {% block main_menu %}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block 'main_menu'
-    {{ layout.menu() }}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 828, in _invoke
-    rv = self._func(*arguments)
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 55, in template
-    {%- if item.is_accessible() and item.is_visible() -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
-    return self._view.is_accessible()
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 13, in is_accessible
-    return current_user.id == 0
-AttributeError: 'AnonymousUserMixin' object has no attribute 'id'
-2022-04-19 09:01:00,216 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:84]
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
+    {% for govlists in govlist.items %}
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'govlist' is undefined
+2022-04-28 14:03:49,009 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 14:03:52,092 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 222, in collectionfc
+    return render_template('MobPlan.html')
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+    ctx.app,
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
+    {% for govlists in govlist.items %}
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'govlist' is undefined
+2022-04-28 14:08:19,767 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]

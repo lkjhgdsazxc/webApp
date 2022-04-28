@@ -15,6 +15,16 @@ followers = db.Table(
     db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
 )
 
+class collection(db.Model):
+    cid = db.Column(db.Integer, primary_key=True)
+    uid = db.Column(db.Integer)
+    fid = db.Column(db.Integer)
+    
+class likecount(db.Model):
+    lid = db.Column(db.Integer, primary_key=True)
+    uid = db.Column(db.Integer)
+    fid = db.Column(db.Integer)
+
 class Announcement(db.Model):
     Aid = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.VARCHAR(100))
@@ -86,7 +96,7 @@ class governmentfac(db.Model):
     Venue_Name = db.Column(db.VARCHAR(100))
     Address = db.Column(db.VARCHAR(100))
     govimg = db.Column(db.VARCHAR(200))
-
+    Likes = db.Column(db.Integer)
 class facility(db.Model):
     fid = db.Column(db.Integer, primary_key=True)
     fname = db.Column(db.VARCHAR(100))

@@ -2,9 +2,7 @@ import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
 from flask import Flask, request, current_app, render_template, jsonify, redirect, url_for
-import mysql.connector
 from flask_sqlalchemy import SQLAlchemy
-from flask_mysqldb import MySQL,MySQLdb
 from flask_migrate import Migrate
 from flask_login import LoginManager, current_user
 from flask_mail import Mail, Message
@@ -33,7 +31,7 @@ admin = Admin()
 
 def create_app(config_class=Config):
     app = Flask(__name__)
-    app.debug = True
+    #app.debug = True
     app.config.from_object(config_class)
     db.init_app(app)
     migrate.init_app(app, db)

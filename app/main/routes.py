@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from app import current_app, db, admin, mail
 from app.main.forms import EditProfileForm, PostForm, CheckLocationForm, PriceListForm, PayForm , MobPriceListForm, RecordForm, UpgradeForm, BookingForm
-from app.models import User, Post, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, Announcement,permission, governmentfac, facility, booking_record, Roles, UserRoles
+from app.models import User, Post, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, Announcement,permission, governmentfac, facility, booking_record, Roles, UserRoles, collection,likecount
 from app.main import bp
 from flask_admin.contrib.sqla import ModelView
 from flask_mail import Message
@@ -23,11 +23,11 @@ class SuperAdminView(ModelView):
 
 admin.add_view(SuperAdminView(User, db.session))
 admin.add_view(SuperAdminView(governmentfac, db.session))
+admin.add_view(SuperAdminView(facility, db.session))
 admin.add_view(SuperAdminView(Post, db.session))
 admin.add_view(SuperAdminView(booking_record, db.session))
-admin.add_view(SuperAdminView(Roles, db.session))
-
-
+admin.add_view(SuperAdminView(Announcement, db.session))
+admin.add_view(SuperAdminView(UserRoles, db.session))
 @bp.before_request
 def before_request():
     if current_user.is_authenticated:
@@ -99,7 +99,6 @@ def explore():
 @bp.route('/user/<username>')
 @login_required
 def user(username):
-    permis = permission.query.get(current_user.id)
     user = User.query.filter_by(username=username).first_or_404()
     page = request.args.get('page', 1, type=int)
     posts = user.posts.order_by(Post.timestamp.desc()).paginate(
@@ -109,7 +108,7 @@ def user(username):
     prev_url = url_for('main.user', username=user.username, page=posts.prev_num) \
         if posts.has_prev else None
     return render_template('user.html', user=user, posts=posts.items,
-                           next_url=next_url, prev_url=prev_url,permis=permis)
+                           next_url=next_url, prev_url=prev_url)
 
 
 @bp.route('/edit_profile', methods=['GET', 'POST'])
@@ -181,6 +180,15 @@ def Mobplanlist(page):
         Search2 = "%{}%".format(searchbar2)
         govlist = governmentfac.query.filter(governmentfac.Venue_Name.like(Search),governmentfac.Category.like(Search1),governmentfac.District.like(Search2)).paginate(per_page=pages, error_out=False) # LIKE: query.filter(User.name.like('%ednalan%'))
         return render_template('MobPlan.html', govlist=govlist, searchbar=searchbar,searchbar1=searchbar1,searchbar2=searchbar2,group2=group2, group=group)
+    if request.method == 'POST' and 'searchbar' in request.form:
+        searchbar = request.form["searchbar"]
+        Search = "%{}%".format(searchbar)
+        searchbar1 = request.form["searchbar1"]
+        Search1 = "%{}%".format(searchbar1)
+        searchbar2 = request.form["searchbar2"]
+        Search2 = "%{}%".format(searchbar2)
+        govlist = governmentfac.query.filter(governmentfac.Venue_Name.like(Search),governmentfac.Category.like(Search1),governmentfac.District.like(Search2)).paginate(per_page=pages, error_out=False) # LIKE: query.filter(User.name.like('%ednalan%'))
+        return render_template('MobPlan.html', govlist=govlist, searchbar=searchbar,searchbar1=searchbar1,searchbar2=searchbar2,group2=group2, group=group)
     return render_template('MobPlan.html', form=form, govlist=govlist,group2=group2, group=group)
 
 @bp.route('/', methods=['GET', 'POST'])
@@ -192,6 +200,60 @@ def booking():
         popup = governmentfac.query.get(govid)
     return jsonify({'htmlresponse': render_template('booking.html',popup=popup,faclist=faclist)})
     
+    
+@bp.route('/collection', methods=['GET', 'POST'])
+def collectionfc():
+    if request.method == 'POST':
+        #_collid = request.form['TESTCOLL']
+        _collid=request.form.get('TESTCOLL')
+        #_collid2 = "%{}%".format(_collid)
+        print(_collid)
+        iscoll = db.engine.execute('SELECT uid, fid FROM collection WHERE uid=%s AND fid=%s;',current_user.id,_collid)
+        checkiscoll = [row[0] for row in iscoll]
+        if checkiscoll:
+            print("wrong")
+            flash('This cneter already in your collection')
+        else:
+            print(checkiscoll)
+            incollection = collection(uid=current_user.id, fid=_collid)
+            db.session.add(incollection)
+            db.session.commit()
+            flash('Collectioned')
+        return redirect(request.referrer)
+    return redirect(request.referrer)
+    
+@bp.route('/Like', methods=['GET', 'POST'])
+def Likee():
+    if request.method == 'POST':
+        #_collid = request.form['TESTCOLL']
+        _collid=request.form.get('TESTCOLL')
+        #_collid2 = "%{}%".format(_collid)
+        print(_collid)
+        iscoll = db.engine.execute('SELECT uid, fid FROM likecount WHERE uid=%s AND fid=%s;',current_user.id,_collid)
+        likeresult = db.engine.execute('SELECT Likes FROM governmentfac WHERE govid=%s;',_collid)
+        checkiscoll = [row[0] for row in iscoll]
+        likess = [row[0] for row in likeresult]
+        if checkiscoll:
+            print("not success")
+            likessplus = likess[0] - 1
+            likesspluss = governmentfac.query.get(_collid)
+            likesspluss.Likes = likessplus
+            incollection = likecount(uid=current_user.id, fid=_collid)
+            likecount.query.filter_by(uid=current_user.id, fid=_collid).delete()
+            db.session.add(likesspluss)
+            db.session.commit()
+            return redirect(request.referrer)
+        else:
+            print("success")
+            likessplus = likess[0] + 1
+            likesspluss = governmentfac.query.get(_collid)
+            likesspluss.Likes = likessplus
+            incollection = likecount(uid=current_user.id, fid=_collid)
+            db.session.add(incollection, likesspluss)
+            db.session.commit()
+        return redirect(request.referrer)
+    return redirect(request.referrer)
+
 @bp.route('/book_insert', methods=['GET', 'POST'])
 def book_insert():
     if request.method == 'POST': 
@@ -253,6 +315,13 @@ def cancelbook():
     return render_template('Record.html')
 
 
+@bp.route("/RemoveColl",methods=["POST","GET"])
+def RemoveColl():
+    RemoveColl = request.form['string']
+    print(RemoveColl)
+    collection.query.filter_by(cid=RemoveColl).delete()
+    db.session.commit()
+    return redirect(request.referrer)
 
 #@bp.route("/timecounting",methods=["POST","GET"])
 #def timecounting():
@@ -280,6 +349,15 @@ def PaySite():
 def CheckRecord():
     Record = booking_record.query.filter(booking_record.id.like(current_user.id))
     return render_template('Record.html', Record=Record)
+
+@bp.route('/CheckLike',methods=['GET', 'POST'])
+@login_required
+def CheckLike():
+    cid = collection.query.filter(collection.cid.like(current_user.id))
+    Testlike = db.engine.execute('SELECT governmentfac.*, cid FROM collection INNER JOIN governmentfac ON collection.fid=governmentfac.govid WHERE uid=%s;',current_user.id)
+                   #            ('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=%s;',current_user.id)
+    likels = [row for row in Testlike]
+    return render_template('CheckLike.html', cid=cid,likels=likels)
 
 @bp.route('/Upgrade',methods=['GET', 'POST'])
 @login_required
@@ -322,12 +400,7 @@ def CONTACT():
 @bp.route('/aboutus', methods=['GET', 'POST'])
 @login_required
 def aboutus():
-    form = MobPriceListForm()
-    Tel1 = SupportTel.query.get(11112222)
-    Tel2 = SupportTel.query.get(22223333)
-    Tel3 = SupportTel.query.get(33334444)
-
-    return render_template('aboutus.html', form=form,Tel1=Tel1,Tel2=Tel2,Tel3=Tel3)
+    return render_template('aboutus.html')
 
 
 @bp.route('/Referral', methods=['GET', 'POST'])
