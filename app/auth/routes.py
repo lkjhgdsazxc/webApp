@@ -37,6 +37,8 @@ def logout():
 def register():
     if current_user.is_authenticated:
         return redirect(url_for('main.index'))
+    else:
+        flash('Password must contain 8 - 20 characters and at least 1 Uppercase letter, 1 Lowercase letter, 1 Special character and 1 Number.')
     form = RegistrationForm()
     if form.validate_on_submit():
         user = User(username=form.username.data, email=form.email.data)
@@ -68,6 +70,8 @@ def reset_password_request():
 def reset_password(token):
     if current_user.is_authenticated:
         return redirect(url_for('main.index'))
+    else:
+        flash('Password must contain 8 - 20 characters and at least 1 Uppercase letter, 1 Lowercase letter, 1 Special character and 1 Number.')
     user = User.verify_reset_password_token(token)
     if not user:
         return redirect(url_for('main.index'))
