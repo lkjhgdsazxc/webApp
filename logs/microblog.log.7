@@ -1,80 +1,4 @@
-2022-04-28 14:08:24,013 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 223, in collectionfc
-    return render_template('MobPlan.html')
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
-    {% for govlists in govlist.items %}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'govlist' is undefined
-2022-04-28 14:09:06,356 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:09:09,515 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 223, in collectionfc
-    return render_template('MobPlan.html')
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
-    {% for govlists in govlist.items %}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'govlist' is undefined
-2022-04-28 14:11:59,681 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:12:04,450 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-04-28 14:13:54,220 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -111,4 +35,83 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'govlist' is undefined
-2022-04-28 14:13:49,364 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 14:16:52,895 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 14:16:56,623 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 222, in collectionfc
+    return redirect(url_for('main.MobPlan'))
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.MobPlan'. Did you mean 'main.Mobplanlist' instead?
+2022-04-28 14:17:34,322 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 14:17:37,314 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 222, in collectionfc
+    return redirect(url_for('/'))
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint '/'. Did you mean 'booking_record.ajax_lookup' instead?
+2022-04-28 14:18:18,492 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 14:22:19,082 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 14:23:05,436 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 14:23:07,388 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 222, in collectionfc
+    return render_template('MobPlan.html')
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+    ctx.app,
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
+    {% for govlists in govlist.items %}
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'govlist' is undefined

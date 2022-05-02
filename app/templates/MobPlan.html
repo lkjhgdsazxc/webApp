@@ -34,9 +34,6 @@
             <form action="" method="post" autocompleted="off">
             <h4>By category:</h4>
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Categorys..
-              </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 {% for Categorys in group2 %}
                 <a class="dropdown-item" href="#">{{Categorys.Category}}</a>
@@ -65,32 +62,6 @@
             
             <div class="padding"></div>
             
-            <!-- BEGIN FILTER BY DATE -->
-            <h4>By date:</h4>
-            From
-            <div class="input-group date form_date" data-date="2014-06-14T05:25:07Z" data-date-format="dd-mm-yyyy" data-link-field="dtp_input1">
-              <input type="text" class="form-control">
-              <span class="input-group-addon bg-blue"><i class="fa fa-th"></i></span>
-            </div>
-            <input type="hidden" id="dtp_input1" value="">
-            
-            To
-            <div class="input-group date form_date" data-date="2014-06-14T05:25:07Z" data-date-format="dd-mm-yyyy" data-link-field="dtp_input2">
-              <input type="text" class="form-control">
-              <span class="input-group-addon bg-blue"><i class="fa fa-th"></i></span>
-            </div>
-            <input type="hidden" id="dtp_input2" value="">
-            <!-- END FILTER BY DATE -->
-            
-            <div class="padding"></div>
-            
-            <!-- BEGIN FILTER BY PRICE -->
-            <h4>By price:</h4>
-            Between <div id="price1">$300</div> to <div id="price2">$800</div>
-            <div class="slider-primary">
-              <div class="slider slider-horizontal" style="width: 152px;"><div class="slider-track"><div class="slider-selection" style="left: 30%; width: 50%;"></div><div class="slider-handle round" style="left: 30%;"></div><div class="slider-handle round" style="left: 80%;"></div></div><div class="tooltip top hide" style="top: -30px; left: 50.1px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">300 : 800</div></div><input type="text" class="slider" value="" data-slider-min="0" data-slider-max="1000" data-slider-step="1" data-slider-value="[300,800]" data-slider-tooltip="hide"></div>
-            </div>
-            <!-- END FILTER BY PRICE -->
           </div>
           <!-- END FILTERS -->
           <!-- BEGIN RESULT -->
