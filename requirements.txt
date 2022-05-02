@@ -32,3 +32,4 @@ WTForms-Components==0.10.5
 Flask-reCaptcha==0.4.2
 Flask-Mysql==1.5.2
 Pillow==9.1.0
+pyOpenSSL==21.0.0
