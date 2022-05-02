@@ -33,5 +33,4 @@ Flask-reCaptcha==0.4.2
 Flask-Mysql==1.5.2
 Pillow==9.1.0
 pyOpenSSL==21.0.0
-django-extensions==3.0.0
-django-werkzeug-debugger-runserver==0.3.1
+django-sslserver==0.20
