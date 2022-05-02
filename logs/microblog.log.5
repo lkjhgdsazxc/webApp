@@ -1,105 +1,135 @@
-2022-04-28 15:29:35,510 ERROR: Exception on /CheckLike [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-05-02 08:05:11,613 ERROR: Exception on /aboutus [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 319, in CheckLike
-    return render_template('collection.html', scid=scid)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 148, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 997, in get_template
-    return self._load_template(name, globals)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 958, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "/usr/local/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load
-    source, filename, uptodate = self.get_source(environment, name)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 59, in get_source
-    return self._get_source_fast(environment, template)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 95, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: collection.html
-2022-04-28 15:30:13,696 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:30:16,944 ERROR: Exception on /CheckLike [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 319, in CheckLike
-    return render_template('collection.html', scid=scid)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 148, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 997, in get_template
-    return self._load_template(name, globals)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 958, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "/usr/local/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load
-    source, filename, uptodate = self.get_source(environment, name)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 59, in get_source
-    return self._get_source_fast(environment, template)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 95, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: collection.html
-2022-04-28 15:30:49,120 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:32:49,465 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:47:53,904 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:48:12,159 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:48:42,968 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:55:28,938 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:59:41,733 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:59:45,031 ERROR: Exception on /CheckLike [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 318, in CheckLike
-    return render_template('CheckLike.html', Testlike=Testlike)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 403, in aboutus
+    return render_template('aboutus.html')
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
     rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
     self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/CheckLike.html", line 2, in top-level template code
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/usr/local/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ec2-user/environment/webApp/app/templates/aboutus.html", line 2, in top-level template code
     {% import 'bootstrap/wtf.html' as wtf %}
   File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
   File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
     {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/CheckLike.html", line 25, in block 'content'
-    <td><button type="submit" name="cancelbook" id="{{ bookrc.bid }}" class="cancelbook btn btn-danger">Cancel</button></td>
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 3, in block "doc"
+    <html{% block html_attribs %}{% endblock html_attribs %}>
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 11, in block "html"
+    {%- endblock metas %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 13, in block "body"
+    {%- block styles %}
+  File "/home/ec2-user/environment/webApp/app/templates/aboutus.html", line 12, in block "content"
+    <p>{{ Tel2.Service }}: {{ Tel2.Telno }}</p>
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'bookrc' is undefined
+jinja2.exceptions.UndefinedError: 'Tel2' is undefined
+2022-05-02 08:44:06,463 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 08:45:08,493 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 08:45:29,032 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 08:46:56,920 ERROR: Exception on /auth/register [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1364, "Field 'IsAdmin' doesn't have a default value")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 47, in register
+    db.session.commit()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2479, in flush
+    self._flush(objects)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2617, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2577, in _flush
+    flush_context.execute()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1137, in _emit_insert_statements
+    statement, params
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.IntegrityError: (MySQLdb._exceptions.IntegrityError) (1364, "Field 'IsAdmin' doesn't have a default value")
+[SQL: INSERT INTO user (username, email, password_hash, about_me, last_seen) VALUES (%s, %s, %s, %s, %s)]
+[parameters: ('Test0502', 'Test0502@gmail.com', 'pbkdf2:sha256:150000$IxhjNsU7$fd7521226525676136ecdcb25cd66a2a869e885f38922f0d48dc200541f564c5', None, datetime.datetime(2022, 5, 2, 8, 46, 56, 917025))]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+2022-05-02 12:14:39,901 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 12:16:49,862 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]

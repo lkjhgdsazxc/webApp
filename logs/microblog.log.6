@@ -1,4 +1,4 @@
-2022-04-28 14:23:15,206 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-04-28 18:46:56,938 ERROR: Exception on /Like [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,35 +8,11 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 222, in collectionfc
-    return render_template('MobPlan.html')
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
-    {% for govlists in govlist.items %}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'govlist' is undefined
-2022-04-28 14:24:41,925 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:24:46,774 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 236, in Likee
+    likeplus = likess + 1
+TypeError: can only concatenate list (not "int") to list
+2022-04-28 18:53:16,160 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 18:53:20,594 ERROR: Exception on /Like [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -46,29 +22,11 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 222, in collectionfc
-    redirect(url_for('MobPlan'))
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'MobPlan'. Did you mean 'main.Mobplanlist' instead?
-2022-04-28 14:26:34,812 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:27:09,472 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:29:05,524 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:40:55,814 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:48:06,117 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:51:18,188 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:52:26,643 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:53:05,539 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:55:05,027 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:55:34,892 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:56:55,816 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:05:00,267 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:27:09,477 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:27:15,645 ERROR: Exception on /user/Test [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 236, in Likee
+    likess = likess + 1
+TypeError: can only concatenate list (not "int") to list
+2022-04-28 18:59:41,480 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 18:59:51,341 ERROR: Exception on /Like [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -78,38 +36,80 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 236, in Likee
+    print(int(likess))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2022-04-28 19:02:44,925 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 19:03:52,028 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 19:09:18,978 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-29 12:04:19,144 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-01 07:23:25,402 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-01 15:59:45,511 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 06:38:25,498 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 06:43:11,142 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 06:43:15,819 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 111, in user
-    next_url=next_url, prev_url=prev_url)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 59, in index
+    prev_url=prev_url)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
     rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
     self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/usr/local/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base1.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
   File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
     {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/user.html", line 17, in block 'content'
-    <p><a href="{{ url_for('main.ChcekCollection') }}">{{ _('Collection') }}</a></p>
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 338, in url_for
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 3, in block "doc"
+    <html{% block html_attribs %}{% endblock html_attribs %}>
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 11, in block "html"
+    {%- endblock metas %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 12, in block "body"
+  File "/home/ec2-user/environment/webApp/app/templates/base1.html", line 84, in block "navbar"
+    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.entertainment') }}"class="nav-link pb-1 px-2">BLOG</a></li>
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 326, in url_for
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
     endpoint, values, method=method, force_external=external
-  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2315, in build
+  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'main.ChcekCollection'. Did you mean 'main.collectionfc' instead?
-2022-04-28 15:27:52,323 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 15:29:30,577 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.entertainment'. Did you mean 'main.announcement' instead?
+2022-05-02 06:44:01,437 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:00:29,592 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:07:09,975 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:08:59,791 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:11:18,957 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:20:07,733 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:21:24,021 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:21:59,119 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:22:25,689 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:23:12,454 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:27:06,757 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:29:02,267 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:30:44,505 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 07:58:43,497 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]

@@ -1,4 +1,4 @@
-2022-04-28 14:03:19,351 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-04-28 15:59:47,364 ERROR: Exception on /CheckLike [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,8 +8,10 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 222, in collectionfc
-    return render_template('MobPlan.html')
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 318, in CheckLike
+    return render_template('CheckLike.html', Testlike=Testlike)
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -18,7 +20,7 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
+  File "/home/ec2-user/environment/webApp/app/templates/CheckLike.html", line 2, in top-level template code
     {% import 'bootstrap/wtf.html' as wtf %}
   File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
@@ -30,12 +32,13 @@ Traceback (most recent call last):
     {% block body -%}
   File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
     {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
-    {% for govlists in govlist.items %}
+  File "/home/ec2-user/environment/webApp/app/templates/CheckLike.html", line 25, in block 'content'
+    <td><button type="submit" name="cancelbook" id="{{ bookrc.bid }}" class="cancelbook btn btn-danger">Cancel</button></td>
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'govlist' is undefined
-2022-04-28 14:03:24,075 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+jinja2.exceptions.UndefinedError: 'bookrc' is undefined
+2022-04-28 16:00:10,455 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:00:12,247 ERROR: Exception on /CheckLike [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -45,8 +48,10 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 222, in collectionfc
-    return render_template('MobPlan.html')
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 318, in CheckLike
+    return render_template('CheckLike.html', Testlike=Testlike)
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
@@ -55,7 +60,7 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
+  File "/home/ec2-user/environment/webApp/app/templates/CheckLike.html", line 2, in top-level template code
     {% import 'bootstrap/wtf.html' as wtf %}
   File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
@@ -67,13 +72,22 @@ Traceback (most recent call last):
     {% block body -%}
   File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
     {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
-    {% for govlists in govlist.items %}
+  File "/home/ec2-user/environment/webApp/app/templates/CheckLike.html", line 25, in block 'content'
+    <td><button type="submit" name="cancelbook" id="{{ bookrc.bid }}" class="cancelbook btn btn-danger">Cancel</button></td>
   File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'govlist' is undefined
-2022-04-28 14:03:49,009 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:03:52,092 ERROR: Exception on /collection [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+jinja2.exceptions.UndefinedError: 'bookrc' is undefined
+2022-04-28 16:02:23,945 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:02:41,727 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:04:49,449 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:06:02,065 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:07:06,694 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:09:01,309 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:28:22,252 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:29:04,180 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:30:07,818 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:38:38,931 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:38:43,941 ERROR: Exception on /RemoveColl [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -83,31 +97,37 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 222, in collectionfc
-    return render_template('MobPlan.html')
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ec2-user/environment/webApp/app/templates/MobPlan.html", line 133, in block 'content'
-    {% for govlists in govlist.items %}
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'govlist' is undefined
-2022-04-28 14:08:19,767 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 291, in RemoveColl
+    dele = collection.delete().where(collection.c.cid == RemoveColl)
+AttributeError: type object 'collection' has no attribute 'delete'
+2022-04-28 16:39:48,181 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:39:53,897 ERROR: Exception on /RemoveColl [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 291, in RemoveColl
+    dele = collection.delete().where(collection.c.cid == RemoveColl)
+AttributeError: type object 'collection' has no attribute 'delete'
+2022-04-28 16:40:25,254 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:40:32,243 ERROR: Exception on /RemoveColl [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 291, in RemoveColl
+    dele = collection.delete().where(collection.c.cid == RemoveColl)
+AttributeError: type object 'collection' has no attribute 'delete'
+2022-04-28 16:41:07,539 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:44:40,365 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 16:47:05,820 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]

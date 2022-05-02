@@ -70,7 +70,9 @@ def Community():
         flash(_('Your post is now live!'))
         return redirect(url_for('main.Community'))
     page = request.args.get('page', 1, type=int)
+    allposts = Post.query.all()
     posts = current_user.followed_posts().paginate(
+    #posts = post.query.all(
         page, current_app.config['POSTS_PER_PAGE'], False)
     next_url = url_for('main.Community', page=posts.next_num) \
         if posts.has_next else None
@@ -78,7 +80,7 @@ def Community():
         if posts.has_prev else None
     return render_template('Community.html', title=_('Community'), form=form,
                            posts=posts.items, next_url=next_url,
-                           prev_url=prev_url)
+                           prev_url=prev_url, allposts=allposts)
 
 
 @bp.route('/explore')

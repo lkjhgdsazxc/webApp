@@ -1,115 +1,133 @@
-2022-04-28 18:46:56,938 ERROR: Exception on /Like [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-05-02 12:38:04,600 ERROR: Exception on /Community [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 236, in Likee
-    likeplus = likess + 1
-TypeError: can only concatenate list (not "int") to list
-2022-04-28 18:53:16,160 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 18:53:20,594 ERROR: Exception on /Like [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 236, in Likee
-    likess = likess + 1
-TypeError: can only concatenate list (not "int") to list
-2022-04-28 18:59:41,480 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 18:59:51,341 ERROR: Exception on /Like [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 236, in Likee
-    print(int(likess))
-TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
-2022-04-28 19:02:44,925 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 19:03:52,028 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 19:09:18,978 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-29 12:04:19,144 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-01 07:23:25,402 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-01 15:59:45,511 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 06:38:25,498 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 06:43:11,142 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 06:43:15,819 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+  File "/usr/lib/python2.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 59, in index
-    prev_url=prev_url)
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/usr/local/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base1.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 3, in block "doc"
-    <html{% block html_attribs %}{% endblock html_attribs %}>
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 11, in block "html"
-    {%- endblock metas %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 12, in block "body"
-  File "/home/ec2-user/environment/webApp/app/templates/base1.html", line 84, in block "navbar"
-    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.entertainment') }}"class="nav-link pb-1 px-2">BLOG</a></li>
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 69, in Community
+    db.session.commit()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 2479, in flush
+    self._flush(objects)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 2617, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 2577, in _flush
+    flush_context.execute()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 1137, in _emit_insert_statements
+    statement, params
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/lib/python2.7/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/usr/lib/python2.7/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/usr/lib/python2.7/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/lib/python2.7/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/usr/lib/python2.7/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/lib/python2.7/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/usr/lib/python2.7/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/lib/python2.7/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+IntegrityError: (pymysql.err.IntegrityError) (1062, u"Duplicate entry '0' for key 'PRIMARY'")
+[SQL: INSERT INTO post (body, timestamp, user_id) VALUES (%(body)s, %(timestamp)s, %(user_id)s)]
+[parameters: {'body': u'Test two', 'timestamp': datetime.datetime(2022, 5, 2, 12, 38, 4, 598742), 'user_id': 0}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+2022-05-02 12:41:07,824 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 12:43:55,275 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 12:46:35,559 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 12:46:41,521 ERROR: Exception on /Community [GET] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'main.entertainment'. Did you mean 'main.announcement' instead?
-2022-05-02 06:44:01,437 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:00:29,592 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:07:09,975 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:08:59,791 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:11:18,957 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:20:07,733 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:21:24,021 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:21:59,119 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:22:25,689 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:23:12,454 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:27:06,757 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:29:02,267 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:30:44,505 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:58:43,497 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 74, in Community
+    posts = post.query.all(
+UnboundLocalError: local variable 'post' referenced before assignment
+2022-05-02 12:48:20,100 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 12:48:21,630 ERROR: Exception on /Community [GET] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 74, in Community
+    posts = post.query.all()
+UnboundLocalError: local variable 'post' referenced before assignment
+2022-05-02 12:59:18,282 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 12:59:20,363 ERROR: Exception on /Community [GET] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 74, in Community
+    posts = post.query.all(
+UnboundLocalError: local variable 'post' referenced before assignment
+2022-05-02 13:01:24,898 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]

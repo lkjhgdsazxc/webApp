@@ -1,4 +1,4 @@
-2022-04-25 14:36:21,150 ERROR: Exception on /Sendmail [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+2022-04-28 15:29:35,510 ERROR: Exception on /CheckLike [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,29 +8,27 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 233, in Sendmail
-    mail.send(msg)
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 491, in send
-    with self.connect() as connection:
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
-    self.host = self.configure_host()
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 165, in configure_host
-    host.login(self.mail.username, self.mail.password)
-  File "/usr/lib64/python3.7/smtplib.py", line 730, in login
-    raise last_exception
-  File "/usr/lib64/python3.7/smtplib.py", line 721, in login
-    initial_response_ok=initial_response_ok)
-  File "/usr/lib64/python3.7/smtplib.py", line 642, in auth
-    raise SMTPAuthenticationError(code, resp)
-smtplib.SMTPAuthenticationError: (534, b'5.7.9 Please log in with your web browser and then try again. Learn more at\n5.7.9  https://support.google.com/mail/?p=WebLoginRequired j2-20020ac85c42000000b002f36764a3c4sm2332812qtj.32 - gsmtp')
-2022-04-25 14:37:09,204 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:93]
-2022-04-25 14:39:41,233 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:93]
-2022-04-25 14:41:28,223 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:93]
-2022-04-25 14:44:53,839 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:93]
-2022-04-25 14:46:37,698 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:93]
-2022-04-25 14:46:47,153 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:93]
-2022-04-25 14:48:36,010 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:87]
-2022-04-25 14:48:43,177 ERROR: Exception on /Sendmail [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 319, in CheckLike
+    return render_template('collection.html', scid=scid)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/usr/local/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: collection.html
+2022-04-28 15:30:13,696 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 15:30:16,944 ERROR: Exception on /CheckLike [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -40,23 +38,33 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 233, in Sendmail
-    mail.send(msg)
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 491, in send
-    with self.connect() as connection:
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
-    self.host = self.configure_host()
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 165, in configure_host
-    host.login(self.mail.username, self.mail.password)
-  File "/usr/lib64/python3.7/smtplib.py", line 730, in login
-    raise last_exception
-  File "/usr/lib64/python3.7/smtplib.py", line 721, in login
-    initial_response_ok=initial_response_ok)
-  File "/usr/lib64/python3.7/smtplib.py", line 642, in auth
-    raise SMTPAuthenticationError(code, resp)
-smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbs\n5.7.14 n1BjWdFPyKMKjhVQ6DCNGgKmsbYYW7DcacAxPx4-fKHCaqB56hJIsZQzpx8L6ycRsaUjs\n5.7.14 9bJDz-bEahv9A8RfK9Yv6vTa2uKv_LstMIMYduRjxQGc9xzJPTncF-VQaOhE9q81>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 d17-20020ac85d91000000b002f365edfd21sm2647827qtx.83 - gsmtp')
-2022-04-25 14:51:19,032 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:87]
-2022-04-25 14:51:25,880 ERROR: Exception on /Sendmail [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 319, in CheckLike
+    return render_template('collection.html', scid=scid)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/usr/local/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: collection.html
+2022-04-28 15:30:49,120 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 15:32:49,465 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 15:47:53,904 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 15:48:12,159 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 15:48:42,968 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 15:55:28,938 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 15:59:41,733 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-04-28 15:59:45,031 ERROR: Exception on /CheckLike [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -66,48 +74,32 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 233, in Sendmail
-    mail.send(msg)
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 491, in send
-    with self.connect() as connection:
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
-    self.host = self.configure_host()
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 165, in configure_host
-    host.login(self.mail.username, self.mail.password)
-  File "/usr/lib64/python3.7/smtplib.py", line 730, in login
-    raise last_exception
-  File "/usr/lib64/python3.7/smtplib.py", line 721, in login
-    initial_response_ok=initial_response_ok)
-  File "/usr/lib64/python3.7/smtplib.py", line 642, in auth
-    raise SMTPAuthenticationError(code, resp)
-smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbt\n5.7.14 SbKOoFVkD-gBaQdkNTxjMhRnWC6NSIo51rTviHVCj4lVD1Vh3BrbpdRgKvN5tqku5hCsg\n5.7.14 H9aHsn6-KvVp82TbSa4rOSJpDF3HGW76h6pF_lpc7bUL6xkJZcJamw3Hdhe8W0y->\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 i68-20020a375447000000b006809e0adfffsm5172148qkb.25 - gsmtp')
-2022-04-25 14:54:38,201 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:87]
-2022-04-25 14:55:01,135 ERROR: Exception on /Sendmail [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 233, in Sendmail
-    mail.send(msg)
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 491, in send
-    with self.connect() as connection:
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
-    self.host = self.configure_host()
-  File "/usr/local/lib/python3.7/site-packages/flask_mail.py", line 165, in configure_host
-    host.login(self.mail.username, self.mail.password)
-  File "/usr/lib64/python3.7/smtplib.py", line 730, in login
-    raise last_exception
-  File "/usr/lib64/python3.7/smtplib.py", line 721, in login
-    initial_response_ok=initial_response_ok)
-  File "/usr/lib64/python3.7/smtplib.py", line 642, in auth
-    raise SMTPAuthenticationError(code, resp)
-smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbt\n5.7.14 cJ1J_d0DQYgjPOgCVazZkYtDhKHJXUAntJnJ1DHsslcNY4EiAxwMRaxWLwmcev3qZu4iO\n5.7.14 a4FhhM7L7aOwNIymYAoD4B5JJLfQ7SqYidzdWPaCEA8F4x0hy35EWot4iJAjkaJc>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 k20-20020a05622a03d400b002ec16d2694fsm6413888qtx.39 - gsmtp')
-2022-04-28 13:55:01,938 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 13:57:48,580 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:01:45,962 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 14:03:14,374 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 318, in CheckLike
+    return render_template('CheckLike.html', Testlike=Testlike)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 150, in render_template
+    ctx.app,
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ec2-user/environment/webApp/app/templates/CheckLike.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/ec2-user/environment/webApp/app/templates/CheckLike.html", line 25, in block 'content'
+    <td><button type="submit" name="cancelbook" id="{{ bookrc.bid }}" class="cancelbook btn btn-danger">Cancel</button></td>
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'bookrc' is undefined
