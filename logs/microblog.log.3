@@ -1,4 +1,4 @@
-2022-05-02 12:22:44,497 ERROR: Exception on /Community [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+2022-05-02 12:29:06,489 ERROR: Exception on /Community [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -72,6 +72,53 @@ Traceback (most recent call last):
     raise errorclass(errno, errval)
 IntegrityError: (pymysql.err.IntegrityError) (1062, u"Duplicate entry '0' for key 'PRIMARY'")
 [SQL: INSERT INTO post (body, timestamp, user_id) VALUES (%(body)s, %(timestamp)s, %(user_id)s)]
-[parameters: {'body': u'Why?', 'timestamp': datetime.datetime(2022, 5, 2, 12, 22, 44, 495432), 'user_id': 0}]
+[parameters: {'body': u'Hey!', 'timestamp': datetime.datetime(2022, 5, 2, 12, 29, 6, 487311), 'user_id': 2}]
 (Background on this error at: http://sqlalche.me/e/gkpj)
-2022-05-02 12:26:12,549 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 12:36:30,376 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 12:36:48,849 ERROR: Exception on /admin/ [GET] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.7/site-packages/flask_admin/base.py", line 69, in inner
+    return self._run_view(f, *args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/flask_admin/base.py", line 368, in _run_view
+    return fn(self, *args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/flask_admin/base.py", line 452, in index
+    return self.render(self._template)
+  File "/usr/lib/python2.7/site-packages/flask_admin/base.py", line 308, in render
+    return render_template(template, **kwargs)
+  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/usr/lib/python2.7/site-packages/flask_admin/templates/bootstrap2/admin/index.html", line 1, in top-level template code
+    {% extends 'admin/master.html' %}
+  File "/usr/lib/python2.7/site-packages/flask_admin/templates/bootstrap2/admin/master.html", line 1, in top-level template code
+    {% extends admin_base_template %}
+  File "/usr/lib/python2.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 35, in top-level template code
+    {% block page_body %}
+  File "/usr/lib/python2.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 42, in block "page_body"
+    {% block main_menu %}
+  File "/usr/lib/python2.7/site-packages/flask_admin/templates/bootstrap2/admin/base.html", line 44, in block "main_menu"
+    {{ layout.menu() }}
+  File "/usr/lib/python2.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "/usr/lib/python2.7/site-packages/flask_admin/templates/bootstrap2/admin/layout.html", line 40, in template
+    {%- if child.is_active(admin_view) %}
+  File "/usr/lib/python2.7/site-packages/flask_admin/menu.py", line 126, in is_accessible
+    return self._view.is_accessible()
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 20, in is_accessible
+    return checkatc1[0] == SuperAdmin
+IndexError: list index out of range

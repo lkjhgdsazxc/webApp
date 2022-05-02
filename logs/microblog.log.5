@@ -1,135 +1,80 @@
-2022-05-02 08:05:11,613 ERROR: Exception on /aboutus [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
+2022-05-02 12:18:08,058 ERROR: Exception on /auth/login [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 403, in aboutus
-    return render_template('aboutus.html')
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/usr/local/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/home/ec2-user/environment/webApp/app/templates/aboutus.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 3, in block "doc"
-    <html{% block html_attribs %}{% endblock html_attribs %}>
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 11, in block "html"
-    {%- endblock metas %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 13, in block "body"
-    {%- block styles %}
-  File "/home/ec2-user/environment/webApp/app/templates/aboutus.html", line 12, in block "content"
-    <p>{{ Tel2.Service }}: {{ Tel2.Telno }}</p>
-  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'Tel2' is undefined
-2022-05-02 08:44:06,463 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 08:45:08,493 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 08:45:29,032 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 08:46:56,920 ERROR: Exception on /auth/register [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
+  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 19, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 519, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/_collections.py", line 1032, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 3234, in __call__
+    return self.class_(**local_kw)
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 937, in engine
+    return self.get_engine()
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 956, in get_engine
+    return connector.get_engine()
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 561, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 966, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 479, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 87, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 118, in dbapi
+    return __import__("MySQLdb")
+ImportError: No module named MySQLdb
+2022-05-02 12:20:18,432 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 12:20:31,228 ERROR: Exception on /auth/login [POST] [in /usr/lib/python2.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
-    cursor.execute(statement, parameters)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
-    res = self._query(query)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
-    db.query(q)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
-    _mysql.connection.query(self, query)
-MySQLdb._exceptions.IntegrityError: (1364, "Field 'IsAdmin' doesn't have a default value")
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1820, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 47, in register
-    db.session.commit()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
-    self.transaction.commit()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 503, in commit
-    self._prepare_impl()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
-    self.session.flush()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2479, in flush
-    self._flush(objects)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2617, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
-    raise value
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2577, in _flush
-    flush_context.execute()
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
-    uow,
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
-    insert,
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1137, in _emit_insert_statements
-    statement, params
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
-    return meth(self, multiparams, params)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
-    distilled_params,
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
-    e, statement, parameters, cursor, context
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
-    util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
-    raise value.with_traceback(tb)
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
-    cursor.execute(statement, parameters)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
-    res = self._query(query)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
-    db.query(q)
-  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
-    _mysql.connection.query(self, query)
-sqlalchemy.exc.IntegrityError: (MySQLdb._exceptions.IntegrityError) (1364, "Field 'IsAdmin' doesn't have a default value")
-[SQL: INSERT INTO user (username, email, password_hash, about_me, last_seen) VALUES (%s, %s, %s, %s, %s)]
-[parameters: ('Test0502', 'Test0502@gmail.com', 'pbkdf2:sha256:150000$IxhjNsU7$fd7521226525676136ecdcb25cd66a2a869e885f38922f0d48dc200541f564c5', None, datetime.datetime(2022, 5, 2, 8, 46, 56, 917025))]
-(Background on this error at: http://sqlalche.me/e/gkpj)
-2022-05-02 12:14:39,901 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 12:16:49,862 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 19, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 519, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 78, in __call__
+    return self.registry()
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/util/_collections.py", line 1032, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/orm/session.py", line 3234, in __call__
+    return self.class_(**local_kw)
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 937, in engine
+    return self.get_engine()
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 956, in get_engine
+    return connector.get_engine()
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 561, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "/usr/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py", line 966, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 479, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 87, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/lib64/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 118, in dbapi
+    return __import__("MySQLdb")
+ImportError: No module named MySQLdb
+2022-05-02 12:22:23,433 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]

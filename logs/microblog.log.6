@@ -1,53 +1,4 @@
-2022-04-28 18:46:56,938 ERROR: Exception on /Like [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 236, in Likee
-    likeplus = likess + 1
-TypeError: can only concatenate list (not "int") to list
-2022-04-28 18:53:16,160 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 18:53:20,594 ERROR: Exception on /Like [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 236, in Likee
-    likess = likess + 1
-TypeError: can only concatenate list (not "int") to list
-2022-04-28 18:59:41,480 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 18:59:51,341 ERROR: Exception on /Like [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1458]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 236, in Likee
-    print(int(likess))
-TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
-2022-04-28 19:02:44,925 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 19:03:52,028 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-28 19:09:18,978 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-04-29 12:04:19,144 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-01 07:23:25,402 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-01 15:59:45,511 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 06:38:25,498 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 06:43:11,142 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 06:43:15,819 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
+2022-05-02 08:05:11,613 ERROR: Exception on /aboutus [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -63,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 59, in index
-    prev_url=prev_url)
+  File "/home/ec2-user/environment/webApp/app/main/routes.py", line 403, in aboutus
+    return render_template('aboutus.html')
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
   File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
@@ -75,9 +26,9 @@ Traceback (most recent call last):
     reraise(*rewrite_traceback_stack(source=source))
   File "/usr/local/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/ec2-user/environment/webApp/app/templates/index.html", line 2, in top-level template code
+  File "/home/ec2-user/environment/webApp/app/templates/aboutus.html", line 2, in top-level template code
     {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ec2-user/environment/webApp/app/templates/base1.html", line 1, in top-level template code
+  File "/home/ec2-user/environment/webApp/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
   File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
     {% block doc -%}
@@ -85,31 +36,100 @@ Traceback (most recent call last):
     <html{% block html_attribs %}{% endblock html_attribs %}>
   File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 11, in block "html"
     {%- endblock metas %}
-  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 12, in block "body"
-  File "/home/ec2-user/environment/webApp/app/templates/base1.html", line 84, in block "navbar"
-    <li class="nav-item mx-1 text-center "><a href="{{ url_for('main.entertainment') }}"class="nav-link pb-1 px-2">BLOG</a></li>
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 13, in block "body"
+    {%- block styles %}
+  File "/home/ec2-user/environment/webApp/app/templates/aboutus.html", line 12, in block "content"
+    <p>{{ Tel2.Service }}: {{ Tel2.Telno }}</p>
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'Tel2' is undefined
+2022-05-02 08:44:06,463 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 08:45:08,493 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 08:45:29,032 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 08:46:56,920 ERROR: Exception on /auth/register [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1364, "Field 'IsAdmin' doesn't have a default value")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
     reraise(exc_type, exc_value, tb)
   File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/usr/local/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/usr/local/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'main.entertainment'. Did you mean 'main.announcement' instead?
-2022-05-02 06:44:01,437 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:00:29,592 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:07:09,975 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:08:59,791 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:11:18,957 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:20:07,733 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:21:24,021 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:21:59,119 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:22:25,689 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:23:12,454 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:27:06,757 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:29:02,267 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:30:44,505 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
-2022-05-02 07:58:43,497 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ec2-user/environment/webApp/app/auth/routes.py", line 47, in register
+    db.session.commit()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2479, in flush
+    self._flush(objects)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2617, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 2577, in _flush
+    flush_context.execute()
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 1137, in _emit_insert_statements
+    statement, params
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib64/python3.7/site-packages/sqlalchemy/engine/default.py", line 588, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/usr/local/lib64/python3.7/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.IntegrityError: (MySQLdb._exceptions.IntegrityError) (1364, "Field 'IsAdmin' doesn't have a default value")
+[SQL: INSERT INTO user (username, email, password_hash, about_me, last_seen) VALUES (%s, %s, %s, %s, %s)]
+[parameters: ('Test0502', 'Test0502@gmail.com', 'pbkdf2:sha256:150000$IxhjNsU7$fd7521226525676136ecdcb25cd66a2a869e885f38922f0d48dc200541f564c5', None, datetime.datetime(2022, 5, 2, 8, 46, 56, 917025))]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+2022-05-02 12:14:39,901 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
+2022-05-02 12:16:49,862 INFO: Microblog startup [in /home/ec2-user/environment/webApp/app/__init__.py:86]
