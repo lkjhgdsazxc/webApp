@@ -4,17 +4,17 @@ from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from app import current_app, db, admin, mail
 from app.main.forms import EditProfileForm, PostForm, CheckLocationForm, PriceListForm, PayForm , MobPriceListForm, RecordForm, UpgradeForm, BookingForm
-from app.models import User, Post, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, Announcement,permission, governmentfac, facility, booking_record, Roles, UserRoles, collection,likecount
+from app.models import User, Post, Pay, MobPlan,GlobalTalk,EService,SupportTel,ReferralRewards, Announcement,permission, governmentfac, facility, booking_record, Roles, user_roles, collection,likecount
 from app.main import bp
 from flask_admin.contrib.sqla import ModelView
 from flask_mail import Message
 
-#adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
+#adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM user_roles INNER JOIN Roles ON user_roles.RolesID=Roles.RolesID WHERE UserID=0;')
 #print(adminviewsql[0])
 
 class SuperAdminView(ModelView):
     def is_accessible(self):
-        adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=%s;',current_user.id)
+        adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM user_roles INNER JOIN Roles ON user_roles.RolesID=Roles.RolesID WHERE UserID=%s;',current_user.id)
         checkatc1 = [row[0] for row in adminviewsql]
         SuperAdmin = 0
         return checkatc1[0] == SuperAdmin
@@ -27,7 +27,7 @@ admin.add_view(SuperAdminView(facility, db.session))
 admin.add_view(SuperAdminView(Post, db.session))
 admin.add_view(SuperAdminView(booking_record, db.session))
 admin.add_view(SuperAdminView(Announcement, db.session))
-admin.add_view(SuperAdminView(UserRoles, db.session))
+admin.add_view(SuperAdminView(user_roles, db.session))
 @bp.before_request
 def before_request():
     if current_user.is_authenticated:
@@ -284,7 +284,7 @@ def Test():
     stime = '13:34'
     etime = '14:34'
     results = db.engine.execute('SELECT STATUS FROM booking_record WHERE bdate=%s AND starttime BETWEEN %s AND %s AND endtime BETWEEN %s AND %s;',date,stime,etime,stime,etime)
-    adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
+    adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM user_roles INNER JOIN Roles ON user_roles.RolesID=Roles.RolesID WHERE UserID=0;')
     print([row[0] for row in adminviewsql])
     print([row[0] for row in results])
     check_datetime= booking_record.query.filter(booking_record.starttime.between(stime, etime))
@@ -300,7 +300,7 @@ def Sendmail():
 
 @bp.route('/', methods=['GET', 'POST'])
 def Adminpg():
-    adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=0;')
+    adminviewsql = db.engine.execute('SELECT Roles.RolesID FROM user_roles INNER JOIN Roles ON user_roles.RolesID=Roles.RolesID WHERE UserID=0;')
     print([row[0] for row in adminviewsql])
     print("Test")
     return redirect(url_for('/'))
@@ -357,7 +357,7 @@ def CheckRecord():
 def CheckLike():
     cid = collection.query.filter(collection.cid.like(current_user.id))
     Testlike = db.engine.execute('SELECT governmentfac.*, cid FROM collection INNER JOIN governmentfac ON collection.fid=governmentfac.govid WHERE uid=%s;',current_user.id)
-                   #            ('SELECT Roles.RolesID FROM UserRoles INNER JOIN Roles ON UserRoles.RolesID=Roles.RolesID WHERE UserID=%s;',current_user.id)
+                   #            ('SELECT Roles.RolesID FROM user_roles INNER JOIN Roles ON user_roles.RolesID=Roles.RolesID WHERE UserID=%s;',current_user.id)
     likels = [row for row in Testlike]
     return render_template('CheckLike.html', cid=cid,likels=likels)
 
