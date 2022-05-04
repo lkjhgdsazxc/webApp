@@ -35,10 +35,10 @@ class Roles(db.Model):
     RolesID = db.Column(db.Integer,db.ForeignKey('UserRoles.RolesID'),primary_key=True)
     Rolesname = db.Column(db.VARCHAR(50))
     
-class UserRoles(db.Model):
+class user_roles(db.Model):
     UserRolesID = db.Column(db.Integer, primary_key=True)
-    UserID = db.Column(db.Integer, db.ForeignKey('user.id'))   
-    RolesID = db.Column(db.Integer, db.ForeignKey('Roles.RolesID'))   
+    UserID = db.Column(db.Integer)   
+    RolesID = db.Column(db.Integer)   
 
 class permission(db.Model):
     userID = db.Column(db.Integer,db.ForeignKey('user.id'), primary_key=True)
